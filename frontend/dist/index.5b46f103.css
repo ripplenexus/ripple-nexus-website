@@ -1,0 +1,80 @@
+.cover-container {
+  background-color: #a9e841;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  display: flex;
+}
+
+.text-section {
+  flex: 1.4;
+  padding: 20px;
+}
+
+.text-section h1 {
+  text-align: center;
+  margin-bottom: .4em;
+  font-size: 5em;
+}
+
+.text-section p {
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.cta-section {
+  align-items: center;
+  gap: 20px;
+  display: flex;
+}
+
+.cta-button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #457fd7;
+  border: none;
+  border-radius: 5px;
+  padding: .7em 1.5em;
+  font-size: 1.1em;
+}
+
+.cta-button:hover {
+  background-color: #1c62cc;
+}
+
+.info-box {
+  border-radius: .28em;
+  padding: .7em;
+  box-shadow: 0 0 .7em #0000001a;
+}
+
+.info-box h2 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.info-box p {
+  font-size: 1em;
+}
+
+.svg-section {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  padding: 20px;
+  display: flex;
+}
+
+@media (width <= 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .svg-section {
+    margin-top: 20px;
+  }
+}
+/*# sourceMappingURL=index.5b46f103.css.map */

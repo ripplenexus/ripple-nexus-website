@@ -1,0 +1,118 @@
+.contact-container {
+  color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  display: flex;
+}
+
+.contact-header {
+  text-align: left;
+  background: linear-gradient(90deg, #457fd7e3 0%, #3c6db8e3 100%);
+  width: 100vw;
+  min-height: 500px;
+  padding-top: 4em;
+  padding-left: 5em;
+}
+
+.contact-content {
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  position: relative;
+  top: -15em;
+}
+
+.contact-form {
+  background-color: #fff;
+  border-radius: .5em 0 0 .5em;
+  flex-direction: column;
+  width: 60%;
+  padding: 2em;
+  display: flex;
+  box-shadow: 0 1.34px 19.69px #00000012;
+}
+
+.sendMessage {
+  color: #5586cf;
+  font: Poppins;
+  margin-bottom: .8em;
+}
+
+.contact-form label {
+  color: #000;
+  margin-bottom: .4em;
+}
+
+.contact-form input, .contact-form textarea {
+  border: 1px solid #d9d9d9;
+  border-radius: .4em;
+  margin-bottom: .6em;
+  padding: .6em;
+}
+
+.contact-form input ::placeholder, .contact-form textarea ::placeholder {
+  color: #d9d9d9;
+}
+
+.contact-form .button-group {
+  flex-wrap: wrap;
+  gap: .7em;
+  display: flex;
+}
+
+.contact-form button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #457fd7;
+  border: none;
+  border-radius: .3em;
+  padding: .7em;
+}
+
+.form-submit-button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #457fd7;
+  border: none;
+  border-radius: .3em;
+  width: 6.5em;
+  height: 3.5em;
+  margin-top: 1em;
+  padding: .7em;
+}
+
+.contact-info {
+  background: #103f6d;
+  border-radius: 0 .5em .5em 0;
+  width: 40%;
+  padding: 1.25em;
+  box-shadow: 0 1.34px 19.69px #00000012;
+}
+
+.contact-lines {
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem;
+  display: flex;
+}
+
+.social-media {
+  gap: .7em;
+  margin-top: 2em;
+  display: flex;
+}
+
+@media (width <= 560px) {
+  .contact-content {
+    display: block;
+  }
+
+  .contact-form, .contact-info {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=index.709ea661.css.map */
