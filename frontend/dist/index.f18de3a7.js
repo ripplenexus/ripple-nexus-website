@@ -27301,7 +27301,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","./components/ErrorPage":"8FX8S","./components/MacBookAir/Homepage":"4rDjT","./components/Navigation":"ixx0n","./components/Footer":"8pPOA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xmpe":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","./components/ErrorPage":"eiSpk","./components/MacBookAir/Homepage":"1hryW","./components/Navigation":"94qj3","./components/Footer":"eHp76","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xmpe":[function(require,module,exports) {
 /**
  * React Router DOM v6.26.2
  *
@@ -34511,16 +34511,18 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"8FX8S":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$7345 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{}],"eiSpk":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ba30 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$7345.prelude(module);
+$parcel$ReactRefreshHelpers$ba30.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRouterDom = require("react-router-dom");
 var _s = $RefreshSig$();
 const ErrorPage = ()=>{
@@ -34532,15 +34534,15 @@ const ErrorPage = ()=>{
             textAlign: "center"
         },
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-            children: err.status + " : " + err.statusText + "....."
+            children: err.status + " : " + (err.statusText || err.message) + "....."
         }, void 0, false, {
-            fileName: "src/components/ErrorPage.js",
-            lineNumber: 9,
-            columnNumber: 45
+            fileName: "src/components/ErrorPage.tsx",
+            lineNumber: 16,
+            columnNumber: 13
         }, undefined)
     }, void 0, false, {
-        fileName: "src/components/ErrorPage.js",
-        lineNumber: 9,
+        fileName: "src/components/ErrorPage.tsx",
+        lineNumber: 15,
         columnNumber: 9
     }, undefined);
 };
@@ -34554,12 +34556,12 @@ exports.default = ErrorPage;
 var _c;
 $RefreshReg$(_c, "ErrorPage");
 
-  $parcel$ReactRefreshHelpers$7345.postlude(module);
+  $parcel$ReactRefreshHelpers$ba30.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"km3Ru":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"km3Ru":[function(require,module,exports) {
 "use strict";
 var Refresh = require("7422ead32dcc1e6b");
 function debounce(func, delay) {
@@ -34697,16 +34699,18 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"7422ead32dcc1e6b":"786KC"}],"4rDjT":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$989e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"7422ead32dcc1e6b":"786KC"}],"1hryW":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$c80a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$989e.prelude(module);
+$parcel$ReactRefreshHelpers$c80a.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
 var _contacts = require("./Contacts");
 var _contactsDefault = parcelHelpers.interopDefault(_contacts);
 var _cover = require("./Cover");
@@ -34719,23 +34723,23 @@ const Homepage = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _coverDefault.default), {}, void 0, false, {
-                fileName: "src/components/MacBookAir/Homepage.js",
-                lineNumber: 9,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _servicesDefault.default), {}, void 0, false, {
-                fileName: "src/components/MacBookAir/Homepage.js",
+                fileName: "src/components/MacBookAir/Homepage.tsx",
                 lineNumber: 10,
                 columnNumber: 13
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _whyChooseUsDefault.default), {}, void 0, false, {
-                fileName: "src/components/MacBookAir/Homepage.js",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _servicesDefault.default), {}, void 0, false, {
+                fileName: "src/components/MacBookAir/Homepage.tsx",
                 lineNumber: 11,
                 columnNumber: 13
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactsDefault.default), {}, void 0, false, {
-                fileName: "src/components/MacBookAir/Homepage.js",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _whyChooseUsDefault.default), {}, void 0, false, {
+                fileName: "src/components/MacBookAir/Homepage.tsx",
                 lineNumber: 12,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactsDefault.default), {}, void 0, false, {
+                fileName: "src/components/MacBookAir/Homepage.tsx",
+                lineNumber: 13,
                 columnNumber: 13
             }, undefined)
         ]
@@ -34746,16 +34750,16 @@ exports.default = Homepage;
 var _c;
 $RefreshReg$(_c, "Homepage");
 
-  $parcel$ReactRefreshHelpers$989e.postlude(module);
+  $parcel$ReactRefreshHelpers$c80a.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./Contacts":"gzKj4","./Cover":"2pp9o","./Services":"hK03Y","./WhyChooseUs":"hblat","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gzKj4":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$37cd = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Contacts":"5NXtd","./Cover":"jdVTP","./Services":"78m7q","./WhyChooseUs":"2m5jK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5NXtd":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0179 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$37cd.prelude(module);
+$parcel$ReactRefreshHelpers$0179.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -34763,10 +34767,52 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _contactCss = require("../../../public/static/css/contact.css");
+var _contactCss = require("../../../public/static/css/MacBookAir/Contact.css");
+var _s = $RefreshSig$();
 const Contacts = ()=>{
+    _s();
+    const [type, setType] = (0, _react.useState)("");
+    const [formData, setFormData] = (0, _react.useState)({
+        name: "",
+        surname: "",
+        email: "",
+        message: "",
+        type: ""
+    });
+    const [showConfirmationPopup, setShowConfirmationPopup] = (0, _react.useState)(false);
+    const [showAlertPopup, setShowAlertPopup] = (0, _react.useState)(false);
+    const handleChange = (e)=>{
+        const { id, value } = e.target;
+        setFormData((prevState)=>({
+                ...prevState,
+                [id]: value
+            }));
+    };
+    const handleButtonClick = (e)=>{
+        const target = e.target;
+        setType(target.value);
+        setFormData((prevState)=>({
+                ...prevState,
+                type: target.value
+            }));
+        console.log(target.value);
+    };
+    const handleSubmit = (e)=>{
+        e.preventDefault();
+        setShowConfirmationPopup(true);
+    };
+    const confirmSubmission = ()=>{
+        // Handle form data submission to the server
+        console.log(formData);
+        setShowConfirmationPopup(false);
+        setShowAlertPopup(true);
+    };
+    const closeAlertPopup = ()=>{
+        setShowAlertPopup(false);
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            id: "contact-us",
             className: "contact-container",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34775,26 +34821,21 @@ const Contacts = ()=>{
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                             children: "Get In Touch"
                         }, void 0, false, {
-                            fileName: "src/components/MacBookAir/Contacts.js",
-                            lineNumber: 10,
+                            fileName: "src/components/MacBookAir/Contacts.tsx",
+                            lineNumber: 64,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                            style: {
-                                fontSize: "1.5em",
-                                width: "50%",
-                                marginTop: "1em"
-                            },
                             children: "We'd love to hear from you! Whether you have questions, need more information, or want to discuss your project, feel free to reach out. Our team is here to help and will get back to you as soon as possible."
                         }, void 0, false, {
-                            fileName: "src/components/MacBookAir/Contacts.js",
-                            lineNumber: 11,
+                            fileName: "src/components/MacBookAir/Contacts.tsx",
+                            lineNumber: 65,
                             columnNumber: 21
                         }, undefined)
                     ]
                 }, void 0, true, {
-                    fileName: "src/components/MacBookAir/Contacts.js",
-                    lineNumber: 9,
+                    fileName: "src/components/MacBookAir/Contacts.tsx",
+                    lineNumber: 63,
                     columnNumber: 17
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34807,138 +34848,162 @@ const Contacts = ()=>{
                                     className: "sendMessage",
                                     children: "Send us a Message"
                                 }, void 0, false, {
-                                    fileName: "src/components/MacBookAir/Contacts.js",
-                                    lineNumber: 15,
+                                    fileName: "src/components/MacBookAir/Contacts.tsx",
+                                    lineNumber: 69,
                                     columnNumber: 25
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                                     htmlFor: "name",
                                     children: "Name"
                                 }, void 0, false, {
-                                    fileName: "src/components/MacBookAir/Contacts.js",
-                                    lineNumber: 16,
+                                    fileName: "src/components/MacBookAir/Contacts.tsx",
+                                    lineNumber: 70,
                                     columnNumber: 25
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                                     type: "text",
                                     id: "name",
-                                    placeholder: "Name"
+                                    placeholder: "Name",
+                                    value: formData.name,
+                                    onChange: handleChange
                                 }, void 0, false, {
-                                    fileName: "src/components/MacBookAir/Contacts.js",
-                                    lineNumber: 17,
+                                    fileName: "src/components/MacBookAir/Contacts.tsx",
+                                    lineNumber: 71,
                                     columnNumber: 25
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                                     htmlFor: "surname",
                                     children: "Surname"
                                 }, void 0, false, {
-                                    fileName: "src/components/MacBookAir/Contacts.js",
-                                    lineNumber: 19,
+                                    fileName: "src/components/MacBookAir/Contacts.tsx",
+                                    lineNumber: 73,
                                     columnNumber: 25
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                                     type: "text",
                                     id: "surname",
-                                    placeholder: "Surname"
+                                    placeholder: "Surname",
+                                    value: formData.surname,
+                                    onChange: handleChange
                                 }, void 0, false, {
-                                    fileName: "src/components/MacBookAir/Contacts.js",
-                                    lineNumber: 20,
+                                    fileName: "src/components/MacBookAir/Contacts.tsx",
+                                    lineNumber: 74,
                                     columnNumber: 25
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                                     htmlFor: "email",
                                     children: "Business Email"
                                 }, void 0, false, {
-                                    fileName: "src/components/MacBookAir/Contacts.js",
-                                    lineNumber: 22,
+                                    fileName: "src/components/MacBookAir/Contacts.tsx",
+                                    lineNumber: 76,
                                     columnNumber: 25
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                                     type: "email",
                                     id: "email",
-                                    placeholder: "Business Email"
+                                    placeholder: "Business Email",
+                                    value: formData.email,
+                                    onChange: handleChange
                                 }, void 0, false, {
-                                    fileName: "src/components/MacBookAir/Contacts.js",
-                                    lineNumber: 23,
+                                    fileName: "src/components/MacBookAir/Contacts.tsx",
+                                    lineNumber: 77,
                                     columnNumber: 25
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                                     htmlFor: "message",
                                     children: "Message"
                                 }, void 0, false, {
-                                    fileName: "src/components/MacBookAir/Contacts.js",
-                                    lineNumber: 25,
+                                    fileName: "src/components/MacBookAir/Contacts.tsx",
+                                    lineNumber: 79,
                                     columnNumber: 25
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("textarea", {
                                     id: "message",
-                                    placeholder: "Message"
+                                    placeholder: "Message",
+                                    value: formData.message,
+                                    onChange: handleChange
                                 }, void 0, false, {
-                                    fileName: "src/components/MacBookAir/Contacts.js",
-                                    lineNumber: 26,
+                                    fileName: "src/components/MacBookAir/Contacts.tsx",
+                                    lineNumber: 80,
                                     columnNumber: 25
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     className: "button-group",
                                     children: [
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                            id: "WebDevelopment",
                                             type: "button",
+                                            value: "web",
+                                            onClick: handleButtonClick,
                                             children: "Web Development"
                                         }, void 0, false, {
-                                            fileName: "src/components/MacBookAir/Contacts.js",
-                                            lineNumber: 29,
+                                            fileName: "src/components/MacBookAir/Contacts.tsx",
+                                            lineNumber: 83,
                                             columnNumber: 29
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                            id: "UIDesign",
                                             type: "button",
+                                            value: "ui",
+                                            onClick: handleButtonClick,
                                             children: "UI/UX Design"
                                         }, void 0, false, {
-                                            fileName: "src/components/MacBookAir/Contacts.js",
-                                            lineNumber: 30,
+                                            fileName: "src/components/MacBookAir/Contacts.tsx",
+                                            lineNumber: 84,
                                             columnNumber: 29
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                            id: "GraphicDesign",
                                             type: "button",
+                                            value: "graphic",
+                                            onClick: handleButtonClick,
                                             children: "Graphic & Logic Design"
                                         }, void 0, false, {
-                                            fileName: "src/components/MacBookAir/Contacts.js",
-                                            lineNumber: 31,
+                                            fileName: "src/components/MacBookAir/Contacts.tsx",
+                                            lineNumber: 85,
                                             columnNumber: 29
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                            id: "ResumeWriting",
                                             type: "button",
+                                            value: "resume",
+                                            onClick: handleButtonClick,
                                             children: "Resume/CV Writing"
                                         }, void 0, false, {
-                                            fileName: "src/components/MacBookAir/Contacts.js",
-                                            lineNumber: 32,
+                                            fileName: "src/components/MacBookAir/Contacts.tsx",
+                                            lineNumber: 86,
                                             columnNumber: 29
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                            id: "LinkedIn",
                                             type: "button",
+                                            value: "linkedIn",
+                                            onClick: handleButtonClick,
                                             children: "LinkedIn Optimization"
                                         }, void 0, false, {
-                                            fileName: "src/components/MacBookAir/Contacts.js",
-                                            lineNumber: 33,
+                                            fileName: "src/components/MacBookAir/Contacts.tsx",
+                                            lineNumber: 87,
                                             columnNumber: 29
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
-                                    fileName: "src/components/MacBookAir/Contacts.js",
-                                    lineNumber: 28,
+                                    fileName: "src/components/MacBookAir/Contacts.tsx",
+                                    lineNumber: 82,
                                     columnNumber: 25
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                     className: "form-submit-button",
+                                    onClick: handleSubmit,
                                     children: "Submit"
                                 }, void 0, false, {
-                                    fileName: "src/components/MacBookAir/Contacts.js",
-                                    lineNumber: 37,
+                                    fileName: "src/components/MacBookAir/Contacts.tsx",
+                                    lineNumber: 91,
                                     columnNumber: 25
                                 }, undefined)
                             ]
                         }, void 0, true, {
-                            fileName: "src/components/MacBookAir/Contacts.js",
-                            lineNumber: 14,
+                            fileName: "src/components/MacBookAir/Contacts.tsx",
+                            lineNumber: 68,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34951,8 +35016,8 @@ const Contacts = ()=>{
                                     },
                                     children: "Contact Information"
                                 }, void 0, false, {
-                                    fileName: "src/components/MacBookAir/Contacts.js",
-                                    lineNumber: 41,
+                                    fileName: "src/components/MacBookAir/Contacts.tsx",
+                                    lineNumber: 95,
                                     columnNumber: 25
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34965,18 +35030,18 @@ const Contacts = ()=>{
                                             fill: "none",
                                             xmlns: "http://www.w3.org/2000/svg",
                                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                                "fill-rule": "evenodd",
-                                                "clip-rule": "evenodd",
+                                                fillRule: "evenodd",
+                                                clipRule: "evenodd",
                                                 d: "M4.45508 10.5206C4.45508 6.04519 7.24428 2.42554 10.6929 2.42554C14.1416 2.42554 16.9308 6.04519 16.9308 10.5206C16.9308 15.343 12.992 21.9925 11.3791 24.5251C11.0226 25.0802 10.3721 25.0802 10.0157 24.5251C8.39383 21.9925 4.45508 15.343 4.45508 10.5206ZM8.46484 10.5205C8.46484 12.1164 9.4629 13.4116 10.6926 13.4116C11.9224 13.4116 12.9204 12.1164 12.9204 10.5205C12.9204 8.92462 11.9224 7.62941 10.6926 7.62941C9.4629 7.62941 8.46484 8.92462 8.46484 10.5205Z",
                                                 fill: "white"
                                             }, void 0, false, {
-                                                fileName: "src/components/MacBookAir/Contacts.js",
-                                                lineNumber: 45,
+                                                fileName: "src/components/MacBookAir/Contacts.tsx",
+                                                lineNumber: 99,
                                                 columnNumber: 33
                                             }, undefined)
                                         }, void 0, false, {
-                                            fileName: "src/components/MacBookAir/Contacts.js",
-                                            lineNumber: 44,
+                                            fileName: "src/components/MacBookAir/Contacts.tsx",
+                                            lineNumber: 98,
                                             columnNumber: 29
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -34986,14 +35051,14 @@ const Contacts = ()=>{
                                             },
                                             children: "RXH7+FV5, Bibiapur Marg, Neil Lines, Cantonment, Lucknow, Uttar Pradesh 226002"
                                         }, void 0, false, {
-                                            fileName: "src/components/MacBookAir/Contacts.js",
-                                            lineNumber: 47,
+                                            fileName: "src/components/MacBookAir/Contacts.tsx",
+                                            lineNumber: 101,
                                             columnNumber: 29
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
-                                    fileName: "src/components/MacBookAir/Contacts.js",
-                                    lineNumber: 42,
+                                    fileName: "src/components/MacBookAir/Contacts.tsx",
+                                    lineNumber: 96,
                                     columnNumber: 25
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35006,31 +35071,31 @@ const Contacts = ()=>{
                                             fill: "none",
                                             xmlns: "http://www.w3.org/2000/svg",
                                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                                "fill-rule": "evenodd",
-                                                "clip-rule": "evenodd",
+                                                fillRule: "evenodd",
+                                                clipRule: "evenodd",
                                                 d: "M17.1367 18.6112L14.8732 18.2759C14.3297 18.1949 13.795 18.4378 13.4118 18.935L11.7721 21.0629C9.25027 19.3976 7.18287 16.7262 5.89966 13.4419L7.54823 11.3025C7.93141 10.8052 8.11855 10.1114 8.05617 9.40595L7.79775 6.49172C7.69081 5.32372 6.93336 4.44482 6.02442 4.44482H4.48278C3.47581 4.44482 2.63816 5.53188 2.70054 6.83866C3.17283 16.7147 9.25918 24.6016 16.8604 25.2145C17.8674 25.2954 18.7051 24.2084 18.7051 22.9016V20.901C18.714 19.733 18.0367 18.75 17.1367 18.6112Z",
                                                 fill: "white"
                                             }, void 0, false, {
-                                                fileName: "src/components/MacBookAir/Contacts.js",
-                                                lineNumber: 53,
+                                                fileName: "src/components/MacBookAir/Contacts.tsx",
+                                                lineNumber: 107,
                                                 columnNumber: 33
                                             }, undefined)
                                         }, void 0, false, {
-                                            fileName: "src/components/MacBookAir/Contacts.js",
-                                            lineNumber: 52,
+                                            fileName: "src/components/MacBookAir/Contacts.tsx",
+                                            lineNumber: 106,
                                             columnNumber: 29
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                             children: "  (123) 456-7890"
                                         }, void 0, false, {
-                                            fileName: "src/components/MacBookAir/Contacts.js",
-                                            lineNumber: 56,
+                                            fileName: "src/components/MacBookAir/Contacts.tsx",
+                                            lineNumber: 110,
                                             columnNumber: 29
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
-                                    fileName: "src/components/MacBookAir/Contacts.js",
-                                    lineNumber: 51,
+                                    fileName: "src/components/MacBookAir/Contacts.tsx",
+                                    lineNumber: 105,
                                     columnNumber: 25
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35043,31 +35108,31 @@ const Contacts = ()=>{
                                             fill: "none",
                                             xmlns: "http://www.w3.org/2000/svg",
                                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                                "fill-rule": "evenodd",
-                                                "clip-rule": "evenodd",
+                                                fillRule: "evenodd",
+                                                clipRule: "evenodd",
                                                 d: "M6.23305 3.94238H15.1442C15.6344 3.94238 16.0354 4.46278 16.0354 5.09882V7.4117C16.0354 8.04775 15.6344 8.56814 15.1442 8.56814H6.23305C5.74293 8.56814 5.34193 8.04775 5.34193 7.4117V5.09882C5.34193 4.46278 5.74293 3.94238 6.23305 3.94238ZM4.4507 9.7245H16.9264C18.4056 9.7245 19.5997 11.2741 19.5997 13.1938V17.8196C19.5997 19.0917 18.7977 20.1325 17.8175 20.1325H16.0353V22.4453C16.0353 23.7174 15.2333 24.7582 14.253 24.7582H7.12406C6.14383 24.7582 5.34182 23.7174 5.34182 22.4453V20.1325H3.55958C2.57935 20.1325 1.77734 19.0917 1.77734 17.8196V13.1938C1.77734 11.2741 2.97144 9.7245 4.4507 9.7245ZM8.01487 22.4457H13.3616C13.8517 22.4457 14.2527 21.9253 14.2527 21.2892V16.6635H7.12375V21.2892C7.12375 21.9253 7.52475 22.4457 8.01487 22.4457ZM16.9268 14.3505C16.4367 14.3505 16.0357 13.8301 16.0357 13.194C16.0357 12.558 16.4367 12.0376 16.9268 12.0376C17.4169 12.0376 17.8179 12.558 17.8179 13.194C17.8179 13.8301 17.4169 14.3505 16.9268 14.3505Z",
                                                 fill: "white"
                                             }, void 0, false, {
-                                                fileName: "src/components/MacBookAir/Contacts.js",
-                                                lineNumber: 60,
+                                                fileName: "src/components/MacBookAir/Contacts.tsx",
+                                                lineNumber: 114,
                                                 columnNumber: 33
                                             }, undefined)
                                         }, void 0, false, {
-                                            fileName: "src/components/MacBookAir/Contacts.js",
-                                            lineNumber: 59,
+                                            fileName: "src/components/MacBookAir/Contacts.tsx",
+                                            lineNumber: 113,
                                             columnNumber: 29
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                             children: " contact@company.com"
                                         }, void 0, false, {
-                                            fileName: "src/components/MacBookAir/Contacts.js",
-                                            lineNumber: 63,
+                                            fileName: "src/components/MacBookAir/Contacts.tsx",
+                                            lineNumber: 117,
                                             columnNumber: 29
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
-                                    fileName: "src/components/MacBookAir/Contacts.js",
-                                    lineNumber: 58,
+                                    fileName: "src/components/MacBookAir/Contacts.tsx",
+                                    lineNumber: 112,
                                     columnNumber: 25
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35080,31 +35145,31 @@ const Contacts = ()=>{
                                             fill: "none",
                                             xmlns: "http://www.w3.org/2000/svg",
                                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                                "fill-rule": "evenodd",
-                                                "clip-rule": "evenodd",
+                                                fillRule: "evenodd",
+                                                clipRule: "evenodd",
                                                 d: "M6.23305 3.94238H15.1442C15.6344 3.94238 16.0354 4.46278 16.0354 5.09882V7.4117C16.0354 8.04775 15.6344 8.56814 15.1442 8.56814H6.23305C5.74293 8.56814 5.34193 8.04775 5.34193 7.4117V5.09882C5.34193 4.46278 5.74293 3.94238 6.23305 3.94238ZM4.4507 9.7245H16.9264C18.4056 9.7245 19.5997 11.2741 19.5997 13.1938V17.8196C19.5997 19.0917 18.7977 20.1325 17.8175 20.1325H16.0353V22.4453C16.0353 23.7174 15.2333 24.7582 14.253 24.7582H7.12406C6.14383 24.7582 5.34182 23.7174 5.34182 22.4453V20.1325H3.55958C2.57935 20.1325 1.77734 19.0917 1.77734 17.8196V13.1938C1.77734 11.2741 2.97144 9.7245 4.4507 9.7245ZM8.01487 22.4457H13.3616C13.8517 22.4457 14.2527 21.9253 14.2527 21.2892V16.6635H7.12375V21.2892C7.12375 21.9253 7.52475 22.4457 8.01487 22.4457ZM16.9268 14.3505C16.4367 14.3505 16.0357 13.8301 16.0357 13.194C16.0357 12.558 16.4367 12.0376 16.9268 12.0376C17.4169 12.0376 17.8179 12.558 17.8179 13.194C17.8179 13.8301 17.4169 14.3505 16.9268 14.3505Z",
                                                 fill: "white"
                                             }, void 0, false, {
-                                                fileName: "src/components/MacBookAir/Contacts.js",
-                                                lineNumber: 68,
+                                                fileName: "src/components/MacBookAir/Contacts.tsx",
+                                                lineNumber: 122,
                                                 columnNumber: 33
                                             }, undefined)
                                         }, void 0, false, {
-                                            fileName: "src/components/MacBookAir/Contacts.js",
-                                            lineNumber: 67,
+                                            fileName: "src/components/MacBookAir/Contacts.tsx",
+                                            lineNumber: 121,
                                             columnNumber: 29
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                             children: "  (123) 456-7891"
                                         }, void 0, false, {
-                                            fileName: "src/components/MacBookAir/Contacts.js",
-                                            lineNumber: 70,
+                                            fileName: "src/components/MacBookAir/Contacts.tsx",
+                                            lineNumber: 124,
                                             columnNumber: 29
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
-                                    fileName: "src/components/MacBookAir/Contacts.js",
-                                    lineNumber: 66,
+                                    fileName: "src/components/MacBookAir/Contacts.tsx",
+                                    lineNumber: 120,
                                     columnNumber: 25
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35120,53 +35185,53 @@ const Contacts = ()=>{
                                                 d: "M11.4043 10.3836L18.538 2.26318H16.8482L10.6514 9.31258L5.70568 2.26318H0L7.48049 12.9241L0 21.4386H1.68986L8.22962 13.9926L13.4538 21.4386H19.1594M2.29977 3.5111H4.89588L16.8469 20.252H14.2502",
                                                 fill: "#D2D2D2"
                                             }, void 0, false, {
-                                                fileName: "src/components/MacBookAir/Contacts.js",
-                                                lineNumber: 74,
+                                                fileName: "src/components/MacBookAir/Contacts.tsx",
+                                                lineNumber: 128,
                                                 columnNumber: 33
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
-                                                "clip-path": "url(#clip0_81_1841)",
+                                                clipPath: "url(#clip0_81_1841)",
                                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
                                                     d: "M41.1854 3.99137C43.7453 3.99137 44.0489 4.00096 45.0604 4.0473C47.6587 4.16554 48.8723 5.39836 48.9906 7.97746C49.0369 8.98816 49.0457 9.29177 49.0457 11.8517C49.0457 14.4124 49.0361 14.7152 48.9906 15.7259C48.8715 18.3026 47.6611 19.5378 45.0604 19.6561C44.0489 19.7024 43.7469 19.712 41.1854 19.712C38.6254 19.712 38.3218 19.7024 37.3111 19.6561C34.7065 19.537 33.4992 18.2986 33.381 15.7251C33.3346 14.7144 33.325 14.4116 33.325 11.8509C33.325 9.29097 33.3354 8.98816 33.381 7.97666C33.5 5.39836 34.7105 4.16475 37.3111 4.0465C38.3226 4.00096 38.6254 3.99137 41.1854 3.99137ZM41.1854 2.26318C38.5815 2.26318 38.2555 2.27437 37.2328 2.32071C33.7509 2.4805 31.8158 4.41243 31.656 7.89756C31.6088 8.92105 31.5977 9.24703 31.5977 11.8509C31.5977 14.4548 31.6088 14.7815 31.6552 15.8042C31.815 19.2862 33.7469 21.2213 37.232 21.3811C38.2555 21.4274 38.5815 21.4386 41.1854 21.4386C43.7892 21.4386 44.116 21.4274 45.1387 21.3811C48.6174 21.2213 50.5573 19.2894 50.7147 15.8042C50.7619 14.7815 50.7731 14.4548 50.7731 11.8509C50.7731 9.24703 50.7619 8.92105 50.7155 7.89836C50.5589 4.41962 48.6246 2.4813 45.1395 2.32151C44.116 2.27437 43.7892 2.26318 41.1854 2.26318ZM41.1854 6.9276C38.4664 6.9276 36.2621 9.13198 36.2621 11.8509C36.2621 14.5698 38.4664 16.775 41.1854 16.775C43.9043 16.775 46.1087 14.5706 46.1087 11.8509C46.1087 9.13198 43.9043 6.9276 41.1854 6.9276ZM41.1854 15.0468C39.4204 15.0468 37.9895 13.6166 37.9895 11.8509C37.9895 10.086 39.4204 8.65499 41.1854 8.65499C42.9503 8.65499 44.3813 10.086 44.3813 11.8509C44.3813 13.6166 42.9503 15.0468 41.1854 15.0468ZM46.3036 5.58293C45.6676 5.58293 45.1523 6.09827 45.1523 6.73345C45.1523 7.36864 45.6676 7.88398 46.3036 7.88398C46.9388 7.88398 47.4533 7.36864 47.4533 6.73345C47.4533 6.09827 46.9388 5.58293 46.3036 5.58293Z",
                                                     fill: "#D2D2D2"
                                                 }, void 0, false, {
-                                                    fileName: "src/components/MacBookAir/Contacts.js",
-                                                    lineNumber: 76,
+                                                    fileName: "src/components/MacBookAir/Contacts.tsx",
+                                                    lineNumber: 130,
                                                     columnNumber: 37
                                                 }, undefined)
                                             }, void 0, false, {
-                                                fileName: "src/components/MacBookAir/Contacts.js",
-                                                lineNumber: 75,
+                                                fileName: "src/components/MacBookAir/Contacts.tsx",
+                                                lineNumber: 129,
                                                 columnNumber: 33
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
-                                                "clip-path": "url(#clip1_81_1841)",
+                                                clipPath: "url(#clip1_81_1841)",
                                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
                                                     d: "M78.8828 4.80702C76.0033 4.61048 69.59 4.61127 66.7144 4.80702C63.6008 5.01955 63.2341 6.90034 63.2109 11.8508C63.2341 16.7925 63.5976 18.6812 66.7144 18.8946C69.5908 19.0903 76.0033 19.0911 78.8828 18.8946C81.9965 18.682 82.3632 16.8012 82.3864 11.8508C82.3632 6.90913 81.9996 5.02035 78.8828 4.80702ZM70.4017 15.0467V8.65489L76.7935 11.8452L70.4017 15.0467Z",
                                                     fill: "#D2D2D2"
                                                 }, void 0, false, {
-                                                    fileName: "src/components/MacBookAir/Contacts.js",
-                                                    lineNumber: 79,
+                                                    fileName: "src/components/MacBookAir/Contacts.tsx",
+                                                    lineNumber: 133,
                                                     columnNumber: 37
                                                 }, undefined)
                                             }, void 0, false, {
-                                                fileName: "src/components/MacBookAir/Contacts.js",
-                                                lineNumber: 78,
+                                                fileName: "src/components/MacBookAir/Contacts.tsx",
+                                                lineNumber: 132,
                                                 columnNumber: 33
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
-                                                "clip-path": "url(#clip2_81_1841)",
+                                                clipPath: "url(#clip2_81_1841)",
                                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
                                                     d: "M110.005 2.26318H98.8191C96.6131 2.26318 94.8242 4.05209 94.8242 6.25806V17.4437C94.8242 19.6497 96.6131 21.4386 98.8191 21.4386H110.005C112.212 21.4386 114 19.6497 114 17.4437V6.25806C114 4.05209 112.212 2.26318 110.005 2.26318ZM101.216 17.4437H98.8191V8.65499H101.216V17.4437ZM100.018 7.64189C99.2457 7.64189 98.6194 7.0107 98.6194 6.23249C98.6194 5.45429 99.2457 4.8231 100.018 4.8231C100.789 4.8231 101.416 5.45429 101.416 6.23249C101.416 7.0107 100.79 7.64189 100.018 7.64189ZM110.804 17.4437H108.407V12.9663C108.407 10.2753 105.211 10.479 105.211 12.9663V17.4437H102.814V8.65499H105.211V10.0652C106.326 7.99903 110.804 7.84643 110.804 12.0434V17.4437Z",
                                                     fill: "#D2D2D2"
                                                 }, void 0, false, {
-                                                    fileName: "src/components/MacBookAir/Contacts.js",
-                                                    lineNumber: 82,
+                                                    fileName: "src/components/MacBookAir/Contacts.tsx",
+                                                    lineNumber: 136,
                                                     columnNumber: 37
                                                 }, undefined)
                                             }, void 0, false, {
-                                                fileName: "src/components/MacBookAir/Contacts.js",
-                                                lineNumber: 81,
+                                                fileName: "src/components/MacBookAir/Contacts.tsx",
+                                                lineNumber: 135,
                                                 columnNumber: 33
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("defs", {
@@ -35179,13 +35244,13 @@ const Contacts = ()=>{
                                                             fill: "white",
                                                             transform: "translate(31.5977 2.26318)"
                                                         }, void 0, false, {
-                                                            fileName: "src/components/MacBookAir/Contacts.js",
-                                                            lineNumber: 86,
+                                                            fileName: "src/components/MacBookAir/Contacts.tsx",
+                                                            lineNumber: 140,
                                                             columnNumber: 41
                                                         }, undefined)
                                                     }, void 0, false, {
-                                                        fileName: "src/components/MacBookAir/Contacts.js",
-                                                        lineNumber: 85,
+                                                        fileName: "src/components/MacBookAir/Contacts.tsx",
+                                                        lineNumber: 139,
                                                         columnNumber: 37
                                                     }, undefined),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("clipPath", {
@@ -35196,13 +35261,13 @@ const Contacts = ()=>{
                                                             fill: "white",
                                                             transform: "translate(63.2109 2.26318)"
                                                         }, void 0, false, {
-                                                            fileName: "src/components/MacBookAir/Contacts.js",
-                                                            lineNumber: 89,
+                                                            fileName: "src/components/MacBookAir/Contacts.tsx",
+                                                            lineNumber: 143,
                                                             columnNumber: 41
                                                         }, undefined)
                                                     }, void 0, false, {
-                                                        fileName: "src/components/MacBookAir/Contacts.js",
-                                                        lineNumber: 88,
+                                                        fileName: "src/components/MacBookAir/Contacts.tsx",
+                                                        lineNumber: 142,
                                                         columnNumber: 37
                                                     }, undefined),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("clipPath", {
@@ -35213,67 +35278,163 @@ const Contacts = ()=>{
                                                             fill: "white",
                                                             transform: "translate(94.8242 2.26318)"
                                                         }, void 0, false, {
-                                                            fileName: "src/components/MacBookAir/Contacts.js",
-                                                            lineNumber: 92,
+                                                            fileName: "src/components/MacBookAir/Contacts.tsx",
+                                                            lineNumber: 146,
                                                             columnNumber: 41
                                                         }, undefined)
                                                     }, void 0, false, {
-                                                        fileName: "src/components/MacBookAir/Contacts.js",
-                                                        lineNumber: 91,
+                                                        fileName: "src/components/MacBookAir/Contacts.tsx",
+                                                        lineNumber: 145,
                                                         columnNumber: 37
                                                     }, undefined)
                                                 ]
                                             }, void 0, true, {
-                                                fileName: "src/components/MacBookAir/Contacts.js",
-                                                lineNumber: 84,
+                                                fileName: "src/components/MacBookAir/Contacts.tsx",
+                                                lineNumber: 138,
                                                 columnNumber: 33
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
-                                        fileName: "src/components/MacBookAir/Contacts.js",
-                                        lineNumber: 73,
+                                        fileName: "src/components/MacBookAir/Contacts.tsx",
+                                        lineNumber: 127,
                                         columnNumber: 29
                                     }, undefined)
                                 }, void 0, false, {
-                                    fileName: "src/components/MacBookAir/Contacts.js",
-                                    lineNumber: 72,
+                                    fileName: "src/components/MacBookAir/Contacts.tsx",
+                                    lineNumber: 126,
                                     columnNumber: 25
                                 }, undefined)
                             ]
                         }, void 0, true, {
-                            fileName: "src/components/MacBookAir/Contacts.js",
-                            lineNumber: 40,
+                            fileName: "src/components/MacBookAir/Contacts.tsx",
+                            lineNumber: 94,
                             columnNumber: 21
                         }, undefined)
                     ]
                 }, void 0, true, {
-                    fileName: "src/components/MacBookAir/Contacts.js",
-                    lineNumber: 13,
+                    fileName: "src/components/MacBookAir/Contacts.tsx",
+                    lineNumber: 67,
                     columnNumber: 17
+                }, undefined),
+                showConfirmationPopup && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "popup",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "popup-content",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                style: {
+                                    color: "black"
+                                },
+                                children: "Confirm Submission"
+                            }, void 0, false, {
+                                fileName: "src/components/MacBookAir/Contacts.tsx",
+                                lineNumber: 157,
+                                columnNumber: 29
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                style: {
+                                    color: "black"
+                                },
+                                children: "Are you sure you want to submit the form?"
+                            }, void 0, false, {
+                                fileName: "src/components/MacBookAir/Contacts.tsx",
+                                lineNumber: 158,
+                                columnNumber: 29
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "button-group",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                        onClick: confirmSubmission,
+                                        children: "Yes"
+                                    }, void 0, false, {
+                                        fileName: "src/components/MacBookAir/Contacts.tsx",
+                                        lineNumber: 160,
+                                        columnNumber: 29
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                        onClick: ()=>setShowConfirmationPopup(false),
+                                        children: "No"
+                                    }, void 0, false, {
+                                        fileName: "src/components/MacBookAir/Contacts.tsx",
+                                        lineNumber: 161,
+                                        columnNumber: 29
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/MacBookAir/Contacts.tsx",
+                                lineNumber: 159,
+                                columnNumber: 29
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/MacBookAir/Contacts.tsx",
+                        lineNumber: 156,
+                        columnNumber: 25
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/MacBookAir/Contacts.tsx",
+                    lineNumber: 155,
+                    columnNumber: 21
+                }, undefined),
+                showAlertPopup && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "alert-popup",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "alert-popup-content",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                style: {
+                                    color: "black"
+                                },
+                                children: "Your request has been submitted!"
+                            }, void 0, false, {
+                                fileName: "src/components/MacBookAir/Contacts.tsx",
+                                lineNumber: 170,
+                                columnNumber: 29
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                onClick: closeAlertPopup,
+                                children: "Close"
+                            }, void 0, false, {
+                                fileName: "src/components/MacBookAir/Contacts.tsx",
+                                lineNumber: 171,
+                                columnNumber: 29
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/MacBookAir/Contacts.tsx",
+                        lineNumber: 169,
+                        columnNumber: 25
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/MacBookAir/Contacts.tsx",
+                    lineNumber: 168,
+                    columnNumber: 21
                 }, undefined)
             ]
         }, void 0, true, {
-            fileName: "src/components/MacBookAir/Contacts.js",
-            lineNumber: 8,
+            fileName: "src/components/MacBookAir/Contacts.tsx",
+            lineNumber: 62,
             columnNumber: 13
         }, undefined)
     }, void 0, false);
 };
+_s(Contacts, "CeNq0J1Deodx8ngIqnPD9JHauBw=");
 _c = Contacts;
 exports.default = Contacts;
 var _c;
 $RefreshReg$(_c, "Contacts");
 
-  $parcel$ReactRefreshHelpers$37cd.postlude(module);
+  $parcel$ReactRefreshHelpers$0179.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../../public/static/css/contact.css":"i5RYw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"i5RYw":[function() {},{}],"2pp9o":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$ba94 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../../public/static/css/MacBookAir/Contact.css":"1Iwjt","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1Iwjt":[function() {},{}],"jdVTP":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$9523 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$ba94.prelude(module);
+$parcel$ReactRefreshHelpers$9523.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -35281,8 +35442,12 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _homeCoverCss = require("../../../public/static/css/HomeCover.css");
+var _reactRouterDom = require("react-router-dom");
+var _homeCoverCss = require("../../../public/static/css/MacBookAir/HomeCover.css");
+var _s = $RefreshSig$();
 const MainCover = ()=>{
+    _s();
+    const navigate = (0, _reactRouterDom.useNavigate)();
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "cover-container",
         children: [
@@ -35292,84 +35457,100 @@ const MainCover = ()=>{
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                         children: '"Creating the Nexus Where Ideas Become Movements"'
                     }, void 0, false, {
-                        fileName: "src/components/MacBookAir/Cover.js",
-                        lineNumber: 9,
+                        fileName: "src/components/MacBookAir/Cover.tsx",
+                        lineNumber: 11,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                         children: '"Empowering Your Digital Journey with Tailored Solutions: From innovative web development and intuitive UX/UI design to impactful branding and resume optimization, we bring your ideas to life with precision and creativity. Let us help you stand out in the digital world."'
                     }, void 0, false, {
-                        fileName: "src/components/MacBookAir/Cover.js",
-                        lineNumber: 10,
+                        fileName: "src/components/MacBookAir/Cover.tsx",
+                        lineNumber: 12,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "cta-section",
                         children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "cta-button",
-                                children: "Get Started"
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                href: "#contact-us",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                    className: "cta-button",
+                                    children: "Get Started"
+                                }, void 0, false, {
+                                    fileName: "src/components/MacBookAir/Cover.tsx",
+                                    lineNumber: 17,
+                                    columnNumber: 21
+                                }, undefined)
                             }, void 0, false, {
-                                fileName: "src/components/MacBookAir/Cover.js",
-                                lineNumber: 14,
+                                fileName: "src/components/MacBookAir/Cover.tsx",
+                                lineNumber: 16,
                                 columnNumber: 21
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "info-box",
+                                className: "cta-section-info",
                                 children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                        children: "200+"
-                                    }, void 0, false, {
-                                        fileName: "src/components/MacBookAir/Cover.js",
-                                        lineNumber: 16,
-                                        columnNumber: 25
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "info-box",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                                children: "200+"
+                                            }, void 0, false, {
+                                                fileName: "src/components/MacBookAir/Cover.tsx",
+                                                lineNumber: 21,
+                                                columnNumber: 25
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
+                                                children: "Projects Delivered"
+                                            }, void 0, false, {
+                                                fileName: "src/components/MacBookAir/Cover.tsx",
+                                                lineNumber: 22,
+                                                columnNumber: 25
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/MacBookAir/Cover.tsx",
+                                        lineNumber: 20,
+                                        columnNumber: 21
                                     }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
-                                        children: "Projects Delivered"
-                                    }, void 0, false, {
-                                        fileName: "src/components/MacBookAir/Cover.js",
-                                        lineNumber: 17,
-                                        columnNumber: 25
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "info-box",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                                children: "50+"
+                                            }, void 0, false, {
+                                                fileName: "src/components/MacBookAir/Cover.tsx",
+                                                lineNumber: 25,
+                                                columnNumber: 25
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
+                                                children: "Domain Expertise"
+                                            }, void 0, false, {
+                                                fileName: "src/components/MacBookAir/Cover.tsx",
+                                                lineNumber: 26,
+                                                columnNumber: 25
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/MacBookAir/Cover.tsx",
+                                        lineNumber: 24,
+                                        columnNumber: 21
                                     }, undefined)
                                 ]
                             }, void 0, true, {
-                                fileName: "src/components/MacBookAir/Cover.js",
-                                lineNumber: 15,
-                                columnNumber: 21
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "info-box",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                        children: "50+"
-                                    }, void 0, false, {
-                                        fileName: "src/components/MacBookAir/Cover.js",
-                                        lineNumber: 21,
-                                        columnNumber: 25
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
-                                        children: "Domain Expertise"
-                                    }, void 0, false, {
-                                        fileName: "src/components/MacBookAir/Cover.js",
-                                        lineNumber: 22,
-                                        columnNumber: 25
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/MacBookAir/Cover.js",
-                                lineNumber: 20,
+                                fileName: "src/components/MacBookAir/Cover.tsx",
+                                lineNumber: 19,
                                 columnNumber: 21
                             }, undefined)
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/MacBookAir/Cover.js",
-                        lineNumber: 13,
+                        fileName: "src/components/MacBookAir/Cover.tsx",
+                        lineNumber: 15,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/MacBookAir/Cover.js",
-                lineNumber: 8,
+                fileName: "src/components/MacBookAir/Cover.tsx",
+                lineNumber: 10,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35385,49 +35566,49 @@ const MainCover = ()=>{
                             d: "M245.148 283.792L259.022 279.918L254.974 293.105L259.022 306.256L245.148 302.419L231.234 306.256L235.322 293.105L231.234 279.918L245.148 283.792Z",
                             fill: "black",
                             stroke: "white",
-                            "stroke-width": "0.78826",
-                            "stroke-miterlimit": "10"
+                            strokeWidth: "0.78826",
+                            strokeMiterlimit: "10"
                         }, void 0, false, {
-                            fileName: "src/components/MacBookAir/Cover.js",
-                            lineNumber: 29,
+                            fileName: "src/components/MacBookAir/Cover.tsx",
+                            lineNumber: 33,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
                             d: "M98.4909 218.773L123.302 231.586L98.4909 244.502L84.918 267.967L71.3451 244.502L46.5338 231.586L71.3451 218.773L84.918 195.205L98.4909 218.773Z",
                             fill: "black",
                             stroke: "white",
-                            "stroke-width": "0.78826",
-                            "stroke-miterlimit": "10"
+                            strokeWidth: "0.78826",
+                            strokeMiterlimit: "10"
                         }, void 0, false, {
-                            fileName: "src/components/MacBookAir/Cover.js",
-                            lineNumber: 30,
+                            fileName: "src/components/MacBookAir/Cover.tsx",
+                            lineNumber: 34,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
                             d: "M445.035 274.942C443.538 277.657 440.749 279.62 436.732 280.838C432.714 282.057 427.502 282.517 421.226 282.246C408.677 281.705 391.964 278.245 372.246 272.21C332.817 260.142 281.453 237.801 227.505 208.044C173.557 178.287 127.26 146.758 96.0189 119.845C80.396 106.387 68.5547 94.0963 61.4023 83.7703C57.8257 78.6066 55.4346 73.9526 54.3217 69.9037C53.2093 65.8567 53.3824 62.4501 54.8798 59.7354C56.3772 57.0208 59.1663 55.0571 63.1827 53.8392C67.2011 52.6206 72.4131 52.1604 78.6887 52.4312C91.2382 52.9725 107.951 56.432 127.668 62.467C167.098 74.535 218.462 96.8761 272.41 126.633C326.358 156.391 372.655 187.919 403.896 214.832C419.519 228.29 431.36 240.581 438.513 250.907C442.089 256.071 444.48 260.725 445.593 264.774C446.706 268.821 446.532 272.227 445.035 274.942Z",
                             stroke: "black",
-                            "stroke-width": "0.78826"
+                            strokeWidth: "0.78826"
                         }, void 0, false, {
-                            fileName: "src/components/MacBookAir/Cover.js",
-                            lineNumber: 31,
+                            fileName: "src/components/MacBookAir/Cover.tsx",
+                            lineNumber: 35,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
                             d: "M429.09 303.85C427.592 306.565 424.803 308.529 420.787 309.747C416.768 310.965 411.556 311.425 405.281 311.155C392.731 310.613 376.019 307.154 356.301 301.119C316.872 289.051 265.508 266.71 211.559 236.952C157.611 207.195 111.314 175.667 80.0736 148.754C64.4507 135.295 52.6094 123.005 45.457 112.679C41.8803 107.515 39.4893 102.861 38.3764 98.8122C37.264 94.7652 37.4371 91.3586 38.9345 88.644C40.4319 85.9293 43.221 83.9656 47.2374 82.7477C51.2558 81.5292 56.4678 81.069 62.7434 81.3397C75.2929 81.881 92.0054 85.3405 111.723 91.3755C151.152 103.444 202.517 125.785 256.465 155.542C310.413 185.299 356.71 216.827 387.951 243.74C403.574 257.199 415.415 269.49 422.567 279.816C426.144 284.979 428.535 289.633 429.648 293.682C430.76 297.729 430.587 301.136 429.09 303.85Z",
                             stroke: "black",
-                            "stroke-width": "0.78826"
+                            strokeWidth: "0.78826"
                         }, void 0, false, {
-                            fileName: "src/components/MacBookAir/Cover.js",
-                            lineNumber: 32,
+                            fileName: "src/components/MacBookAir/Cover.tsx",
+                            lineNumber: 36,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
                             d: "M413.142 332.759C411.645 335.474 408.856 337.438 404.84 338.656C400.821 339.874 395.609 340.334 389.334 340.064C376.784 339.522 360.072 336.063 340.354 330.028C300.925 317.96 249.56 295.619 195.612 265.861C141.664 236.104 95.3671 204.576 64.1263 177.663C48.5034 164.204 36.6621 151.914 29.5097 141.588C25.9331 136.424 23.542 131.77 22.4291 127.721C21.3167 123.674 21.4899 120.267 22.9872 117.553C24.4846 114.838 27.2737 112.875 31.2902 111.657C35.3085 110.438 40.5206 109.978 46.7961 110.249C59.3456 110.79 76.0581 114.249 95.7758 120.284C135.205 132.352 186.569 154.694 240.518 184.451C294.466 214.208 340.763 245.736 372.003 272.649C387.626 286.108 399.468 298.398 406.62 308.724C410.197 313.888 412.588 318.542 413.701 322.591C414.813 326.638 414.64 330.045 413.142 332.759Z",
                             stroke: "black",
-                            "stroke-width": "0.78826"
+                            strokeWidth: "0.78826"
                         }, void 0, false, {
-                            fileName: "src/components/MacBookAir/Cover.js",
-                            lineNumber: 33,
+                            fileName: "src/components/MacBookAir/Cover.tsx",
+                            lineNumber: 37,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("circle", {
@@ -35436,8 +35617,8 @@ const MainCover = ()=>{
                             r: "12.218",
                             fill: "#FF4823"
                         }, void 0, false, {
-                            fileName: "src/components/MacBookAir/Cover.js",
-                            lineNumber: 34,
+                            fileName: "src/components/MacBookAir/Cover.tsx",
+                            lineNumber: 38,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("circle", {
@@ -35446,8 +35627,8 @@ const MainCover = ()=>{
                             r: "7.8826",
                             fill: "#FF4823"
                         }, void 0, false, {
-                            fileName: "src/components/MacBookAir/Cover.js",
-                            lineNumber: 35,
+                            fileName: "src/components/MacBookAir/Cover.tsx",
+                            lineNumber: 39,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("circle", {
@@ -35456,68 +35637,68 @@ const MainCover = ()=>{
                             r: "18.5241",
                             fill: "black"
                         }, void 0, false, {
-                            fileName: "src/components/MacBookAir/Cover.js",
-                            lineNumber: 36,
+                            fileName: "src/components/MacBookAir/Cover.tsx",
+                            lineNumber: 40,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
                             d: "M204.358 242.208L204.359 242.206C205.493 239.557 205.61 235.924 205.61 229.809C205.61 228.815 206.032 227.856 206.791 227.146C207.551 226.436 208.586 226.034 209.67 226.034H234.35C235.433 226.034 236.468 226.436 237.228 227.146C237.988 227.856 238.41 228.815 238.41 229.809C238.41 235.924 238.527 239.557 239.661 242.206L239.661 242.208C240.82 244.873 243.144 247.369 249.053 251.28C249.757 251.746 250.28 252.407 250.551 253.164C250.822 253.921 250.828 254.738 250.568 255.497C250.308 256.258 249.795 256.925 249.098 257.4C248.401 257.875 247.558 258.132 246.69 258.13H246.69H197.33L197.329 258.13C196.462 258.132 195.619 257.875 194.922 257.4C194.225 256.925 193.711 256.258 193.452 255.497C193.192 254.738 193.198 253.921 193.469 253.164C193.739 252.407 194.262 251.746 194.966 251.28C200.876 247.369 203.2 244.873 204.358 242.208ZM194.744 257.661C195.495 258.173 196.4 258.448 197.33 258.446L194.792 251.016C194.033 251.518 193.466 252.234 193.171 253.058C192.876 253.882 192.87 254.772 193.153 255.6C193.435 256.427 193.993 257.149 194.744 257.661ZM213.547 233.584H213.236L213.231 233.895C213.223 234.375 213.217 234.853 213.212 235.327C213.173 238.818 213.135 242.119 211.891 245.008L211.891 245.009C211.521 245.871 210.691 246.694 209.719 247.537C209.479 247.744 209.231 247.953 208.981 248.163C208.242 248.784 207.492 249.415 206.922 250.054L206.453 250.58H207.158H236.862H237.566L237.097 250.054C236.528 249.415 235.777 248.784 235.039 248.163C234.789 247.953 234.54 247.744 234.301 247.537C233.328 246.694 232.499 245.871 232.128 245.009L232.128 245.008C230.881 242.129 230.846 238.842 230.808 235.365C230.803 234.878 230.797 234.388 230.789 233.895L230.783 233.584H230.473H213.547Z",
                             fill: "black",
                             stroke: "black",
-                            "stroke-width": "0.631795"
+                            strokeWidth: "0.631795"
                         }, void 0, false, {
-                            fileName: "src/components/MacBookAir/Cover.js",
-                            lineNumber: 37,
+                            fileName: "src/components/MacBookAir/Cover.tsx",
+                            lineNumber: 41,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
                             d: "M331.406 185.107H331.722V184.791V147.78H339.842V192.657H287.963V185.107H331.406ZM112.295 184.791V185.107H112.611H155.512V192.657H104.175V146.758H112.295V184.791ZM278.9 127.743L279.211 127.738V127.427V106.232H287.331V135.159L265.763 135.482L265.452 135.486V135.798V147.656H257.332V128.058L278.9 127.743ZM178.566 135.798V135.486L178.254 135.482L156.686 135.167V106.617H164.806V127.419V127.73L165.117 127.735L186.686 128.058V147.656H178.566V135.798ZM226.069 147.656H217.949V62.3766H226.069V147.656Z",
                             fill: "black",
                             stroke: "black",
-                            "stroke-width": "0.631795"
+                            strokeWidth: "0.631795"
                         }, void 0, false, {
-                            fileName: "src/components/MacBookAir/Cover.js",
-                            lineNumber: 38,
+                            fileName: "src/components/MacBookAir/Cover.tsx",
+                            lineNumber: 42,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
                             d: "M160.746 151.764H160.43V152.08V225.718V226.034H160.746H283.271H283.587V225.718V152.08V151.764H283.271H160.746ZM153.492 145.326C154.251 144.616 155.287 144.214 156.37 144.214H287.647C288.73 144.214 289.766 144.616 290.525 145.326C291.285 146.036 291.707 146.995 291.707 147.989V229.809C291.707 230.803 291.285 231.761 290.525 232.471C289.765 233.181 288.73 233.584 287.647 233.584H156.37C155.287 233.584 154.252 233.181 153.492 232.471C152.732 231.761 152.31 230.803 152.31 229.809V147.989C152.31 146.995 152.732 146.036 153.492 145.326Z",
                             fill: "#F05542",
                             stroke: "black",
-                            "stroke-width": "0.631795"
+                            strokeWidth: "0.631795"
                         }, void 0, false, {
-                            fileName: "src/components/MacBookAir/Cover.js",
-                            lineNumber: 39,
+                            fileName: "src/components/MacBookAir/Cover.tsx",
+                            lineNumber: 43,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
                             d: "M179.868 251.692C180.628 250.982 181.663 250.58 182.747 250.58H261.216C262.299 250.58 263.334 250.982 264.094 251.692C264.853 252.402 265.276 253.361 265.276 254.355C265.276 255.349 264.853 256.307 264.094 257.017C263.334 257.727 262.299 258.13 261.216 258.13H182.747C181.664 258.13 180.629 257.727 179.868 257.017C179.109 256.307 178.687 255.349 178.687 254.355C178.687 253.361 179.109 252.402 179.868 251.692Z",
                             fill: "black",
                             stroke: "black",
-                            "stroke-width": "0.631795"
+                            strokeWidth: "0.631795"
                         }, void 0, false, {
-                            fileName: "src/components/MacBookAir/Cover.js",
-                            lineNumber: 40,
+                            fileName: "src/components/MacBookAir/Cover.tsx",
+                            lineNumber: 44,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
                             d: "M160.746 217.22H160.43V217.536V225.718V226.034H160.746H283.271H283.587V225.718V217.536V217.22H283.271H160.746ZM291.707 233.584H152.31V209.67H291.707V233.584Z",
                             fill: "black",
                             stroke: "black",
-                            "stroke-width": "0.631795"
+                            strokeWidth: "0.631795"
                         }, void 0, false, {
-                            fileName: "src/components/MacBookAir/Cover.js",
-                            lineNumber: 41,
+                            fileName: "src/components/MacBookAir/Cover.tsx",
+                            lineNumber: 45,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
                             d: "M82.2944 127.517C82.2944 114.211 93.9475 103.287 108.234 103.287C122.52 103.287 134.173 114.211 134.173 127.517C134.173 140.831 122.52 151.747 108.234 151.747C93.9475 151.747 82.2944 140.831 82.2944 127.517ZM126.053 127.517C126.053 118.241 118.102 110.837 108.234 110.837C98.3653 110.837 90.4144 118.241 90.4144 127.517C90.4144 136.793 98.3653 144.197 108.234 144.197C118.102 144.197 126.053 136.793 126.053 127.517ZM196.068 45.6967C196.068 32.3906 207.721 21.4671 222.007 21.4671C236.294 21.4671 247.947 32.3906 247.947 45.6967C247.947 59.011 236.294 69.9269 222.007 69.9269C207.721 69.9269 196.068 59.011 196.068 45.6967ZM239.827 45.6967C239.827 36.4205 231.876 29.0173 222.007 29.0173C212.139 29.0173 204.188 36.4205 204.188 45.6967C204.188 54.9729 212.139 62.3767 222.007 62.3767C231.876 62.3767 239.827 54.9729 239.827 45.6967ZM134.805 86.6068C134.805 73.3006 146.458 62.3767 160.745 62.3767C175.031 62.3767 186.684 73.3006 186.684 86.6068C186.684 99.9211 175.031 110.837 160.745 110.837C146.458 110.837 134.805 99.9211 134.805 86.6068ZM178.564 86.6068C178.564 77.3306 170.613 69.9269 160.745 69.9269C150.876 69.9269 142.925 77.3306 142.925 86.6068C142.925 95.883 150.876 103.287 160.745 103.287C170.613 103.287 178.564 95.883 178.564 86.6068ZM335.781 103.287C350.067 103.287 361.72 114.211 361.72 127.517C361.72 140.831 350.067 151.747 335.781 151.747C321.494 151.747 309.841 140.831 309.841 127.517C309.841 114.211 321.494 103.287 335.781 103.287ZM335.781 110.837C325.912 110.837 317.961 118.241 317.961 127.517C317.961 136.793 325.912 144.197 335.781 144.197C345.649 144.197 353.6 136.793 353.6 127.517C353.6 118.241 345.649 110.837 335.781 110.837ZM283.27 62.3767C297.556 62.3767 309.209 73.3006 309.209 86.6068C309.209 99.9211 297.556 110.837 283.27 110.837C268.983 110.837 257.33 99.9211 257.33 86.6068C257.33 73.3006 268.983 62.3767 283.27 62.3767ZM283.27 69.9269C273.401 69.9269 265.45 77.3306 265.45 86.6068C265.45 95.883 273.401 103.287 283.27 103.287C293.138 103.287 301.089 95.883 301.089 86.6068C301.089 77.3306 293.138 69.9269 283.27 69.9269Z",
                             fill: "black",
                             stroke: "black",
-                            "stroke-width": "0.631795"
+                            strokeWidth: "0.631795"
                         }, void 0, false, {
-                            fileName: "src/components/MacBookAir/Cover.js",
-                            lineNumber: 42,
+                            fileName: "src/components/MacBookAir/Cover.tsx",
+                            lineNumber: 46,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("rect", {
@@ -35527,43 +35708,48 @@ const MainCover = ()=>{
                             height: "74",
                             fill: "#A9E841"
                         }, void 0, false, {
-                            fileName: "src/components/MacBookAir/Cover.js",
-                            lineNumber: 43,
+                            fileName: "src/components/MacBookAir/Cover.tsx",
+                            lineNumber: 47,
                             columnNumber: 21
                         }, undefined)
                     ]
                 }, void 0, true, {
-                    fileName: "src/components/MacBookAir/Cover.js",
-                    lineNumber: 28,
+                    fileName: "src/components/MacBookAir/Cover.tsx",
+                    lineNumber: 32,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
-                fileName: "src/components/MacBookAir/Cover.js",
-                lineNumber: 27,
+                fileName: "src/components/MacBookAir/Cover.tsx",
+                lineNumber: 31,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/MacBookAir/Cover.js",
-        lineNumber: 7,
+        fileName: "src/components/MacBookAir/Cover.tsx",
+        lineNumber: 9,
         columnNumber: 9
     }, undefined);
 };
+_s(MainCover, "CzcTeTziyjMsSrAVmHuCCb6+Bfg=", false, function() {
+    return [
+        (0, _reactRouterDom.useNavigate)
+    ];
+});
 _c = MainCover;
 exports.default = MainCover;
 var _c;
 $RefreshReg$(_c, "MainCover");
 
-  $parcel$ReactRefreshHelpers$ba94.postlude(module);
+  $parcel$ReactRefreshHelpers$9523.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../../public/static/css/HomeCover.css":"8d2yN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8d2yN":[function() {},{}],"hK03Y":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$be25 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../../public/static/css/MacBookAir/HomeCover.css":"81gqa","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"81gqa":[function() {},{}],"78m7q":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$32e5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$be25.prelude(module);
+$parcel$ReactRefreshHelpers$32e5.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -35571,7 +35757,7 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _servicesCss = require("../../../public/static/css/Services.css");
+var _cardsCss = require("../../../public/static/css/MacBookAir/Cards.css");
 var _webDevPng = require("../../../public/static/img/services/webDev.png");
 var _webDevPngDefault = parcelHelpers.interopDefault(_webDevPng);
 var _designPng = require("../../../public/static/img/services/design.png");
@@ -35623,8 +35809,8 @@ const Services = ()=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 children: "Services"
             }, void 0, false, {
-                fileName: "src/components/MacBookAir/Services.js",
-                lineNumber: 48,
+                fileName: "src/components/MacBookAir/Services.tsx",
+                lineNumber: 53,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35636,39 +35822,39 @@ const Services = ()=>{
                                 src: service.image,
                                 alt: service.category
                             }, void 0, false, {
-                                fileName: "src/components/MacBookAir/Services.js",
-                                lineNumber: 52,
+                                fileName: "src/components/MacBookAir/Services.tsx",
+                                lineNumber: 57,
                                 columnNumber: 25
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                                 children: service.category
                             }, void 0, false, {
-                                fileName: "src/components/MacBookAir/Services.js",
-                                lineNumber: 53,
+                                fileName: "src/components/MacBookAir/Services.tsx",
+                                lineNumber: 58,
                                 columnNumber: 25
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                 children: service.description
                             }, void 0, false, {
-                                fileName: "src/components/MacBookAir/Services.js",
-                                lineNumber: 54,
+                                fileName: "src/components/MacBookAir/Services.tsx",
+                                lineNumber: 59,
                                 columnNumber: 25
                             }, undefined)
                         ]
                     }, index, true, {
-                        fileName: "src/components/MacBookAir/Services.js",
-                        lineNumber: 51,
+                        fileName: "src/components/MacBookAir/Services.tsx",
+                        lineNumber: 56,
                         columnNumber: 21
                     }, undefined))
             }, void 0, false, {
-                fileName: "src/components/MacBookAir/Services.js",
-                lineNumber: 49,
+                fileName: "src/components/MacBookAir/Services.tsx",
+                lineNumber: 54,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/MacBookAir/Services.js",
-        lineNumber: 47,
+        fileName: "src/components/MacBookAir/Services.tsx",
+        lineNumber: 52,
         columnNumber: 9
     }, undefined);
 };
@@ -35677,12 +35863,12 @@ exports.default = Services;
 var _c;
 $RefreshReg$(_c, "Services");
 
-  $parcel$ReactRefreshHelpers$be25.postlude(module);
+  $parcel$ReactRefreshHelpers$32e5.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../../public/static/css/Services.css":"hI2N5","../../../public/static/img/services/webDev.png":"9jnyJ","../../../public/static/img/services/design.png":"6oCyo","../../../public/static/img/services/graphics.png":"gTai3","../../../public/static/img/services/resume.png":"iMdSr","../../../public/static/img/services/software.png":"6Ui6P","../../../public/static/img/services/linkedIn.png":"9slsB","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hI2N5":[function() {},{}],"9jnyJ":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../../public/static/css/MacBookAir/Cards.css":"cueQJ","../../../public/static/img/services/webDev.png":"9jnyJ","../../../public/static/img/services/design.png":"6oCyo","../../../public/static/img/services/graphics.png":"gTai3","../../../public/static/img/services/resume.png":"iMdSr","../../../public/static/img/services/software.png":"6Ui6P","../../../public/static/img/services/linkedIn.png":"9slsB","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cueQJ":[function() {},{}],"9jnyJ":[function(require,module,exports) {
 module.exports = require("629129c0d75dd6c7").getBundleURL("h7qW7") + "webDev.01d69358.png" + "?" + Date.now();
 
 },{"629129c0d75dd6c7":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -35735,11 +35921,11 @@ module.exports = require("d891239e43ece6ad").getBundleURL("h7qW7") + "software.d
 },{"d891239e43ece6ad":"lgJ39"}],"9slsB":[function(require,module,exports) {
 module.exports = require("f0fa57d301d8db6c").getBundleURL("h7qW7") + "linkedIn.d680a8ad.png" + "?" + Date.now();
 
-},{"f0fa57d301d8db6c":"lgJ39"}],"hblat":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$1435 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"f0fa57d301d8db6c":"lgJ39"}],"2m5jK":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$9cc0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$1435.prelude(module);
+$parcel$ReactRefreshHelpers$9cc0.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -35747,7 +35933,7 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _whyChooseUsCss = require("../../../public/static/css/WhyChooseUs.css");
+var _cardsCss = require("../../../public/static/css/MacBookAir/Cards.css");
 var _clientPng = require("../../../public/static/img/chooseUs/client.png");
 var _clientPngDefault = parcelHelpers.interopDefault(_clientPng);
 var _consultationPng = require("../../../public/static/img/chooseUs/consultation.png");
@@ -35813,8 +35999,8 @@ const WhyChooseUs = ()=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 children: "Why Choose Us"
             }, void 0, false, {
-                fileName: "src/components/MacBookAir/WhyChooseUs.js",
-                lineNumber: 59,
+                fileName: "src/components/MacBookAir/WhyChooseUs.tsx",
+                lineNumber: 65,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35826,39 +36012,39 @@ const WhyChooseUs = ()=>{
                                 src: service.image,
                                 alt: service.title
                             }, void 0, false, {
-                                fileName: "src/components/MacBookAir/WhyChooseUs.js",
-                                lineNumber: 63,
+                                fileName: "src/components/MacBookAir/WhyChooseUs.tsx",
+                                lineNumber: 69,
                                 columnNumber: 25
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                                 children: service.title
                             }, void 0, false, {
-                                fileName: "src/components/MacBookAir/WhyChooseUs.js",
-                                lineNumber: 64,
+                                fileName: "src/components/MacBookAir/WhyChooseUs.tsx",
+                                lineNumber: 70,
                                 columnNumber: 25
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                 children: service.description
                             }, void 0, false, {
-                                fileName: "src/components/MacBookAir/WhyChooseUs.js",
-                                lineNumber: 65,
+                                fileName: "src/components/MacBookAir/WhyChooseUs.tsx",
+                                lineNumber: 71,
                                 columnNumber: 25
                             }, undefined)
                         ]
                     }, index, true, {
-                        fileName: "src/components/MacBookAir/WhyChooseUs.js",
-                        lineNumber: 62,
+                        fileName: "src/components/MacBookAir/WhyChooseUs.tsx",
+                        lineNumber: 68,
                         columnNumber: 21
                     }, undefined))
             }, void 0, false, {
-                fileName: "src/components/MacBookAir/WhyChooseUs.js",
-                lineNumber: 60,
+                fileName: "src/components/MacBookAir/WhyChooseUs.tsx",
+                lineNumber: 66,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/MacBookAir/WhyChooseUs.js",
-        lineNumber: 58,
+        fileName: "src/components/MacBookAir/WhyChooseUs.tsx",
+        lineNumber: 64,
         columnNumber: 9
     }, undefined);
 };
@@ -35867,12 +36053,12 @@ exports.default = WhyChooseUs;
 var _c;
 $RefreshReg$(_c, "WhyChooseUs");
 
-  $parcel$ReactRefreshHelpers$1435.postlude(module);
+  $parcel$ReactRefreshHelpers$9cc0.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../../public/static/css/WhyChooseUs.css":"4y86l","../../../public/static/img/chooseUs/client.png":"9YGqq","../../../public/static/img/chooseUs/consultation.png":"iQeUC","../../../public/static/img/chooseUs/implementation.png":"a9DcH","../../../public/static/img/chooseUs/improvement.png":"izcn6","../../../public/static/img/chooseUs/monitoring.png":"6t2g6","../../../public/static/img/chooseUs/quality.png":"k6To0","../../../public/static/img/chooseUs/reporting.png":"8KuqR","../../../public/static/img/chooseUs/research.png":"8uMaE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4y86l":[function() {},{}],"9YGqq":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../../public/static/css/MacBookAir/Cards.css":"cueQJ","../../../public/static/img/chooseUs/client.png":"9YGqq","../../../public/static/img/chooseUs/consultation.png":"iQeUC","../../../public/static/img/chooseUs/implementation.png":"a9DcH","../../../public/static/img/chooseUs/improvement.png":"izcn6","../../../public/static/img/chooseUs/monitoring.png":"6t2g6","../../../public/static/img/chooseUs/quality.png":"k6To0","../../../public/static/img/chooseUs/reporting.png":"8KuqR","../../../public/static/img/chooseUs/research.png":"8uMaE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cueQJ":[function() {},{}],"9YGqq":[function(require,module,exports) {
 module.exports = require("5356f4623557599c").getBundleURL("h7qW7") + "client.7945b56e.png" + "?" + Date.now();
 
 },{"5356f4623557599c":"lgJ39"}],"iQeUC":[function(require,module,exports) {
@@ -35896,11 +36082,11 @@ module.exports = require("6024ebcdcd3eb73a").getBundleURL("h7qW7") + "reporting.
 },{"6024ebcdcd3eb73a":"lgJ39"}],"8uMaE":[function(require,module,exports) {
 module.exports = require("f246cbba6d43d422").getBundleURL("h7qW7") + "research.3f6bdbbd.png" + "?" + Date.now();
 
-},{"f246cbba6d43d422":"lgJ39"}],"ixx0n":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$e9f7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"f246cbba6d43d422":"lgJ39"}],"94qj3":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$72be = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$e9f7.prelude(module);
+$parcel$ReactRefreshHelpers$72be.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -35921,14 +36107,14 @@ const Navigation = ()=>{
                         className: "green",
                         children: "pp"
                     }, void 0, false, {
-                        fileName: "src/components/Navigation.js",
+                        fileName: "src/components/Navigation.tsx",
                         lineNumber: 9,
                         columnNumber: 19
                     }, undefined),
                     "le Nexus"
                 ]
             }, void 0, true, {
-                fileName: "src/components/Navigation.js",
+                fileName: "src/components/Navigation.tsx",
                 lineNumber: 8,
                 columnNumber: 13
             }, undefined),
@@ -35943,12 +36129,12 @@ const Navigation = ()=>{
                                     href: "#home",
                                     children: "Home"
                                 }, void 0, false, {
-                                    fileName: "src/components/Navigation.js",
+                                    fileName: "src/components/Navigation.tsx",
                                     lineNumber: 13,
                                     columnNumber: 25
                                 }, undefined)
                             }, void 0, false, {
-                                fileName: "src/components/Navigation.js",
+                                fileName: "src/components/Navigation.tsx",
                                 lineNumber: 13,
                                 columnNumber: 21
                             }, undefined),
@@ -35957,12 +36143,12 @@ const Navigation = ()=>{
                                     href: "#services",
                                     children: "Services"
                                 }, void 0, false, {
-                                    fileName: "src/components/Navigation.js",
+                                    fileName: "src/components/Navigation.tsx",
                                     lineNumber: 14,
                                     columnNumber: 25
                                 }, undefined)
                             }, void 0, false, {
-                                fileName: "src/components/Navigation.js",
+                                fileName: "src/components/Navigation.tsx",
                                 lineNumber: 14,
                                 columnNumber: 21
                             }, undefined),
@@ -35971,12 +36157,12 @@ const Navigation = ()=>{
                                     href: "#career",
                                     children: "Career"
                                 }, void 0, false, {
-                                    fileName: "src/components/Navigation.js",
+                                    fileName: "src/components/Navigation.tsx",
                                     lineNumber: 15,
                                     columnNumber: 25
                                 }, undefined)
                             }, void 0, false, {
-                                fileName: "src/components/Navigation.js",
+                                fileName: "src/components/Navigation.tsx",
                                 lineNumber: 15,
                                 columnNumber: 21
                             }, undefined),
@@ -35985,18 +36171,18 @@ const Navigation = ()=>{
                                     href: "#about",
                                     children: "About Us"
                                 }, void 0, false, {
-                                    fileName: "src/components/Navigation.js",
+                                    fileName: "src/components/Navigation.tsx",
                                     lineNumber: 16,
                                     columnNumber: 25
                                 }, undefined)
                             }, void 0, false, {
-                                fileName: "src/components/Navigation.js",
+                                fileName: "src/components/Navigation.tsx",
                                 lineNumber: 16,
                                 columnNumber: 21
                             }, undefined)
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/Navigation.js",
+                        fileName: "src/components/Navigation.tsx",
                         lineNumber: 12,
                         columnNumber: 17
                     }, undefined),
@@ -36004,19 +36190,19 @@ const Navigation = ()=>{
                         className: "quote-button",
                         children: "Request a Quote"
                     }, void 0, false, {
-                        fileName: "src/components/Navigation.js",
+                        fileName: "src/components/Navigation.tsx",
                         lineNumber: 18,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/Navigation.js",
+                fileName: "src/components/Navigation.tsx",
                 lineNumber: 11,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/Navigation.js",
+        fileName: "src/components/Navigation.tsx",
         lineNumber: 7,
         columnNumber: 9
     }, undefined);
@@ -36026,16 +36212,16 @@ exports.default = Navigation;
 var _c;
 $RefreshReg$(_c, "Navigation");
 
-  $parcel$ReactRefreshHelpers$e9f7.postlude(module);
+  $parcel$ReactRefreshHelpers$72be.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../public/static/css/Navigation.css":"buuws","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"buuws":[function() {},{}],"8pPOA":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../public/static/css/Navigation.css":"buuws","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"buuws":[function() {},{}],"eHp76":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b676 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$bc7c.prelude(module);
+$parcel$ReactRefreshHelpers$b676.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -36099,53 +36285,53 @@ const Footer = ()=>{
                             d: "M11.4043 10.3836L18.538 2.26318H16.8482L10.6514 9.31258L5.70568 2.26318H0L7.48049 12.9241L0 21.4386H1.68986L8.22962 13.9926L13.4538 21.4386H19.1594M2.29977 3.5111H4.89588L16.8469 20.252H14.2502",
                             fill: "#D2D2D2"
                         }, void 0, false, {
-                            fileName: "src/components/Footer.js",
-                            lineNumber: 48,
-                            columnNumber: 21
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
-                            "clip-path": "url(#clip0_81_1841)",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                d: "M41.1854 3.99137C43.7453 3.99137 44.0489 4.00096 45.0604 4.0473C47.6587 4.16554 48.8723 5.39836 48.9906 7.97746C49.0369 8.98816 49.0457 9.29177 49.0457 11.8517C49.0457 14.4124 49.0361 14.7152 48.9906 15.7259C48.8715 18.3026 47.6611 19.5378 45.0604 19.6561C44.0489 19.7024 43.7469 19.712 41.1854 19.712C38.6254 19.712 38.3218 19.7024 37.3111 19.6561C34.7065 19.537 33.4992 18.2986 33.381 15.7251C33.3346 14.7144 33.325 14.4116 33.325 11.8509C33.325 9.29097 33.3354 8.98816 33.381 7.97666C33.5 5.39836 34.7105 4.16475 37.3111 4.0465C38.3226 4.00096 38.6254 3.99137 41.1854 3.99137ZM41.1854 2.26318C38.5815 2.26318 38.2555 2.27437 37.2328 2.32071C33.7509 2.4805 31.8158 4.41243 31.656 7.89756C31.6088 8.92105 31.5977 9.24703 31.5977 11.8509C31.5977 14.4548 31.6088 14.7815 31.6552 15.8042C31.815 19.2862 33.7469 21.2213 37.232 21.3811C38.2555 21.4274 38.5815 21.4386 41.1854 21.4386C43.7892 21.4386 44.116 21.4274 45.1387 21.3811C48.6174 21.2213 50.5573 19.2894 50.7147 15.8042C50.7619 14.7815 50.7731 14.4548 50.7731 11.8509C50.7731 9.24703 50.7619 8.92105 50.7155 7.89836C50.5589 4.41962 48.6246 2.4813 45.1395 2.32151C44.116 2.27437 43.7892 2.26318 41.1854 2.26318ZM41.1854 6.9276C38.4664 6.9276 36.2621 9.13198 36.2621 11.8509C36.2621 14.5698 38.4664 16.775 41.1854 16.775C43.9043 16.775 46.1087 14.5706 46.1087 11.8509C46.1087 9.13198 43.9043 6.9276 41.1854 6.9276ZM41.1854 15.0468C39.4204 15.0468 37.9895 13.6166 37.9895 11.8509C37.9895 10.086 39.4204 8.65499 41.1854 8.65499C42.9503 8.65499 44.3813 10.086 44.3813 11.8509C44.3813 13.6166 42.9503 15.0468 41.1854 15.0468ZM46.3036 5.58293C45.6676 5.58293 45.1523 6.09827 45.1523 6.73345C45.1523 7.36864 45.6676 7.88398 46.3036 7.88398C46.9388 7.88398 47.4533 7.36864 47.4533 6.73345C47.4533 6.09827 46.9388 5.58293 46.3036 5.58293Z",
-                                fill: "#D2D2D2"
-                            }, void 0, false, {
-                                fileName: "src/components/Footer.js",
-                                lineNumber: 50,
-                                columnNumber: 25
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/Footer.js",
+                            fileName: "src/components/Footer.tsx",
                             lineNumber: 49,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
-                            "clip-path": "url(#clip1_81_1841)",
+                            clipPath: "url(#clip0_81_1841)",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                d: "M41.1854 3.99137C43.7453 3.99137 44.0489 4.00096 45.0604 4.0473C47.6587 4.16554 48.8723 5.39836 48.9906 7.97746C49.0369 8.98816 49.0457 9.29177 49.0457 11.8517C49.0457 14.4124 49.0361 14.7152 48.9906 15.7259C48.8715 18.3026 47.6611 19.5378 45.0604 19.6561C44.0489 19.7024 43.7469 19.712 41.1854 19.712C38.6254 19.712 38.3218 19.7024 37.3111 19.6561C34.7065 19.537 33.4992 18.2986 33.381 15.7251C33.3346 14.7144 33.325 14.4116 33.325 11.8509C33.325 9.29097 33.3354 8.98816 33.381 7.97666C33.5 5.39836 34.7105 4.16475 37.3111 4.0465C38.3226 4.00096 38.6254 3.99137 41.1854 3.99137ZM41.1854 2.26318C38.5815 2.26318 38.2555 2.27437 37.2328 2.32071C33.7509 2.4805 31.8158 4.41243 31.656 7.89756C31.6088 8.92105 31.5977 9.24703 31.5977 11.8509C31.5977 14.4548 31.6088 14.7815 31.6552 15.8042C31.815 19.2862 33.7469 21.2213 37.232 21.3811C38.2555 21.4274 38.5815 21.4386 41.1854 21.4386C43.7892 21.4386 44.116 21.4274 45.1387 21.3811C48.6174 21.2213 50.5573 19.2894 50.7147 15.8042C50.7619 14.7815 50.7731 14.4548 50.7731 11.8509C50.7731 9.24703 50.7619 8.92105 50.7155 7.89836C50.5589 4.41962 48.6246 2.4813 45.1395 2.32151C44.116 2.27437 43.7892 2.26318 41.1854 2.26318ZM41.1854 6.9276C38.4664 6.9276 36.2621 9.13198 36.2621 11.8509C36.2621 14.5698 38.4664 16.775 41.1854 16.775C43.9043 16.775 46.1087 14.5706 46.1087 11.8509C46.1087 9.13198 43.9043 6.9276 41.1854 6.9276ZM41.1854 15.0468C39.4204 15.0468 37.9895 13.6166 37.9895 11.8509C37.9895 10.086 39.4204 8.65499 41.1854 8.65499C42.9503 8.65499 44.3813 10.086 44.3813 11.8509C44.3813 13.6166 42.9503 15.0468 41.1854 15.0468ZM46.3036 5.58293C45.6676 5.58293 45.1523 6.09827 45.1523 6.73345C45.1523 7.36864 45.6676 7.88398 46.3036 7.88398C46.9388 7.88398 47.4533 7.36864 47.4533 6.73345C47.4533 6.09827 46.9388 5.58293 46.3036 5.58293Z",
+                                fill: "#D2D2D2"
+                            }, void 0, false, {
+                                fileName: "src/components/Footer.tsx",
+                                lineNumber: 51,
+                                columnNumber: 25
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Footer.tsx",
+                            lineNumber: 50,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
+                            clipPath: "url(#clip1_81_1841)",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
                                 d: "M78.8828 4.80702C76.0033 4.61048 69.59 4.61127 66.7144 4.80702C63.6008 5.01955 63.2341 6.90034 63.2109 11.8508C63.2341 16.7925 63.5976 18.6812 66.7144 18.8946C69.5908 19.0903 76.0033 19.0911 78.8828 18.8946C81.9965 18.682 82.3632 16.8012 82.3864 11.8508C82.3632 6.90913 81.9996 5.02035 78.8828 4.80702ZM70.4017 15.0467V8.65489L76.7935 11.8452L70.4017 15.0467Z",
                                 fill: "#D2D2D2"
                             }, void 0, false, {
-                                fileName: "src/components/Footer.js",
-                                lineNumber: 53,
+                                fileName: "src/components/Footer.tsx",
+                                lineNumber: 54,
                                 columnNumber: 25
                             }, undefined)
                         }, void 0, false, {
-                            fileName: "src/components/Footer.js",
-                            lineNumber: 52,
+                            fileName: "src/components/Footer.tsx",
+                            lineNumber: 53,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
-                            "clip-path": "url(#clip2_81_1841)",
+                            clipPath: "url(#clip2_81_1841)",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
                                 d: "M110.005 2.26318H98.8191C96.6131 2.26318 94.8242 4.05209 94.8242 6.25806V17.4437C94.8242 19.6497 96.6131 21.4386 98.8191 21.4386H110.005C112.212 21.4386 114 19.6497 114 17.4437V6.25806C114 4.05209 112.212 2.26318 110.005 2.26318ZM101.216 17.4437H98.8191V8.65499H101.216V17.4437ZM100.018 7.64189C99.2457 7.64189 98.6194 7.0107 98.6194 6.23249C98.6194 5.45429 99.2457 4.8231 100.018 4.8231C100.789 4.8231 101.416 5.45429 101.416 6.23249C101.416 7.0107 100.79 7.64189 100.018 7.64189ZM110.804 17.4437H108.407V12.9663C108.407 10.2753 105.211 10.479 105.211 12.9663V17.4437H102.814V8.65499H105.211V10.0652C106.326 7.99903 110.804 7.84643 110.804 12.0434V17.4437Z",
                                 fill: "#D2D2D2"
                             }, void 0, false, {
-                                fileName: "src/components/Footer.js",
-                                lineNumber: 56,
+                                fileName: "src/components/Footer.tsx",
+                                lineNumber: 57,
                                 columnNumber: 25
                             }, undefined)
                         }, void 0, false, {
-                            fileName: "src/components/Footer.js",
-                            lineNumber: 55,
+                            fileName: "src/components/Footer.tsx",
+                            lineNumber: 56,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("defs", {
@@ -36158,13 +36344,13 @@ const Footer = ()=>{
                                         fill: "white",
                                         transform: "translate(31.5977 2.26318)"
                                     }, void 0, false, {
-                                        fileName: "src/components/Footer.js",
-                                        lineNumber: 60,
+                                        fileName: "src/components/Footer.tsx",
+                                        lineNumber: 61,
                                         columnNumber: 29
                                     }, undefined)
                                 }, void 0, false, {
-                                    fileName: "src/components/Footer.js",
-                                    lineNumber: 59,
+                                    fileName: "src/components/Footer.tsx",
+                                    lineNumber: 60,
                                     columnNumber: 25
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("clipPath", {
@@ -36175,13 +36361,13 @@ const Footer = ()=>{
                                         fill: "white",
                                         transform: "translate(63.2109 2.26318)"
                                     }, void 0, false, {
-                                        fileName: "src/components/Footer.js",
-                                        lineNumber: 63,
+                                        fileName: "src/components/Footer.tsx",
+                                        lineNumber: 64,
                                         columnNumber: 29
                                     }, undefined)
                                 }, void 0, false, {
-                                    fileName: "src/components/Footer.js",
-                                    lineNumber: 62,
+                                    fileName: "src/components/Footer.tsx",
+                                    lineNumber: 63,
                                     columnNumber: 25
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("clipPath", {
@@ -36192,30 +36378,30 @@ const Footer = ()=>{
                                         fill: "white",
                                         transform: "translate(94.8242 2.26318)"
                                     }, void 0, false, {
-                                        fileName: "src/components/Footer.js",
-                                        lineNumber: 66,
+                                        fileName: "src/components/Footer.tsx",
+                                        lineNumber: 67,
                                         columnNumber: 29
                                     }, undefined)
                                 }, void 0, false, {
-                                    fileName: "src/components/Footer.js",
-                                    lineNumber: 65,
+                                    fileName: "src/components/Footer.tsx",
+                                    lineNumber: 66,
                                     columnNumber: 25
                                 }, undefined)
                             ]
                         }, void 0, true, {
-                            fileName: "src/components/Footer.js",
-                            lineNumber: 58,
+                            fileName: "src/components/Footer.tsx",
+                            lineNumber: 59,
                             columnNumber: 21
                         }, undefined)
                     ]
                 }, void 0, true, {
-                    fileName: "src/components/Footer.js",
-                    lineNumber: 47,
+                    fileName: "src/components/Footer.tsx",
+                    lineNumber: 48,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
-                fileName: "src/components/Footer.js",
-                lineNumber: 45,
+                fileName: "src/components/Footer.tsx",
+                lineNumber: 46,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36226,38 +36412,38 @@ const Footer = ()=>{
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                                 children: column.title
                             }, void 0, false, {
-                                fileName: "src/components/Footer.js",
-                                lineNumber: 77,
+                                fileName: "src/components/Footer.tsx",
+                                lineNumber: 78,
                                 columnNumber: 25
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                                 children: column.items.map((item, idx)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                                         children: item
                                     }, idx, false, {
-                                        fileName: "src/components/Footer.js",
-                                        lineNumber: 80,
+                                        fileName: "src/components/Footer.tsx",
+                                        lineNumber: 81,
                                         columnNumber: 33
                                     }, undefined))
                             }, void 0, false, {
-                                fileName: "src/components/Footer.js",
-                                lineNumber: 78,
+                                fileName: "src/components/Footer.tsx",
+                                lineNumber: 79,
                                 columnNumber: 25
                             }, undefined)
                         ]
                     }, index, true, {
-                        fileName: "src/components/Footer.js",
-                        lineNumber: 76,
+                        fileName: "src/components/Footer.tsx",
+                        lineNumber: 77,
                         columnNumber: 21
                     }, undefined))
             }, void 0, false, {
-                fileName: "src/components/Footer.js",
-                lineNumber: 74,
+                fileName: "src/components/Footer.tsx",
+                lineNumber: 75,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/Footer.js",
-        lineNumber: 44,
+        fileName: "src/components/Footer.tsx",
+        lineNumber: 45,
         columnNumber: 9
     }, undefined);
 };
@@ -36266,7 +36452,7 @@ exports.default = Footer;
 var _c;
 $RefreshReg$(_c, "Footer");
 
-  $parcel$ReactRefreshHelpers$bc7c.postlude(module);
+  $parcel$ReactRefreshHelpers$b676.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;

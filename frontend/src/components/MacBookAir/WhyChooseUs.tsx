@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../public/static/css/WhyChooseUs.css';
+import '../../../public/static/css/MacBookAir/Cards.css';
 
 import clientImg from '../../../public/static/img/chooseUs/client.png';
 import consultationImg from '../../../public/static/img/chooseUs/consultation.png';
@@ -10,8 +10,14 @@ import qualityImg from '../../../public/static/img/chooseUs/quality.png';
 import reportingImg from '../../../public/static/img/chooseUs/reporting.png';
 import researchImg from '../../../public/static/img/chooseUs/research.png';
 
-const WhyChooseUs = () => {
-    const services = [
+interface Service {
+    image: string;
+    title: string;
+    description: string;
+}
+
+const WhyChooseUs: React.FC = () => {
+    const services: Service[] = [
         {
             image: consultationImg,
             title: 'Consultation',

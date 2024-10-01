@@ -2,7 +2,7 @@ import React from 'react';
 import '../../public/static/css/Navigation.css';
 
 
-const Navigation = () => {
+const Navigation:React.FC = () => {
     return (
         <nav className="navbar">
             <div className="brand">

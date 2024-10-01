@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../public/static/css/Services.css';
+import '../../../public/static/css/MacBookAir/Cards.css';
 
 import webDevImg from '../../../public/static/img/services/webDev.png';
 import designImg from '../../../public/static/img/services/design.png';
@@ -8,9 +8,14 @@ import resumeImg from '../../../public/static/img/services/resume.png';
 import sofwareImg from '../../../public/static/img/services/software.png';
 import linkedInImg from '../../../public/static/img/services/linkedIn.png';
 
+interface Service {
+    image: string;
+    category: string;
+    description: string;
+}
 
-const Services = () => {
-    const services = [
+const Services: React.FC = () => {
+    const services: Service[] = [
         {
             image: webDevImg,
             category: 'Web Development',

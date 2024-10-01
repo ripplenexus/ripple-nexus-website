@@ -1,0 +1,146 @@
+.cover-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25em;
+    background-color: #A9E841;
+    position: relative;
+    transition: all 0.5s linear;
+}
+
+.text-section {
+    flex: 1.40;
+    padding: 1.25em;
+}
+
+.text-section h1 {
+    font-size: 5em;
+    text-align: center;
+    margin-bottom: 0.4em;
+    transition: inherit;
+}
+
+.text-section p {
+    font-size: 1.5em;
+    text-align: left;
+    margin-bottom: 20px;
+    transition: inherit;
+}
+
+.cta-section {
+    display: flex;
+    align-items: center;
+    gap: 1.25em;
+}
+
+.cta-button {
+    font-size: 1.1em;
+    padding: 0.7em 1.5em;
+    background-color: #457FD7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: inherit;
+}
+
+.cta-button:hover {
+    background-color: #1c62cc;
+    transition: inherit;
+}
+
+.cta-section-info {
+    display: flex;
+}
+
+.info-box {
+    padding: 0.7em;
+    border-radius: 0.28em;
+    box-shadow: 0 0 0.7em rgba(0, 0, 0, 0.1);
+    transition: inherit;
+}
+
+.info-box h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    transition: inherit;
+}
+
+.info-box p {
+    font-size: 1em;
+    transition: inherit;
+}
+
+.svg-section {
+    flex: 1;
+    width: 35%;
+    padding: 1.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .cover-container {
+        flex-direction: column;
+        padding: 0.5em;
+    }
+
+    .text-section h1 {
+        font-size: 2.5em;
+    }
+
+    .text-section p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        font-size: 1em;
+    }
+
+    .svg-section {
+        margin-top: 1.25em;
+        position: absolute;
+        right: 0.2em;
+        bottom: 0;
+        padding: 0em;
+        width: 8em;
+        height: 8em;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .info-box {
+        padding: 0.4em;
+        max-width: 4em;
+    }
+
+    .info-box h2 {
+        font-size: 0.9em;
+    }
+
+    .info-box p {
+        font-size: 0.6em;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .text-section {
+        padding: 0.5em;
+    }
+
+    .cta-section {
+        flex-wrap: wrap;
+    }
+
+    .svg-section {
+        left: 28vw;
+        top: 15%;
+        width: 50vw;
+        height: 50vw;
+        opacity: 0.1;
+    }
+
+}
