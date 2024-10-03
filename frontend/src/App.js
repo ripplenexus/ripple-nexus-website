@@ -4,7 +4,8 @@ import ErrorPage from "./components/ErrorPage";
 import Homepage from "./components/MacBookAir/Homepage"
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
-
+import ServicePage from "./components/ServicePage/ServicePage";
+import ApplyNow from "./components/ApplyNow/ApplyNow"
 const App = () => {
 
     return (
@@ -27,6 +28,14 @@ const appRouter = createBrowserRouter([
                 path: "/",
                 element: <Homepage />
             },
+            {
+                path: "/services",
+                element: <ServicePage />
+            },
+            {
+                path: "/apply",
+                element: <ApplyNow />
+            }
         ]
 
     },

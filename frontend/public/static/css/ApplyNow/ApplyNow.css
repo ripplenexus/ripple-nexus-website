@@ -1,0 +1,48 @@
+.Interested-in-our-mission {
+    /* border: 1px solid white; */
+    width: 50%;
+    margin: 0.5em auto;
+    font-family: Poppins;
+    font-size: 59.4px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--white);
+}
+
+.apply-now-container {
+    /* border: 1px solid white; */
+    width: 80%;
+    margin-bottom: 2em;
+}
+
+.Apply-now {
+    /* border: 1px solid white; */
+    margin: 0 auto;
+    font-family: Poppins;
+    font-size: 46.8px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--white);
+}
+
+.Interested-in-our-mission-p {
+    /* border: 1px solid white; */
+    width: 60%;
+    font-family: Poppins;
+    font-size: 21.1px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--white);
+}

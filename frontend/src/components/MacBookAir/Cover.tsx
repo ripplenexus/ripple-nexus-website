@@ -1,10 +1,9 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import '../../../public/static/css/MacBookAir/HomeCover.css';
 
 
 const MainCover: React.FC = () => {
-    const navigate = useNavigate();
+    
     return (
         <div className="cover-container">
             <div className="text-section">
@@ -14,7 +13,7 @@ const MainCover: React.FC = () => {
                 </p>
                 <div className="cta-section">
                     <a href='#contact-us'>
-                    <button className="cta-button" >Get Started</button>
+                    <button className="cta-button" ><label>Get Started</label></button>
                     </a>
                     <div className='cta-section-info'>
                     <div className="info-box">
@@ -29,7 +28,7 @@ const MainCover: React.FC = () => {
                 </div>
             </div>
             <div className="svg-section">
-                <svg width="469" height="374" viewBox="0 0 469 374" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg  viewBox="0 0 469 374" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M245.148 283.792L259.022 279.918L254.974 293.105L259.022 306.256L245.148 302.419L231.234 306.256L235.322 293.105L231.234 279.918L245.148 283.792Z" fill="black" stroke="white" strokeWidth="0.78826" strokeMiterlimit="10" />
                     <path d="M98.4909 218.773L123.302 231.586L98.4909 244.502L84.918 267.967L71.3451 244.502L46.5338 231.586L71.3451 218.773L84.918 195.205L98.4909 218.773Z" fill="black" stroke="white" strokeWidth="0.78826" strokeMiterlimit="10" />
                     <path d="M445.035 274.942C443.538 277.657 440.749 279.62 436.732 280.838C432.714 282.057 427.502 282.517 421.226 282.246C408.677 281.705 391.964 278.245 372.246 272.21C332.817 260.142 281.453 237.801 227.505 208.044C173.557 178.287 127.26 146.758 96.0189 119.845C80.396 106.387 68.5547 94.0963 61.4023 83.7703C57.8257 78.6066 55.4346 73.9526 54.3217 69.9037C53.2093 65.8567 53.3824 62.4501 54.8798 59.7354C56.3772 57.0208 59.1663 55.0571 63.1827 53.8392C67.2011 52.6206 72.4131 52.1604 78.6887 52.4312C91.2382 52.9725 107.951 56.432 127.668 62.467C167.098 74.535 218.462 96.8761 272.41 126.633C326.358 156.391 372.655 187.919 403.896 214.832C419.519 228.29 431.36 240.581 438.513 250.907C442.089 256.071 444.48 260.725 445.593 264.774C446.706 268.821 446.532 272.227 445.035 274.942Z" stroke="black" strokeWidth="0.78826" />

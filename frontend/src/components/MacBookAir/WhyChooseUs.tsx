@@ -21,42 +21,42 @@ const WhyChooseUs: React.FC = () => {
         {
             image: consultationImg,
             title: 'Consultation',
-            description: 'Providing expert advice to help you achieve your goals.'
+            description: 'Initial consultation to discuss business goals, target audience, and current marketing efforts'
         },
         {
             image: researchImg,
             title: 'Research',
-            description: 'Conducting thorough research to inform our strategies.'
+            description: 'Research and strategy development for informed decisions and long-term growth.'
         },
         {
             image: implementationImg,
             title: 'Implementation',
-            description: 'Executing plans with precision and efficiency.'
+            description: 'Initial consultation to discuss business goals, target audience, and current marketing efforts.'
         },
         {
             image: monitoringImg,
             title: 'Monitoring',
-            description: 'Keeping track of progress to ensure success.'
+            description: 'Precise implementation to transform ideas into tangible results.'
         },
         {
             image: reportingImg,
             title: 'Reporting',
-            description: 'Providing detailed reports on our activities and outcomes.'
+            description: 'Clear reports and open communication to keep you informed.'
         },
         {
             image: improvementImg,
             title: 'Improvement',
-            description: 'Continuously improving our processes and services.'
+            description: 'Continual improvement for sustained success.'
         },
         {
             image: qualityImg,
             title: 'Quality',
-            description: 'Ensuring the highest quality in everything we do.'
+            description: 'We deliver high-quality services with attention to detail, ensuring every project is executed flawlessly.'
         },
         {
             image: clientImg,
             title: 'Client Priority',
-            description: 'Putting our clients first in all our endeavors.'
+            description: 'Your goals are our priority. We tailor solutions to your needs, working closely to ensure your satisfaction and success.'
         }
     ];
 

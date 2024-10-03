@@ -1,24 +1,24 @@
-/* Basic reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    /* background-color: #1e3c72; */
+    padding: 0.625em 1.25em;
     color: white;
+    /* border: 2px solid black */
 }
 
 .brand {
-    font-family: Futura Md BT;
-    color: #4A4A4A;
-    font-size: 1.5em;
-    font-weight: bold;
+    margin-left: 1.6em;
+    font-family: "FuturaMdBT", "Futura Md BT Medium", "Nunito Sans", sans-serif;
+    font-size: 3.10625rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: -0.061875rem;
+    text-align: center;
+    color: #4a4a4a;
+
 }
 
 .brand .green {
@@ -27,14 +27,20 @@
 
 .nav-right {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    gap: 2.21875em;
+    margin: auto 6.50625em;
+    padding: 0;
+    /* border: 2px solid black; */
 }
 
 .nav-menu {
     list-style: none;
     display: flex;
-    gap: 20px;
-    margin-right: 20px;
+    gap: 1.25em;
+    margin-right: 1.25em;
 }
 
 .nav-menu li {
@@ -42,19 +48,45 @@
 }
 
 .nav-menu a {
-    color: black;
-    font-family: Poppins;
+    flex-grow: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.10625em;
     font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
     text-decoration: none;
-    font-size: 1em;
 }
 
 .quote-button {
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    flex-grow: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.55625em;
+    padding: 1.10625em 1.9375em;
+    border-radius: 0.5em;
+    /* border: solid 0.05625em black; */
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.quote-button label {
+    flex-grow: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.10625em;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+
     cursor: pointer;
 }
 
@@ -62,17 +94,28 @@
     background-color: #45a049;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+    .brand {
+        margin: auto;
+        font-size: 2em;
+    }
+
     .nav-menu {
         display: none;
     }
+
 
     .navbar {
         flex-direction: column;
     }
 
+    .nav-right {
+        margin: auto;
+    }
+
     .quote-button {
-        margin-top: 10px;
+        margin-top: 0.625em;
+        padding: 0.5em 1em;
+
     }
 }

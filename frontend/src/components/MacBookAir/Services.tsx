@@ -18,33 +18,33 @@ const Services: React.FC = () => {
     const services: Service[] = [
         {
             image: webDevImg,
-            category: 'Web Development',
-            description: 'Building responsive and high-performance websites.'
+            category: 'Website Development',
+            description: 'We create personalized portfolio and blog websites with clean, responsive designs that showcase your work and ideas effectively.'
         },
         {
             image: designImg,
             category: 'UI/UX Design',
-            description: 'Creating intuitive and engaging user interfaces.'
+            description: 'We design user-friendly interfaces that are both visually appealling and easy to navigate, ensuring a seamless experience for your users.'
         },
         {
             image: graphicsImg,
             category: 'Graphic Design',
-            description: 'Designing visually appealing graphics and logos.'
+            description: 'Providing professional graphic and logo design services to elevate your brand\'s visual identity, ensuring a memorable and impactful presence.'
         },
         {
             image: resumeImg,
             category: 'Resume/CV Writing',
-            description: 'Crafting professional resumes and CVs.'
-        },
-        {
-            image: linkedInImg,
-            category: 'LinkedIn Optimization',
-            description: 'Enhancing LinkedIn profiles for better visibility.'
+            description: 'Professional Resume/CV Writing:\n Crafting standout resumes that showcase your skills and experience to land your dream job.'
         },
         {
             image: sofwareImg,
             category: 'Software Development',
-            description: 'Enhancing LinkedIn profiles for better visibility.'
+            description: 'We provide full software development services, from desing to deployment, to help achieve your business goals.'
+        },
+        {
+            image: linkedInImg,
+            category: 'LinkedIn Optimization',
+            description: 'LinkedIn Profile Optimization: Enhancing your profile to attract recruiters and boost your professional presence online.'
         }
     ];
 
