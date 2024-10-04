@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';  // Import Link for routing
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faYoutube, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
@@ -59,7 +60,12 @@ const Footer: React.FC = () => {
           <div className="footer-column">
             <h4 className="text-xl font-semibold mb-7">Resources</h4>
             <ul className="list-none text-sm space-y-2">
-              <li>Blog</li>
+              {/* Blog Link */}
+              <li>
+                <Link to="/blog" className="hover:underline">
+                  Blog
+                </Link>
+              </li>
               <li>Best Practices</li>
               <li>Colors</li>
               <li>Color Wheel</li>

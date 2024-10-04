@@ -11,9 +11,10 @@ const CompanyVision: React.FC = () => {
       />
       <div className="flex flex-col items-center justify-center relative py-5 px-5 text-black">
         <div className="w-full min-h-[500px] text-center lg:text-left pt-16 pl-10 lg:pl-24 bg-opacity-80">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-            Company Vision
-          </h2>
+        <h2 className="w-[394px] h-[70px] ml-0 mr-[640px] mb-[18px] text-[46.8px] font-semibold font-poppins text-left text-black">
+  Company Vision
+</h2>
+
           <p className="text-lg sm:text-xl md:text-2xl lg:w-3/4 w-full mt-4">
             I chose the name <span className="font-semibold">‘Ripple Nexus’</span> to reflect our core philosophy and strategic vision.
             The 'Ripple' symbolizes our belief in the power of small, thoughtful actions to create waves of significant change. 
