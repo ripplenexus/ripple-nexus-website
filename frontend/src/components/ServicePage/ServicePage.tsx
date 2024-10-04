@@ -1,13 +1,13 @@
 import React from 'react';
 import ServiceCover from './ServiceCover';
-import Services from '../MacBookAir/Services';
+import ServicesCards from '../MacBookAir/ServicesCards';
 
 const ServicePage: React.FC = ()=>{
 
     return(
         <>
             <ServiceCover/>
-            <Services/>
+            <ServicesCards/>
         </>
     )
 }

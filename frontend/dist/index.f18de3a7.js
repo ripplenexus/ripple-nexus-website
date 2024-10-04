@@ -27241,29 +27241,31 @@ var _servicePage = require("./components/ServicePage/ServicePage");
 var _servicePageDefault = parcelHelpers.interopDefault(_servicePage);
 var _applyNow = require("./components/ApplyNow/ApplyNow");
 var _applyNowDefault = parcelHelpers.interopDefault(_applyNow);
+var _services = require("./components/Services/Services");
+var _servicesDefault = parcelHelpers.interopDefault(_services);
 const App = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navigationDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 14,
+                    lineNumber: 15,
                     columnNumber: 17
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 15,
+                    lineNumber: 16,
                     columnNumber: 17
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 16,
+                    lineNumber: 17,
                     columnNumber: 17
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/App.js",
-            lineNumber: 13,
+            lineNumber: 14,
             columnNumber: 13
         }, undefined)
     }, void 0, false);
@@ -27274,7 +27276,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 25,
+            lineNumber: 26,
             columnNumber: 18
         }, undefined),
         children: [
@@ -27282,7 +27284,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homepageDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 29,
+                    lineNumber: 30,
                     columnNumber: 26
                 }, undefined)
             },
@@ -27290,15 +27292,26 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/services",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _servicePageDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 33,
+                    lineNumber: 34,
                     columnNumber: 26
                 }, undefined)
+            },
+            {
+                path: "/services/:category",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _servicesDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 38,
+                    columnNumber: 26
+                }, undefined),
+                loader: ({ params })=>({
+                        category: params.category
+                    })
             },
             {
                 path: "/apply",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _applyNowDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 37,
+                    lineNumber: 43,
                     columnNumber: 26
                 }, undefined)
             }
@@ -27307,7 +27320,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
     {
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorPageDefault.default), {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 43,
+            lineNumber: 48,
             columnNumber: 23
         }, undefined)
     }
@@ -27321,7 +27334,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","./components/ErrorPage":"eiSpk","./components/MacBookAir/Homepage":"1hryW","./components/Navigation":"94qj3","./components/Footer":"eHp76","./components/ServicePage/ServicePage":"4ANHq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/ApplyNow/ApplyNow":"hefKW"}],"9xmpe":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","./components/ErrorPage":"eiSpk","./components/MacBookAir/Homepage":"1hryW","./components/Navigation":"94qj3","./components/Footer":"eHp76","./components/ServicePage/ServicePage":"4ANHq","./components/ApplyNow/ApplyNow":"hefKW","./components/Services/Services":"8ZzqD","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xmpe":[function(require,module,exports) {
 /**
  * React Router DOM v6.26.2
  *
@@ -34735,8 +34748,8 @@ var _contacts = require("./Contacts");
 var _contactsDefault = parcelHelpers.interopDefault(_contacts);
 var _cover = require("./Cover");
 var _coverDefault = parcelHelpers.interopDefault(_cover);
-var _services = require("./Services");
-var _servicesDefault = parcelHelpers.interopDefault(_services);
+var _servicesCards = require("./ServicesCards");
+var _servicesCardsDefault = parcelHelpers.interopDefault(_servicesCards);
 var _whyChooseUs = require("./WhyChooseUs");
 var _whyChooseUsDefault = parcelHelpers.interopDefault(_whyChooseUs);
 const Homepage = ()=>{
@@ -34747,7 +34760,7 @@ const Homepage = ()=>{
                 lineNumber: 10,
                 columnNumber: 13
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _servicesDefault.default), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _servicesCardsDefault.default), {}, void 0, false, {
                 fileName: "src/components/MacBookAir/Homepage.tsx",
                 lineNumber: 11,
                 columnNumber: 13
@@ -34775,7 +34788,7 @@ $RefreshReg$(_c, "Homepage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Contacts":"5NXtd","./Cover":"jdVTP","./Services":"78m7q","./WhyChooseUs":"2m5jK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5NXtd":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Contacts":"5NXtd","./Cover":"jdVTP","./ServicesCards":"g4SVJ","./WhyChooseUs":"2m5jK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5NXtd":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0179 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -35153,7 +35166,7 @@ $RefreshReg$(_c, "Contacts");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../../public/static/css/MacBookAir/Contact.css":"1Iwjt","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../ContactInfo":"i1FmJ"}],"1Iwjt":[function() {},{}],"i1FmJ":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../../public/static/css/MacBookAir/Contact.css":"1Iwjt","../ContactInfo":"i1FmJ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1Iwjt":[function() {},{}],"i1FmJ":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$eba2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -35789,11 +35802,11 @@ $RefreshReg$(_c, "MainCover");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../../public/static/css/MacBookAir/HomeCover.css":"81gqa","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"81gqa":[function() {},{}],"78m7q":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$32e5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../../public/static/css/MacBookAir/HomeCover.css":"81gqa","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"81gqa":[function() {},{}],"g4SVJ":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$248d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$32e5.prelude(module);
+$parcel$ReactRefreshHelpers$248d.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -35801,6 +35814,7 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
 var _cardsCss = require("../../../public/static/css/MacBookAir/Cards.css");
 var _webDevPng = require("../../../public/static/img/services/webDev.png");
 var _webDevPngDefault = parcelHelpers.interopDefault(_webDevPng);
@@ -35814,105 +35828,124 @@ var _softwarePng = require("../../../public/static/img/services/software.png");
 var _softwarePngDefault = parcelHelpers.interopDefault(_softwarePng);
 var _linkedInPng = require("../../../public/static/img/services/linkedIn.png");
 var _linkedInPngDefault = parcelHelpers.interopDefault(_linkedInPng);
-const Services = ()=>{
+var _s = $RefreshSig$();
+const ServicesCards = ()=>{
+    _s();
+    const navigate = (0, _reactRouterDom.useNavigate)();
     const services = [
         {
+            service: "website",
             image: (0, _webDevPngDefault.default),
             category: "Website Development",
             description: "We create personalized portfolio and blog websites with clean, responsive designs that showcase your work and ideas effectively."
         },
         {
+            service: "design",
             image: (0, _designPngDefault.default),
             category: "UI/UX Design",
             description: "We design user-friendly interfaces that are both visually appealling and easy to navigate, ensuring a seamless experience for your users."
         },
         {
+            service: "graphic",
             image: (0, _graphicsPngDefault.default),
             category: "Graphic Design",
             description: "Providing professional graphic and logo design services to elevate your brand's visual identity, ensuring a memorable and impactful presence."
         },
         {
+            service: "resume",
             image: (0, _resumePngDefault.default),
             category: "Resume/CV Writing",
             description: "Professional Resume/CV Writing:\n Crafting standout resumes that showcase your skills and experience to land your dream job."
         },
         {
+            service: "software",
             image: (0, _softwarePngDefault.default),
             category: "Software Development",
             description: "We provide full software development services, from desing to deployment, to help achieve your business goals."
         },
         {
+            service: "linkedIn",
             image: (0, _linkedInPngDefault.default),
             category: "LinkedIn Optimization",
             description: "LinkedIn Profile Optimization: Enhancing your profile to attract recruiters and boost your professional presence online."
         }
     ];
+    const handleClick = (url)=>{
+        navigate(`/services/${url}`);
+        window.scroll(0, 0);
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "services-container",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 children: "Services"
             }, void 0, false, {
-                fileName: "src/components/MacBookAir/Services.tsx",
-                lineNumber: 53,
+                fileName: "src/components/MacBookAir/ServicesCards.tsx",
+                lineNumber: 62,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "services-grid",
                 children: services.map((service, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "service-card",
+                        onClick: ()=>handleClick(service.service),
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                                 src: service.image,
                                 alt: service.category
                             }, void 0, false, {
-                                fileName: "src/components/MacBookAir/Services.tsx",
-                                lineNumber: 57,
+                                fileName: "src/components/MacBookAir/ServicesCards.tsx",
+                                lineNumber: 67,
                                 columnNumber: 25
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                                 children: service.category
                             }, void 0, false, {
-                                fileName: "src/components/MacBookAir/Services.tsx",
-                                lineNumber: 58,
+                                fileName: "src/components/MacBookAir/ServicesCards.tsx",
+                                lineNumber: 68,
                                 columnNumber: 25
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                 children: service.description
                             }, void 0, false, {
-                                fileName: "src/components/MacBookAir/Services.tsx",
-                                lineNumber: 59,
+                                fileName: "src/components/MacBookAir/ServicesCards.tsx",
+                                lineNumber: 69,
                                 columnNumber: 25
                             }, undefined)
                         ]
                     }, index, true, {
-                        fileName: "src/components/MacBookAir/Services.tsx",
-                        lineNumber: 56,
+                        fileName: "src/components/MacBookAir/ServicesCards.tsx",
+                        lineNumber: 66,
                         columnNumber: 21
                     }, undefined))
             }, void 0, false, {
-                fileName: "src/components/MacBookAir/Services.tsx",
-                lineNumber: 54,
+                fileName: "src/components/MacBookAir/ServicesCards.tsx",
+                lineNumber: 63,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/MacBookAir/Services.tsx",
-        lineNumber: 52,
+        fileName: "src/components/MacBookAir/ServicesCards.tsx",
+        lineNumber: 61,
         columnNumber: 9
     }, undefined);
 };
-_c = Services;
-exports.default = Services;
+_s(ServicesCards, "CzcTeTziyjMsSrAVmHuCCb6+Bfg=", false, function() {
+    return [
+        (0, _reactRouterDom.useNavigate)
+    ];
+});
+_c = ServicesCards;
+exports.default = ServicesCards;
 var _c;
-$RefreshReg$(_c, "Services");
+$RefreshReg$(_c, "ServicesCards");
 
-  $parcel$ReactRefreshHelpers$32e5.postlude(module);
+  $parcel$ReactRefreshHelpers$248d.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../../public/static/css/MacBookAir/Cards.css":"cueQJ","../../../public/static/img/services/webDev.png":"9jnyJ","../../../public/static/img/services/design.png":"6oCyo","../../../public/static/img/services/graphics.png":"gTai3","../../../public/static/img/services/resume.png":"iMdSr","../../../public/static/img/services/software.png":"6Ui6P","../../../public/static/img/services/linkedIn.png":"9slsB","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cueQJ":[function() {},{}],"9jnyJ":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../../../public/static/css/MacBookAir/Cards.css":"cueQJ","../../../public/static/img/services/webDev.png":"9jnyJ","../../../public/static/img/services/design.png":"6oCyo","../../../public/static/img/services/graphics.png":"gTai3","../../../public/static/img/services/resume.png":"iMdSr","../../../public/static/img/services/software.png":"6Ui6P","../../../public/static/img/services/linkedIn.png":"9slsB","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cueQJ":[function() {},{}],"9jnyJ":[function(require,module,exports) {
 module.exports = require("629129c0d75dd6c7").getBundleURL("h7qW7") + "webDev.01d69358.png" + "?" + Date.now();
 
 },{"629129c0d75dd6c7":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -36522,8 +36555,8 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _serviceCover = require("./ServiceCover");
 var _serviceCoverDefault = parcelHelpers.interopDefault(_serviceCover);
-var _services = require("../MacBookAir/Services");
-var _servicesDefault = parcelHelpers.interopDefault(_services);
+var _servicesCards = require("../MacBookAir/ServicesCards");
+var _servicesCardsDefault = parcelHelpers.interopDefault(_servicesCards);
 const ServicePage = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
@@ -36532,7 +36565,7 @@ const ServicePage = ()=>{
                 lineNumber: 9,
                 columnNumber: 13
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _servicesDefault.default), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _servicesCardsDefault.default), {}, void 0, false, {
                 fileName: "src/components/ServicePage/ServicePage.tsx",
                 lineNumber: 10,
                 columnNumber: 13
@@ -36550,7 +36583,7 @@ $RefreshReg$(_c, "ServicePage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./ServiceCover":"gGHvT","../MacBookAir/Services":"78m7q","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gGHvT":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./ServiceCover":"gGHvT","../MacBookAir/ServicesCards":"g4SVJ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gGHvT":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$ea9b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -37051,6 +37084,563 @@ $RefreshReg$(_c, "ApplyNow");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../ContactInfo":"i1FmJ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../../public/static/css/ApplyNow/ApplyNow.css":"9AHTF"}],"9AHTF":[function() {},{}]},["e73Eh","1xC6H","7SwCM"], "7SwCM", "parcelRequire10c2")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../ContactInfo":"i1FmJ","../../../public/static/css/ApplyNow/ApplyNow.css":"9AHTF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9AHTF":[function() {},{}],"8ZzqD":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$4237 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$4237.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+var _category = require("./Category");
+var _categoryDefault = parcelHelpers.interopDefault(_category);
+var _servicesCss = require("../../../public/static/css/Services.css");
+var _s = $RefreshSig$();
+const Services = ()=>{
+    _s();
+    const { category } = (0, _reactRouterDom.useLoaderData)();
+    const categoryData = (0, _categoryDefault.default)[category];
+    if (!categoryData) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            "Category not found:",
+            category
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Services/Services.tsx",
+        lineNumber: 16,
+        columnNumber: 16
+    }, undefined);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "services-category",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
+                className: "cover-section",
+                style: {
+                    backgroundColor: `${categoryData.cover.color}`
+                },
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "cover-group",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "cover-content",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                    className: "cover-main-heading",
+                                    children: categoryData.cover.mainHeading
+                                }, void 0, false, {
+                                    fileName: "src/components/Services/Services.tsx",
+                                    lineNumber: 24,
+                                    columnNumber: 25
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                    className: "cover-sub-heading",
+                                    children: categoryData.cover.subHeading
+                                }, void 0, false, {
+                                    fileName: "src/components/Services/Services.tsx",
+                                    lineNumber: 25,
+                                    columnNumber: 25
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                    className: "cover-description",
+                                    children: categoryData.cover.description
+                                }, void 0, false, {
+                                    fileName: "src/components/Services/Services.tsx",
+                                    lineNumber: 26,
+                                    columnNumber: 25
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                                    className: "cover-list",
+                                    children: categoryData.cover.list.map((item, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                            className: "cover-list-item",
+                                            children: item
+                                        }, index, false, {
+                                            fileName: "src/components/Services/Services.tsx",
+                                            lineNumber: 29,
+                                            columnNumber: 33
+                                        }, undefined))
+                                }, void 0, false, {
+                                    fileName: "src/components/Services/Services.tsx",
+                                    lineNumber: 27,
+                                    columnNumber: 25
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/Services/Services.tsx",
+                            lineNumber: 23,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "cover-image",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                src: categoryData.cover.image,
+                                alt: categoryData.cover.mainHeading
+                            }, void 0, false, {
+                                fileName: "src/components/Services/Services.tsx",
+                                lineNumber: 34,
+                                columnNumber: 21
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Services/Services.tsx",
+                            lineNumber: 33,
+                            columnNumber: 21
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Services/Services.tsx",
+                    lineNumber: 22,
+                    columnNumber: 17
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/Services/Services.tsx",
+                lineNumber: 21,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
+                className: "body-section",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "body-content",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                className: "body-heading",
+                                children: categoryData.body.heading
+                            }, void 0, false, {
+                                fileName: "src/components/Services/Services.tsx",
+                                lineNumber: 41,
+                                columnNumber: 21
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "body-description",
+                                children: categoryData.body.description
+                            }, void 0, false, {
+                                fileName: "src/components/Services/Services.tsx",
+                                lineNumber: 42,
+                                columnNumber: 21
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                className: "body-button",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                    children: categoryData.body.buttonText
+                                }, void 0, false, {
+                                    fileName: "src/components/Services/Services.tsx",
+                                    lineNumber: 43,
+                                    columnNumber: 53
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/Services/Services.tsx",
+                                lineNumber: 43,
+                                columnNumber: 21
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Services/Services.tsx",
+                        lineNumber: 40,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        className: "body-image",
+                        src: categoryData.body.image,
+                        alt: categoryData.body.heading
+                    }, void 0, false, {
+                        fileName: "src/components/Services/Services.tsx",
+                        lineNumber: 45,
+                        columnNumber: 17
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Services/Services.tsx",
+                lineNumber: 39,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
+                className: "services-section",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        className: "services-heading",
+                        children: categoryData.servicesDescription.heading
+                    }, void 0, false, {
+                        fileName: "src/components/Services/Services.tsx",
+                        lineNumber: 49,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                        className: "services-list",
+                        children: categoryData.servicesDescription.services.map((service, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                className: "services-list-item",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        className: "service-subheading",
+                                        children: service.subheading
+                                    }, void 0, false, {
+                                        fileName: "src/components/Services/Services.tsx",
+                                        lineNumber: 53,
+                                        columnNumber: 29
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        className: "service-description",
+                                        children: service.description
+                                    }, void 0, false, {
+                                        fileName: "src/components/Services/Services.tsx",
+                                        lineNumber: 54,
+                                        columnNumber: 29
+                                    }, undefined)
+                                ]
+                            }, index, true, {
+                                fileName: "src/components/Services/Services.tsx",
+                                lineNumber: 52,
+                                columnNumber: 25
+                            }, undefined))
+                    }, void 0, false, {
+                        fileName: "src/components/Services/Services.tsx",
+                        lineNumber: 50,
+                        columnNumber: 17
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Services/Services.tsx",
+                lineNumber: 48,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Services/Services.tsx",
+        lineNumber: 20,
+        columnNumber: 9
+    }, undefined);
+};
+_s(Services, "1quylHW4VqSQLvj0Ax2tOGUcVXY=", false, function() {
+    return [
+        (0, _reactRouterDom.useLoaderData)
+    ];
+});
+_c = Services;
+exports.default = Services;
+var _c;
+$RefreshReg$(_c, "Services");
+
+  $parcel$ReactRefreshHelpers$4237.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","./Category":"kh2vH","../../../public/static/css/Services.css":"hI2N5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kh2vH":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _webCoverPng = require("../../../public/static/img/services/webCover.png");
+var _webCoverPngDefault = parcelHelpers.interopDefault(_webCoverPng);
+var _designCoverPng = require("../../../public/static/img/services/designCover.png");
+var _designCoverPngDefault = parcelHelpers.interopDefault(_designCoverPng);
+var _graphicsCoverPng = require("../../../public/static/img/services/graphicsCover.png");
+var _graphicsCoverPngDefault = parcelHelpers.interopDefault(_graphicsCoverPng);
+var _resumeCoverPng = require("../../../public/static/img/services/resumeCover.png");
+var _resumeCoverPngDefault = parcelHelpers.interopDefault(_resumeCoverPng);
+var _softwareCoverPng = require("../../../public/static/img/services/softwareCover.png");
+var _softwareCoverPngDefault = parcelHelpers.interopDefault(_softwareCoverPng);
+var _linkedInCoverPng = require("../../../public/static/img/services/linkedInCover.png");
+var _linkedInCoverPngDefault = parcelHelpers.interopDefault(_linkedInCoverPng);
+var _webDevPng = require("../../../public/static/img/services/webDev.png");
+var _webDevPngDefault = parcelHelpers.interopDefault(_webDevPng);
+var _designPng = require("../../../public/static/img/services/design.png");
+var _designPngDefault = parcelHelpers.interopDefault(_designPng);
+var _graphicsPng = require("../../../public/static/img/services/graphics.png");
+var _graphicsPngDefault = parcelHelpers.interopDefault(_graphicsPng);
+var _resumePng = require("../../../public/static/img/services/resume.png");
+var _resumePngDefault = parcelHelpers.interopDefault(_resumePng);
+var _softwarePng = require("../../../public/static/img/services/software.png");
+var _softwarePngDefault = parcelHelpers.interopDefault(_softwarePng);
+var _linkedInPng = require("../../../public/static/img/services/linkedIn.png");
+var _linkedInPngDefault = parcelHelpers.interopDefault(_linkedInPng);
+const categories = {
+    "website": {
+        cover: {
+            mainHeading: "Website Development",
+            subHeading: "What is web development?",
+            description: "Web Development refers to the process of building and maintaining websites. It involves a combination of coding, design, and technical skills to create websites that are functional, user-friendly, and visually appealing. Web development typically includes two main areas:",
+            list: [
+                "Front-End Development: This focuses on the part of the website that users interact with, including the design, layout, and navigation. Front-end developers use languages like HTML, CSS, and JavaScript to create responsive and engaging websites.",
+                "Back-End Development: This handles the server-side of a website, ensuring it functions smoothly behind the scenes. It involves managing databases, servers, and applications using languages such as PHP, Python, and Ruby."
+            ],
+            image: (0, _webCoverPngDefault.default),
+            color: "#8613bc"
+        },
+        body: {
+            heading: "Website Development",
+            description: "We offer professional web development services to bring your ideas to life with a custom-built website. Whether you need a simple landing page, a dynamic business site, or a fully integrated e-commerce platform, we tailor our solutions to meet your specific goals.",
+            buttonText: "Request An Estimation",
+            image: (0, _webDevPngDefault.default)
+        },
+        servicesDescription: {
+            heading: "Our Services Include:",
+            services: [
+                {
+                    subheading: "Custom Website Design & Development",
+                    description: "We create unique, user-friendly websites tailored to your brand, ensuring a seamless experience across all devices."
+                },
+                {
+                    subheading: "Responsive Design",
+                    description: "All our websites are designed to be fully responsive, ensuring they look and perform perfectly on any device."
+                },
+                {
+                    subheading: "E-Commerce Solutions",
+                    description: "From product pages to secure payment gateways, we build online stores that boost your business and streamline customer experience."
+                },
+                {
+                    subheading: "SEO Optimization",
+                    description: "We develop websites with SEO in mind, helping your site rank higher in search results and reach a broader audience."
+                },
+                {
+                    subheading: "Maintenance & Support",
+                    description: "We provide ongoing support to ensure your website is always up to date, secure, and running smoothly."
+                }
+            ]
+        }
+    },
+    "design": {
+        cover: {
+            mainHeading: "UI/UX Design",
+            subHeading: "What is UI/UX Design?",
+            description: "UI/UX Design refers to the process of creating user-friendly, engaging, and visually appealing digital interfaces for websites, applications, or software. It combines two distinct but related fields:",
+            list: [
+                "UI (User Interface) Design: This focuses on the visual elements of a product, such as layout, buttons, icons, and typography. UI designers ensure that the interface is aesthetically pleasing, intuitive, and easy to navigate. The goal is to create a seamless interaction between users and the product.",
+                "UX (User Experience) Design: UX design is about how a user feels when interacting with a product. It involves researching and understanding user behavior, creating user flows, and ensuring that the product is both functional and enjoyable to use. UX designers aim to provide meaningful and relevant experiences by enhancing usability and accessibility."
+            ],
+            image: (0, _designCoverPngDefault.default),
+            color: "#3b0e69"
+        },
+        body: {
+            heading: "UI/UX Design",
+            description: "We specialize in designing intuitive and visually compelling user interfaces that significantly enhance user experiences. Our focus is on creating websites and apps that are not only aesthetically pleasing but also highly functional, ensuring smooth navigation and engagement for users, ultimately driving both user satisfaction and business success.",
+            buttonText: "Request An Estimation",
+            image: (0, _designPngDefault.default)
+        },
+        servicesDescription: {
+            heading: "Our Services Include:",
+            services: [
+                {
+                    subheading: "User-Centered Design",
+                    description: "We create designs that prioritize the needs and preferences of your target audience, ensuring a seamless user journey."
+                },
+                {
+                    subheading: "Wireframing & Prototyping",
+                    description: "Our process includes developing wireframes and interactive prototypes, allowing you to visualize your product before development."
+                },
+                {
+                    subheading: "Responsive Design",
+                    description: "We ensure your UI looks stunning and operates smoothly on any device, providing a consistent user experience across platforms."
+                },
+                {
+                    subheading: "Usability Testing",
+                    description: "We conduct in-depth usability tests to refine designs and ensure optimal functionality for your users."
+                },
+                {
+                    subheading: "Brand Integration",
+                    description: "Our designs are tailored to align with your brand\u2019s identity, creating a cohesive look and feel across all touchpoints."
+                }
+            ]
+        }
+    },
+    "graphic": {
+        cover: {
+            mainHeading: "Graphic & Logo Design",
+            subHeading: "What is Graphic & Logo Design?",
+            description: "Graphic & Logo Design refers to the process of creating visual content that communicates a message, establishes a brand identity, and enhances the appeal of a product or service. It involves the use of images, typography, colors, and layout to convey information effectively.",
+            list: [
+                "Graphic Design: This is the broader field that involves designing various visual elements for marketing materials, websites, packaging, advertisements, and more. Graphic designers create visuals that attract attention, convey messages clearly, and enhance brand communication.",
+                "Logo Design: A specific subset of graphic design, logo design focuses on creating a unique symbol or emblem that represents a brand or business. A logo is a key part of a company\u2019s visual identity, designed to be memorable, distinctive, and reflective of the brand\u2019s values and mission."
+            ],
+            image: (0, _graphicsCoverPngDefault.default),
+            color: "#9a2078"
+        },
+        body: {
+            heading: "Graphic & Logo Design",
+            description: "We offer professional graphic and logo design services that help your brand stand out and make a lasting impression. Whether you're starting from scratch or rebranding, we ensure your visual identity reflects your values and resonates with your target audience.",
+            buttonText: "Request An Estimation",
+            image: (0, _graphicsPngDefault.default)
+        },
+        servicesDescription: {
+            heading: "Our Services Include:",
+            services: [
+                {
+                    subheading: "Custom Logo Design",
+                    description: "We create unique logos that capture your brand\u2019s essence and establish a memorable presence."
+                },
+                {
+                    subheading: "Brand Identity",
+                    description: "We develop complete brand identities, including color schemes, typography, and visual elements, ensuring consistency across all platforms."
+                },
+                {
+                    subheading: "Marketing Materials",
+                    description: "From business cards to brochures, we design compelling graphics that support your marketing efforts and enhance your brand."
+                },
+                {
+                    subheading: "Digital Graphics",
+                    description: "Our team produces eye-catching digital graphics for websites, social media, and online campaigns to boost engagement."
+                },
+                {
+                    subheading: "Rebranding",
+                    description: "Need a fresh start? We help refresh your brand with modern, relevant designs that reflect your evolving business."
+                }
+            ]
+        }
+    },
+    "resume": {
+        cover: {
+            mainHeading: "Resume/CV Writing",
+            subHeading: "What is Resume/CV Writing?",
+            description: "Graphic & Logo Design refers to the process of creating visual content that communicates a message, establishes a brand identity, and enhances the appeal of a product or service. It involves the use of images, typography, colors, and layout to convey information effectively.",
+            list: [
+                "Graphic Design: This is the broader field that involves designing various visual elements for marketing materials, websites, packaging, advertisements, and more. Graphic designers create visuals that attract attention, convey messages clearly, and enhance brand communication.",
+                "Logo Design: A specific subset of graphic design, logo design focuses on creating a unique symbol or emblem that represents a brand or business. A logo is a key part of a company\u2019s visual identity, designed to be memorable, distinctive, and reflective of the brand\u2019s values and mission."
+            ],
+            image: (0, _resumeCoverPngDefault.default),
+            color: "#0ca68a"
+        },
+        body: {
+            heading: "Resume/CV Writing",
+            description: "We provide expert resume and CV writing services to help you present your skills and experience in the best possible light. Whether you're entering the job market or advancing your career, we create professional, tailored documents that highlight your strengths and make you stand out.",
+            buttonText: "Request An Estimation",
+            image: (0, _resumePngDefault.default)
+        },
+        servicesDescription: {
+            heading: "Our Services Include:",
+            services: [
+                {
+                    subheading: "Tailored Resumes/CVs",
+                    description: "We craft customized resumes and CVs that align with your career goals and target specific industries or positions."
+                },
+                {
+                    subheading: "Keyword Optimization",
+                    description: "We optimize your resume/CV with relevant keywords to ensure it passes through Applicant Tracking Systems (ATS) and gets noticed by employers."
+                },
+                {
+                    subheading: "Cover Letters",
+                    description: "We write personalized, compelling cover letters that complement your resume and help you make a strong first impression."
+                },
+                {
+                    subheading: "LinkedIn Profile Optimization",
+                    description: "We optimize your LinkedIn profile to reflect your professional experience and enhance your online presence."
+                },
+                {
+                    subheading: "Career Consulting",
+                    description: "We offer guidance on how to position yourself for success, from job application strategies to interview preparation."
+                }
+            ]
+        }
+    },
+    "software": {
+        cover: {
+            mainHeading: "Software Development",
+            subHeading: "What is Software Development?",
+            description: "Software Development is the process of designing, creating, and maintaining applications or systems that solve specific problems or meet business needs. It involves coding, testing, and deploying software solutions to ensure they are functional, secure, and scalable. Key aspects of software development include:",
+            list: [
+                "Custom Solutions: We build software tailored to your unique requirements, ensuring it fits your business goals.",
+                "Quality and Performance: Our development process focuses on delivering high-performing, reliable, and efficient software that meets the highest standards."
+            ],
+            image: (0, _softwareCoverPngDefault.default),
+            color: "#6620ac"
+        },
+        body: {
+            heading: "Software Development",
+            description: "Customized software development includes tailored solutions like CRM, ERP, CMS, AI Chatbots, e-commerce platforms, HRMS, POS systems, BI tools, and custom mobile/web apps to meet unique business needs.",
+            buttonText: "Request An Estimation",
+            image: (0, _softwarePngDefault.default)
+        },
+        servicesDescription: {
+            heading: "Our Services Include:",
+            services: [
+                {
+                    subheading: "Custom Software Development",
+                    description: "Tailored applications designed to meet specific business needs."
+                },
+                {
+                    subheading: "Mobile App Development",
+                    description: "Development of user-friendly mobile applications for iOS and Android devices."
+                },
+                {
+                    subheading: "API Development and Integration",
+                    description: "Building and integrating APIs for seamless communication between software applications."
+                },
+                {
+                    subheading: "Software Testing and Quality Assurance",
+                    description: "Comprehensive testing services to ensure software reliability, performance, and security."
+                },
+                {
+                    subheading: "Cloud Solutions",
+                    description: "Development of cloud-based applications for enhanced scalability and accessibility."
+                }
+            ]
+        }
+    },
+    "linkedIn": {
+        cover: {
+            mainHeading: "LinkedIn Profile Optimization",
+            subHeading: "What is LinkedIn Profile Optimization?",
+            description: "LinkedIn Profile Optimization is the process of enhancing your LinkedIn profile to make it more professional, visible, and appealing to recruiters, employers, or potential business connections. The goal is to highlight your skills, experience, and achievements effectively while improving your profile\u2019s searchability on LinkedIn.",
+            list: [
+                "Keyword Optimization: Using industry-specific keywords to increase your profile's visibility in search results and attract relevant opportunities.",
+                "Engaging Content: Crafting a compelling headline, summary, and experience section to clearly communicate your professional value and goals, making a strong impression on viewers."
+            ],
+            image: (0, _linkedInCoverPngDefault.default),
+            color: "#529bdf"
+        },
+        body: {
+            heading: "LinkedIn",
+            description: "Enhance your LinkedIn profile with our professional optimization services. We help you craft a compelling profile that showcases your skills, experience, and achievements, making you more visible to recruiters and potential employers.",
+            buttonText: "Request An Estimation",
+            image: (0, _linkedInPngDefault.default)
+        },
+        servicesDescription: {
+            heading: "Our Services Include:",
+            services: [
+                {
+                    subheading: "Profile Enhancement",
+                    description: "We refine your profile to highlight your strengths and professional achievements, making it stand out in searches."
+                },
+                {
+                    subheading: "Keyword Integration",
+                    description: "We optimize your profile with relevant industry keywords to improve visibility and attract the right opportunities."
+                },
+                {
+                    subheading: "Engaging Summaries",
+                    description: "We write impactful summaries that effectively convey your career story and professional goals."
+                },
+                {
+                    subheading: "Professional Endorsements",
+                    description: "We guide you on obtaining and showcasing endorsements and recommendations to build credibility."
+                },
+                {
+                    subheading: "Networking Strategy",
+                    description: "We provide tips on expanding your network and engaging with relevant industry groups to maximize your LinkedIn presence."
+                }
+            ]
+        }
+    }
+};
+exports.default = categories;
+
+},{"../../../public/static/img/services/webCover.png":"1SbD1","../../../public/static/img/services/designCover.png":"7mfIz","../../../public/static/img/services/graphicsCover.png":"k0ksv","../../../public/static/img/services/resumeCover.png":"XzKqt","../../../public/static/img/services/softwareCover.png":"7kcRu","../../../public/static/img/services/linkedInCover.png":"MDf8e","../../../public/static/img/services/webDev.png":"9jnyJ","../../../public/static/img/services/design.png":"6oCyo","../../../public/static/img/services/graphics.png":"gTai3","../../../public/static/img/services/resume.png":"iMdSr","../../../public/static/img/services/software.png":"6Ui6P","../../../public/static/img/services/linkedIn.png":"9slsB","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1SbD1":[function(require,module,exports) {
+module.exports = require("cbf870721c44ea47").getBundleURL("h7qW7") + "webCover.482015bf.png" + "?" + Date.now();
+
+},{"cbf870721c44ea47":"lgJ39"}],"7mfIz":[function(require,module,exports) {
+module.exports = require("a6910be29e4e4426").getBundleURL("h7qW7") + "designCover.685a671e.png" + "?" + Date.now();
+
+},{"a6910be29e4e4426":"lgJ39"}],"k0ksv":[function(require,module,exports) {
+module.exports = require("36b511bfbeac15b").getBundleURL("h7qW7") + "graphicsCover.135c5dc8.png" + "?" + Date.now();
+
+},{"36b511bfbeac15b":"lgJ39"}],"XzKqt":[function(require,module,exports) {
+module.exports = require("4acc5b94632e5d01").getBundleURL("h7qW7") + "resumeCover.0d5a2c47.png" + "?" + Date.now();
+
+},{"4acc5b94632e5d01":"lgJ39"}],"7kcRu":[function(require,module,exports) {
+module.exports = require("f80bd2f41ef70a4c").getBundleURL("h7qW7") + "softwareCover.4bcc8d6d.png" + "?" + Date.now();
+
+},{"f80bd2f41ef70a4c":"lgJ39"}],"MDf8e":[function(require,module,exports) {
+module.exports = require("b33e6951b80472e6").getBundleURL("h7qW7") + "linkedInCover.52285c85.png" + "?" + Date.now();
+
+},{"b33e6951b80472e6":"lgJ39"}],"hI2N5":[function() {},{}]},["e73Eh","1xC6H","7SwCM"], "7SwCM", "parcelRequire10c2")
 
 //# sourceMappingURL=index.f18de3a7.js.map
