@@ -28,7 +28,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "start:server": "node --loader ts-node/esm backend/server.ts",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
