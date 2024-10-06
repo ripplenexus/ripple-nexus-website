@@ -34752,27 +34752,34 @@ var _servicesCards = require("./ServicesCards");
 var _servicesCardsDefault = parcelHelpers.interopDefault(_servicesCards);
 var _whyChooseUs = require("./WhyChooseUs");
 var _whyChooseUsDefault = parcelHelpers.interopDefault(_whyChooseUs);
+var _testimonials = require("./Testimonials");
+var _testimonialsDefault = parcelHelpers.interopDefault(_testimonials);
 const Homepage = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _coverDefault.default), {}, void 0, false, {
                 fileName: "src/components/MacBookAir/Homepage.tsx",
-                lineNumber: 10,
+                lineNumber: 11,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _servicesCardsDefault.default), {}, void 0, false, {
                 fileName: "src/components/MacBookAir/Homepage.tsx",
-                lineNumber: 11,
+                lineNumber: 12,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _whyChooseUsDefault.default), {}, void 0, false, {
                 fileName: "src/components/MacBookAir/Homepage.tsx",
-                lineNumber: 12,
+                lineNumber: 13,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _testimonialsDefault.default), {}, void 0, false, {
+                fileName: "src/components/MacBookAir/Homepage.tsx",
+                lineNumber: 14,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactsDefault.default), {}, void 0, false, {
                 fileName: "src/components/MacBookAir/Homepage.tsx",
-                lineNumber: 13,
+                lineNumber: 15,
                 columnNumber: 13
             }, undefined)
         ]
@@ -34788,7 +34795,7 @@ $RefreshReg$(_c, "Homepage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Contacts":"5NXtd","./Cover":"jdVTP","./ServicesCards":"g4SVJ","./WhyChooseUs":"2m5jK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5NXtd":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Contacts":"5NXtd","./Cover":"jdVTP","./ServicesCards":"g4SVJ","./WhyChooseUs":"2m5jK","./Testimonials":"9058Q","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5NXtd":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0179 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -36159,7 +36166,141 @@ module.exports = require("6024ebcdcd3eb73a").getBundleURL("h7qW7") + "reporting.
 },{"6024ebcdcd3eb73a":"lgJ39"}],"8uMaE":[function(require,module,exports) {
 module.exports = require("f246cbba6d43d422").getBundleURL("h7qW7") + "research.3f6bdbbd.png" + "?" + Date.now();
 
-},{"f246cbba6d43d422":"lgJ39"}],"94qj3":[function(require,module,exports) {
+},{"f246cbba6d43d422":"lgJ39"}],"9058Q":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$acd4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$acd4.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _testimonialsCss = require("../../../public/static/css/MacBookAir/Testimonials.css");
+var _profilePng = require("../../../public/static/img/profile.png");
+var _profilePngDefault = parcelHelpers.interopDefault(_profilePng);
+const testimonials = [
+    {
+        rating: 4,
+        service: "UI/UX Services",
+        reviewBody: "Amazing work!",
+        reviewer: "Hariom",
+        reviewerImage: (0, _profilePngDefault.default)
+    },
+    {
+        rating: 1,
+        service: "Seo optimization",
+        reviewBody: "Needs improvement.",
+        reviewer: "Shivam",
+        reviewerImage: (0, _profilePngDefault.default)
+    }
+];
+const Testimonials = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "testimonials-container",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "testimonials",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                    children: "Testimonials"
+                }, void 0, false, {
+                    fileName: "src/components/MacBookAir/Testimonials.tsx",
+                    lineNumber: 34,
+                    columnNumber: 17
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "testimonial-cards",
+                    children: testimonials.map((testimonial, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "testimonial-card",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "rating",
+                                    children: [
+                                        "\u2605".repeat(testimonial.rating),
+                                        "\u2606".repeat(5 - testimonial.rating)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/MacBookAir/Testimonials.tsx",
+                                    lineNumber: 38,
+                                    columnNumber: 29
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                    children: testimonial.service
+                                }, void 0, false, {
+                                    fileName: "src/components/MacBookAir/Testimonials.tsx",
+                                    lineNumber: 42,
+                                    columnNumber: 29
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                    children: testimonial.reviewBody
+                                }, void 0, false, {
+                                    fileName: "src/components/MacBookAir/Testimonials.tsx",
+                                    lineNumber: 43,
+                                    columnNumber: 29
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "reviewer",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                            src: testimonial.reviewerImage,
+                                            alt: testimonial.reviewer
+                                        }, void 0, false, {
+                                            fileName: "src/components/MacBookAir/Testimonials.tsx",
+                                            lineNumber: 45,
+                                            columnNumber: 33
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            children: testimonial.reviewer
+                                        }, void 0, false, {
+                                            fileName: "src/components/MacBookAir/Testimonials.tsx",
+                                            lineNumber: 46,
+                                            columnNumber: 33
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/MacBookAir/Testimonials.tsx",
+                                    lineNumber: 44,
+                                    columnNumber: 29
+                                }, undefined)
+                            ]
+                        }, index, true, {
+                            fileName: "src/components/MacBookAir/Testimonials.tsx",
+                            lineNumber: 37,
+                            columnNumber: 25
+                        }, undefined))
+                }, void 0, false, {
+                    fileName: "src/components/MacBookAir/Testimonials.tsx",
+                    lineNumber: 35,
+                    columnNumber: 17
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/MacBookAir/Testimonials.tsx",
+            lineNumber: 33,
+            columnNumber: 13
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/MacBookAir/Testimonials.tsx",
+        lineNumber: 32,
+        columnNumber: 9
+    }, undefined);
+};
+_c = Testimonials;
+exports.default = Testimonials;
+var _c;
+$RefreshReg$(_c, "Testimonials");
+
+  $parcel$ReactRefreshHelpers$acd4.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../../public/static/css/MacBookAir/Testimonials.css":"YU1nv","../../../public/static/img/profile.png":"idZBD","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"YU1nv":[function() {},{}],"idZBD":[function(require,module,exports) {
+module.exports = require("f446ae6c620f3f75").getBundleURL("h7qW7") + "profile.a01a2eef.png" + "?" + Date.now();
+
+},{"f446ae6c620f3f75":"lgJ39"}],"94qj3":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$72be = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
