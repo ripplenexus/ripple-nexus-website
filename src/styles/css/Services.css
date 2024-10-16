@@ -1,0 +1,262 @@
+.services-category {
+    font-family: Poppins;
+}
+
+/* Cover Section */
+.cover-section {
+    /* background: linear-gradient(rgba(36, 93, 203, 1), rgb(48, 101, 205)); */
+    background-blend-mode: overlay;
+    position: relative;
+    transition: all 0.5s linear;
+}
+
+.cover-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../../assets/img/services/image15.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 7%;
+    z-index: 0;
+    /* border: 1px solid black; */
+}
+
+.cover-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* border: 1px solid black; */
+    padding: 4em 5em;
+    margin: 0;
+    margin-bottom: 0;
+}
+
+.cover-content {
+    flex: 0.6;
+    margin-right: 2em;
+    color: white;
+    text-align: left;
+    /* border: 1px solid black; */
+}
+
+.cover-main-heading {
+    font-size: 2.625em;
+    font-weight: 500;
+    margin: 0;
+}
+
+.cover-sub-heading {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.cover-description {
+    font-size: 0.88em;
+    font-weight: 500;
+}
+
+.cover-list {
+    font-size: 14.2px;
+    font-weight: 600;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.cover-list-item {
+    margin: 5px 0;
+}
+
+.cover-image {
+    flex: 0.5;
+    height: auto;
+    padding: 0;
+    text-align: center;
+    /* border: 1px solid black; */
+}
+
+.cover-image > img {
+    display: inline-block;
+    width: 80%;
+    /* border: 1px solid black; */
+    padding: 0 auto;
+    margin: 0;
+}
+
+/* Body Section */
+.body-section {
+    display: flex;
+    padding: 2em 5em 4em 5em;
+    background-color: #ffffff;
+    /* border: 1px solid black; */
+
+}
+
+.body-content {
+    flex: 1;
+}
+
+.body-heading {
+    font-size: 2.925em;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 0.6em;
+    /* border: 1px solid black; */
+
+}
+
+.body-description {
+    font-size: 1.318em;
+    font-weight: normal;
+    line-height: 1.3;
+    padding-right: 1em;
+    margin-bottom: 1.6em;
+    /* border: 1px solid black; */
+}
+
+.body-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10.5px;
+    margin: 2em 1em 0 0;
+    padding: 21.1px 36.9px;
+    border-radius: 8px;
+    background-color: #457fd7;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.body-button > label {
+    flex-grow: 0;
+    font-family: Poppins;
+    font-size: 21.1px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: center;
+}
+
+.body-button:hover {
+    background-color: #0056b3;
+}
+
+.body-image {
+    width: 24em;
+    max-width: 100%;
+    height: 24em;
+    /* border: 1px solid black; */
+
+}
+
+/* Services Description Section */
+.services-section {
+    margin: 1em 0 0;
+    padding: 43px 121px 30px 6.5em;
+    border-top: solid 1px rgba(0, 0, 0, 0.55);
+    background-color: #b0d9ff;
+    /* border: 1px solid black; */
+}
+
+.services-heading {
+    font-size: 28.1px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    margin: 0 0 20px 0;
+}
+
+.services-list {
+    list-style-type: disc;
+    padding: 0;
+}
+
+.services-list-item {
+    font-size: 1.06em;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    margin: 10px 0;
+}
+
+.service-subheading {
+    margin: 0;
+}
+
+.service-description {
+    margin: 5px 0 0 0;
+}
+
+@media (max-width: 768px) {
+
+    .cover-group {
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .cover-content {
+        margin: auto;
+    }
+
+    .cover-image {
+        width: 50%;
+    }
+
+    .body-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .body-button {
+        margin: auto;
+    }
+
+    .cover-image,
+    .body-image {
+        margin: 2em auto;
+    }
+}
+
+@media screen and (max-width:550px) {
+
+    .cover-group,
+    .body-section {
+        padding: 2em 1em;
+    }
+
+    .services-section {
+        padding: 2em;
+        padding-left: 3em;
+    }
+
+    .body-heading {
+        font-size: 2em;
+        margin: auto;
+    }
+
+    .body-description {
+        font-size: 1.2em;
+        padding-right: 0.1em;
+        text-align: center;
+        /* border: 1px solid black; */
+    }
+
+    .cover-image {
+        width: 100%;
+    }
+
+
+}

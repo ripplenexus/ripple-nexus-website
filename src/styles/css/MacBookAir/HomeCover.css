@@ -1,0 +1,245 @@
+/* Adding a parent class to increase specificity */
+.page .cover-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 3.875em 2.0625em 1.74375em 6.9375em;
+    background-color: #A9E841;
+    position: relative;
+    transition: all 0.5s linear;
+    font-family: "Poppins", sans-serif;
+    /* border: 1px solid black; */
+}
+
+.page .text-section {
+    flex: 1;
+}
+
+.page .text-section h1 {
+    /* margin: 0 4.625rem 1.29375rem 0; */
+    width: 90%;
+    margin: 0 1.1em 0.3em 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 4.0125em;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: -0.08rem;
+    text-align: center;
+    color: #000;
+    transition: inherit;
+    /* border: 2px solid black; */
+}
+
+.page .text-section p {
+    width: 35.0875rem;
+    margin: 1.29375rem 6.3625rem 1.71875rem 0.3rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.10625em;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+    transition: inherit;
+    /* border: 2px solid black; */
+}
+
+.page .cta-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.25em;
+    /* border: 2px solid black; */
+}
+
+.page .cta-button {
+    color: white;
+    border: none;
+    width: 10.19375rem;
+    margin-right: 3.60625em;
+    padding: 1.10625rem 1.9375rem;
+    border-radius: 0.5rem;
+    background-color: #457fd7;
+    cursor: pointer;
+    transition: inherit;
+}
+
+.page .cta-button label {
+    width: 6.3125rem;
+    flex-grow: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.10625em;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: center;
+    color: white;
+}
+
+.page .cta-button:hover {
+    background-color: #1c62cc;
+    transition: inherit;
+}
+
+.page .cta-section-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.68rem;
+    /* border: 2px solid black; */
+}
+
+.page .info-box {
+    width: 4.05625rem;
+    border-radius: 0.28em;
+    transition: inherit;
+}
+
+.page .info-box h2 {
+    margin-bottom: 0.5em;
+    width: 4.05625rem;
+    height: 1.7375rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.60625em;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #172048;
+    transition: inherit;
+}
+
+.page .info-box h5 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8em;
+    font-weight: 620;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+    transition: inherit;
+}
+
+.page .svg-section {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: top;
+    position: relative;
+    /* border: 1px solid black; */
+}
+
+.page .svg-section svg {
+    max-width: 30em;
+    max-height: 24em;
+    /* border: 1px solid black; */
+}
+
+@media screen and (max-width: 1000px) and (min-width: 766px) {
+    .page .svg-section svg {
+        width: 10em;
+        height: auto;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        /* display: none; */
+    }
+}
+
+@media (max-width: 768px) {
+    .page .cover-container {
+        flex-direction: column;
+        padding: 1em;
+        padding-top: 2em;
+    }
+
+    .page .text-section h1 {
+        width: auto;
+        font-size: 2.4em;
+    }
+
+    .page .text-section p {
+        width: auto;
+        font-size: 1em;
+    }
+
+    .page .cta-button {
+        font-size: 1em;
+    }
+
+    .page .svg-section {
+        margin-top: 1.25em;
+        position: absolute;
+        right: 0.2em;
+        bottom: 0;
+        padding: 0em;
+        width: 8em;
+        height: 8em;
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+    .page .cta-section {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .page .info-box {
+        padding: 0.4em;
+        max-width: 4em;
+        /* border: 1px solid black; */
+    }
+
+    .page .info-box h2 {
+        font-size: 1em;
+        margin-bottom: 0;
+        /* border: 1px solid black; */
+    }
+
+    .page .info-box h5 {
+        font-size: 0.6em;
+        margin-top: 0;
+        /* border: 1px solid black; */
+    }
+
+    .page .text-section h1 {
+        width: 100%;
+        font-size: 1.8em;
+        padding: 0.1em;
+    }
+
+    .page .text-section p {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    .page .cta-button {
+        width: auto;
+        padding: 0.8em;
+    }
+
+    .page .cta-button label {
+        font-size: 1em;
+        margin: auto;
+        /* border: 2px solid black; */
+    }
+
+    .page .svg-section {
+        left: 28vw;
+        top: 15%;
+        width: 50vw;
+        height: 50vw;
+        opacity: 0.1;
+    }
+}
