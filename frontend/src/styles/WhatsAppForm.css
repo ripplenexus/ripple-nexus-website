@@ -1,0 +1,113 @@
+.whatsapp-container {
+    position: fixed;
+    z-index: 600;
+    top: 0;
+    left: 0;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.sticky-element {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    z-index: 550;
+    /* Lower z-index */
+    padding: 10px;
+}
+
+.whatsapp-image {
+    width: 60px;
+    cursor: pointer;
+}
+
+.whatsapp-form-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    z-index: 800;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+.whatsapp-form {
+    position: relative;
+    top: 20%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 2em;
+    background-color: white;
+    border-radius: 1em;
+    max-width: 400px;
+    margin: auto
+}
+
+.whatsapp-form div {
+    margin-bottom: 15px;
+}
+
+.whatsapp-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: black;
+    font-family: "Poppins";
+    font-weight: 500;
+}
+
+.whatsapp-form input,
+.whatsapp-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.whatsapp-form button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-family: "Poppins";
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.whatsapp-form button:hover {
+    background-color: #45a049;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.25em;
+    width: 2.2em;
+    height: 2.2em;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0.1em;
+    right: 0.2em;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .whatsapp-form-popup {
+        width: 100%;
+        padding: 0.75em;
+    }
+
+    .sticky-element {
+        bottom: 0.5em;
+        right: 0.5em;
+    }
+
+    .whatsapp-image {
+        width: 2.5em;
+    }
+}

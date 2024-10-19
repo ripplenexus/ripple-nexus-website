@@ -1,0 +1,249 @@
+/* --------------------------------------------- */
+.brand .green {
+    color: #498600;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.325em 1.25em;
+    color: white;
+    z-index: 1111;
+    position: sticky;
+    position: -webkit-sticky;
+    /* position: fixed; */
+    top: 0;
+    background-color: rgba(252, 251, 251, 0.8);
+}
+
+.brand {
+    /* border: 1px solid black; */
+    margin: 0;
+    margin-left: 1.6em;
+    font-family: "FuturaMdBT", "Futura Md BT Medium", "Nunito Sans", sans-serif;
+    font-size: 3.10625rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: -0.061875rem;
+    text-align: center;
+    color: #4a4a4a;
+    position: relative;
+    overflow: hidden;
+    min-width: 25%;
+    transition: all linear 0.5s;
+}
+
+img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(-100%);
+    /* display: none; */
+}
+
+.move-left {
+    transform: translateX(-100%);
+    opacity: 0;
+    /* display: none; */
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+    /* display: block; */
+}
+
+#RippleNexus_logo {
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 150;
+}
+
+
+
+.nav-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2.21875em;
+    margin: auto 6.50625em;
+    padding: 0;
+    /* border: 2px solid black; */
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.25em;
+    margin-right: 1.25em;
+}
+
+.nav-menu li {
+    display: inline;
+}
+
+.nav-menu a {
+    flex-grow: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.10625em;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+    text-decoration: none;
+}
+
+.quote-button {
+    flex-grow: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.55625em;
+    padding: 1.10625em 1.9375em;
+    border-radius: 0.5em;
+    border: solid 0.05625em black;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all linear 0.5s;
+}
+
+.quote-button label {
+    flex-grow: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.10625em;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+
+    cursor: pointer;
+}
+
+.quote-button:hover {
+    background-color: #45a049;
+}
+
+
+
+/* Container for the navigation menu */
+/* .small-window-nav {
+    position: fixed;
+    top: 6em;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    flex-direction: column;
+    background-color: #000;
+}
+
+.small-window-nav a {
+    color: white;
+    text-decoration: none;
+} */
+
+.small-window-nav {
+    position: fixed;
+    top: 6em;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    background-color: #000;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    /* transform: translateX(100%); */
+    z-index: 500;
+}
+
+.small-window-nav a {
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.small-window-nav a:hover {
+    background-color: #444;
+}
+
+.show-menu .small-window-nav {
+    transform: translateX(0);
+}
+
+@media (min-width:919px) {
+    .small-window-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 919px) {
+    .brand {
+        margin: auto;
+        font-size: 2em;
+    }
+
+    .nav-right {
+        margin: auto;
+        flex-direction: row-reverse;
+    }
+
+    /* .nav-menu {
+        display: none;
+    } */
+
+    .quote-button {
+        padding: 0.5em 1em;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .navbar {
+        height: auto;
+        justify-content: space-between;
+    }
+
+
+    .quote-button {
+        /* width: 5em; */
+        font-size: 0.8em;
+    }
+
+    #R_logo {
+        width: 2em;
+    }
+}
+
+/* for small icon */
+
+.menu-icon {
+    display: none;
+    /* border: 1px solid black; */
+    font-size: 1em;
+    /* width: 40px;
+    height: 40px; */
+    margin: 0;
+    border-radius: 50%;
+    padding: 0.1em 0.35em;
+    font-size: 1.5em;
+    background-color: rgb(62, 62, 252);
+}
