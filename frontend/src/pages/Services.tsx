@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import { useLoaderData, useParams, useNavigate } from 'react-router-dom';
 import categories from '../components/Services/Category';
 import "../styles/css/Services.css"
 import { TopObserver, BottomObserver, RightObserver, LeftObserver } from '../utils/Animation';
@@ -8,8 +8,10 @@ import { TopObserver, BottomObserver, RightObserver, LeftObserver } from '../uti
 
 const Services: React.FC = () => {
     const { category } = useParams() as { category: string };
+    const navigate = useNavigate();
     // const { category } = useLoaderData() as { category: string };
     const categoryData = categories[category];
+
 
     useEffect(() => {
         const topAnim = document.querySelectorAll('.cover-main-heading, .cover-sub-heading, .body-heading') as NodeListOf<HTMLElement>;
@@ -69,7 +71,7 @@ const Services: React.FC = () => {
                 <div className="body-content">
                     <h2 className="body-heading">{categoryData.body.heading}</h2>
                     <p className="body-description">{categoryData.body.description}</p>
-                    <button className="body-button"><label>{categoryData.body.buttonText}</label></button>
+                    <button className="body-button" onClick={()=>navigate('/about#contact-us')}><label>{categoryData.body.buttonText}</label></button>
                 </div>
                 <img className="body-image" src={categoryData.body.image} alt={categoryData.body.heading} />
             </section>

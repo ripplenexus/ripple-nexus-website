@@ -29,7 +29,7 @@ const CompanyVision: React.FC = () => {
   Company Vision
 </h2>
 
-          <p className="text-lg leading-tight font-500  sm:text-xl md:text-2xl lg:w-3/4 w-full mt-4 text-center sm:text-left">
+          <p className="text-lg leading-tight font-400  sm:text-xl md:text-2xl lg:w-3/4 w-full mt-4 text-center sm:text-left">
             I chose the name <span className="font-700">‘Ripple Nexus’</span> to reflect our core philosophy and strategic vision.
             The 'Ripple' symbolizes our belief in the power of small, thoughtful actions to create waves of significant change. 
             It represents our approach to innovation-starting with a focused initiative that expands its influence far and wide.

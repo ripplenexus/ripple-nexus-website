@@ -99,3 +99,56 @@
         transform: translateY(0);
     }
 }
+
+
+@keyframes dropShowEffect {
+    0% {
+        height: 0;
+        /* width: 0; */
+        /* padding: 0; */
+        opacity: 1;
+        /* border: none; */
+    }
+
+    100% {
+        height: 480px;
+        /* width: 400px; */
+        /* padding: 1em; */
+        opacity: 1;
+    }
+}
+
+
+/* tooltip effects */
+
+.tooltip {
+    cursor: pointer;
+    position: relative;
+    /* display: inline-block; */
+}
+
+.tooltip::after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: 100%;
+    /* Position above the element */
+    /* left: 50%; */
+    right: 20%;
+    transform: translateX(-50%);
+    background-color: #103F6D;
+    /* Custom background color */
+    color: white;
+    /* Custom text color */
+    padding: 0.5em;
+    border-radius: 0.25em;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 1000;
+}
+
+.tooltip:hover::after {
+    opacity: 1;
+    visibility: visible;
+}

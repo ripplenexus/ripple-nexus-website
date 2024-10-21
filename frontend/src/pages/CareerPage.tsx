@@ -7,6 +7,8 @@ import People from '../assets/img/career/people.png';
 import coverBackground from '../assets/img/career/cover.svg';
 import Growing from '../assets/img/career/growing.svg';
 import Accessible from '../assets/img/career/accessible.svg';
+import Underline1 from '../assets/img/career/underlineVector6.png';
+import Underline2 from '../assets/img/career/underlineVector7.png';
 
 
 const Mission = [
@@ -103,20 +105,22 @@ const CareerPage: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col items-center mb-20 ">
       {/* Header Section */}
-      <div className="flex w-full justify-center bg-blue-700 h-[400px] sm:h-[500px]">
+      <div className="flex w-full justify-center p-0 bg-career-blue bg-700 h-[400px] sm:h-[500px]">
         <div className="w-full flex justify-center">
           <div
-            className={`w-full h-full z-10 flex flex-col items-center justify-center`}
+            className={`w-full h-full z-10 flex flex-col items-center justify-center  `}
             style={{
               backgroundImage: `url(${coverBackground})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}
           >
-            <h1 id='career-header' className="text-white font-500 font-poppins text-center leading-[1.4] text-3xl sm:text-4xl lg:text-6xl w-11/12 md:w-2/3 lg:w-1/2 drop-shadow-lg">
-              Explore Exciting Career Opportunities with Us
+            <h1 id='career-header' className="text-white font-500 font-poppins text-center leading-[1.4] text-3xl sm:text-4xl lg:text-6xl w-11/12 md:w-2/3 lg:w-1/2 drop-shadow-lg" style={{lineHeight:"1.4"}}>
+              Explore Exciting Career <span className='relative inline-block'>Opportunities<img className='absolute bottom-[-0.28em] left-0' src={Underline2} alt='underline-2 over Opportunity' />
+              <img className='absolute' src={Underline1} alt='underline-1 over Opportunity' /></span> with Us 
+
             </h1>
-            <p id='career-header-description' className="text-base sm:text-lg lg:text-xl w-11/12 md:w-2/3 lg:w-1/2 pt-4 sm:pt-6 lg:pt-10 font-poppins text-[21.1px] font-normal leading-[1.4] text-center text-white  ">
+            <p id='career-header-description' className="text-base sm:text-lg lg:text-xl w-11/12 md:w-2/3 lg:w-1/2 pt-4 sm:pt-6 lg:pt-10 font-poppins text-[21.1px] font-300 leading-[1.4] text-center text-white  ">
               Join our team and be part of a dynamic and innovative environment where your skills and ideas can make a real impact. We are always on the lookout for passionate and talented individuals to help us drive success and growth.
             </p>
           </div>
@@ -132,10 +136,10 @@ const CareerPage: React.FC = () => {
 
         {/* Right Side - Text Content */}
         <div id='diversity-description' className="w-full lg:w-1/2 flex flex-col justify-center items-center px-4 py-0 sm:px-6 ">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-poppins text-black text-left mb-4" style={{ lineHeight: '1.4' }}>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-500 font-poppins text-black text-left mb-4" style={{ lineHeight: '1.4' }}>
             Diversity, Equity, & Inclusion
           </h1>
-          <p className="text-base text-center sm:text-[1.25em]  font-[Poppins] font-400 text-black" style={{ lineHeight: "1.4", marginLeft: "-0.5em", padding: "0" }}>
+          <p className="text-base sm:text-[1.25em]  font-[Poppins] font-400 text-black text-left" style={{ lineHeight: "1.4", padding: "0" }}>
             we are committed to fostering a diverse, equitable, and inclusive workplace where everyone feels valued and respected. Our goal is to create an environment where all team members can thrive and contribute their unique perspectives.
           </p>
         </div>
@@ -143,7 +147,7 @@ const CareerPage: React.FC = () => {
 
       {/* Call to Action Section */}
       <div id="interested-in-mission" className="flex flex-col justify-center items-center w-full text-center py-10">
-        <div className="text-4xl sm:text-5xl lg:text-7xl font-600 font-[Poppins] text-black mb-2">
+        <div className="text-4xl sm:text-5xl lg:text-6xl font-500 font-[Poppins] text-black mb-2">
           Interested in our <br />mission?
         </div>
       </div>
@@ -165,7 +169,7 @@ const CareerPage: React.FC = () => {
 
       {/* Open Positions Section */}
       <div className="w-11/12 lg:w-10/12 flex flex-col mt-10">
-        <div className="text-black font-600 font-[Poppins] text-4xl sm:text-5xl lg:text-6xl mb-6 open-position-header">
+        <div className="text-black font-500 font-[Poppins] text-4xl sm:text-5xl lg:text-6xl mb-6 open-position-header">
           Open positions
         </div>
 
@@ -179,7 +183,7 @@ const CareerPage: React.FC = () => {
                     <button className="flex-shrink-0 flex-grow-0 text-white text-[0.75em] bg-button-light-blue rounded-[0.25em] px-6 py-3 hover:bg-blue-700 transition-colors" onClick={handleClick}>Apply Now</button>
                   </div>
                   <p className="text-black mt-0 mb text-4">{element.duration} - {element.location}</p>
-                  <p className="text-black mt-3 text-[1em] font-500">Stipend: <strong>{element.stipend}</strong></p>
+                  {/* <p className="text-black mt-3 text-[1em] font-500">Stipend: <strong>{element.stipend}</strong></p> */}
                 </div>
               );
             })

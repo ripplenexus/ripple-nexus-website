@@ -22,6 +22,7 @@ module.exports = {
       },
       colors: {
         'button-light-blue': '#457fd7',
+        'career-blue': '#3a53e4',
       }
     },
   },

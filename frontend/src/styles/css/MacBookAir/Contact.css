@@ -18,7 +18,7 @@
     width: 100%;
     height: 60%;
     background: linear-gradient(90deg, rgba(69, 127, 215, 0.89) 0%, rgba(60, 109, 184, 0.89) 100%);
-    z-index: -1;
+    z-index: -2;
 }
 
 .contact-container::after {
@@ -33,10 +33,9 @@
     background-position: center;
     background-repeat: no-repeat;
     opacity: 83%;
-    z-index: -2;
+    z-index: -3;
     /* border: 1px solid black; */
 }
-
 
 .contact-header {
     /* border: 2px solid black; */
@@ -50,6 +49,8 @@
     font-size: 3em;
     font-weight: 600;
     margin: 0.5em auto;
+    position: relative;
+    z-index: 0;
 }
 
 .contact-header-description {
@@ -211,7 +212,8 @@ form.contact-form select#position {
 .contact-info-header {
     font-size: 1.34em;
     font-weight: 600;
-    text-align: center;
+    /* text-align: center; */
+    text-align: left;
     margin-top: 2em;
 }
 
