@@ -7,7 +7,6 @@ const ContactUsPage = () => {
   return (
     <>
       <CompanyVision />
-      {/* <ContactForm /> */}
       {<Contacts/>}
     </>
   );

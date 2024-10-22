@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../../styles/css/MacBookAir/Testimonials.css';
-import { LeftObserver } from '../../utils/Animation';
+import { TopObserver } from '../../utils/Animation';
 import profile from '../../assets/img/profile.png'
 import testimonials from '../../utils/TestimonialsData';
 import ImgWithFallback from '../../utils/ImgFallback';
@@ -19,7 +19,7 @@ const Testimonials: React.FC = () => {
     useEffect(() => {
         const cards = document.querySelectorAll('.testimonial-cards') as NodeListOf<HTMLElement>;
         cards.forEach((element, index) => {
-            LeftObserver.observe(element);
+            TopObserver.observe(element);
         });
     }, []);
 
@@ -58,12 +58,12 @@ const Testimonials: React.FC = () => {
 
 
                             </p>
-                            <div className="reviewer" onClick={() => window.open(testimonial.linkedInProfile, '_blank')}>
+                            <div className="reviewer"  onClick={() => window.open(testimonial.linkedInProfile, '_blank')} >
                                 {/* <img src={testimonial.reviewerImage} alt={testimonial.reviewer} /> */}
                                 {/* <a className='profile-link' href={testimonial.linkedInProfile} target='_blank' rel='noreferrer'> */}
-                                <ImgWithFallback src={testimonial.reviewerImage} fallbackSrc={profile} alt={testimonial.reviewer} />
+                                <ImgWithFallback src={testimonial.reviewerImage} fallbackSrc={profile} alt={testimonial.reviewer}  />
                                 {/* </a> */}
-                                <span className='reviewer-name'>{testimonial.reviewer}</span>
+                                <span className='reviewer-name tooltip' data-title={`LinkedIn`}>{testimonial.reviewer}</span>
                                 
                             </div>
                         </div>

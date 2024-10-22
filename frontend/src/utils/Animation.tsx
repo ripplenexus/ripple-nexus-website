@@ -43,7 +43,7 @@ export const createObserver = (callback:Function, options = { threshold: 0.1 }) 
     }, options);
   };
 
-  //create observer could hav 2 parameters as callback function and threshold value
+//create observer could hav 2 parameters as callback function and threshold value
 //here callback is the function which would have two parameters, entry and observer!
 // entry is used for checking intersection like entry.isIntersecting
 //observer is generally used when you require a new element to observe or remove observing the element by using observer.unobserve(element)

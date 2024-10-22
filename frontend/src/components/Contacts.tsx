@@ -89,10 +89,10 @@ const Contacts: React.FC = () => {
             BottomObserver.observe(element);
         });
 
-        const contactContent = document.querySelectorAll('.contact-content') as NodeListOf<HTMLElement>;
-        contactContent.forEach((element, index) => {
-            LeftObserver.observe(element);
-        });
+        // const contactContent = document.querySelectorAll('.contact-content') as NodeListOf<HTMLElement>;
+        // contactContent.forEach((element, index) => {
+        //     LeftObserver.observe(element);
+        // });
 
     }, []);
 

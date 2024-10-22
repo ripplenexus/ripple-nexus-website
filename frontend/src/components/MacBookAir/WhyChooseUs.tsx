@@ -62,12 +62,12 @@ const services: Service[] = [
 
 const WhyChooseUs: React.FC = () => {
 
-    useEffect(()=>{
-        const cards = document.querySelectorAll('.choose-us .service-card') as NodeListOf<HTMLElement>;
-        cards.forEach((element, index) => {
-            TopObserver.observe(element);
-        });
-    },[]);
+    // useEffect(()=>{
+    //     const cards = document.querySelectorAll('.choose-us .service-card') as NodeListOf<HTMLElement>;
+    //     cards.forEach((element, index) => {
+    //         TopObserver.observe(element);
+    //     });
+    // },[]);
 
    
 
