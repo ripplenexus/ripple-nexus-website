@@ -72,7 +72,7 @@ const WhatsAppForm: React.FC = () => {
         // const stickyRect = stickyElement.getBoundingClientRect();
         const footerRect = footer.getBoundingClientRect();
 
-        console.log(footerRect);
+        // console.log(footerRect);
         if (footerRect.top < window.innerHeight) {
             stickyElement.style.position = 'absolute';
             stickyElement.style.bottom = `${(window.innerHeight - footerRect.top) * 0.1}px`; // Adjust 16px for padding

@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+/*const mongoose = require('mongoose');
 
 // Define schema for form data
 const formSchema = new mongoose.Schema({
@@ -25,3 +25,4 @@ const formSchema = new mongoose.Schema({
 }, { collection: 'form' }); // Explicitly set the collection name to 'form'
 
 module.exports = mongoose.model('Form', formSchema);
+*/

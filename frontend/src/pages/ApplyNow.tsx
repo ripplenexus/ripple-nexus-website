@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
+import axios from 'axios'; // Axios for API integration
 import ContactInfo from '../components/ContactInfo';
-import '../styles/css/ApplyNow/ApplyNow.css'
+import '../styles/css/ApplyNow/ApplyNow.css';
 
 interface FormData {
     name: string;
     surname: string;
     email: string;
     reason: string;
-    position: string,
+    position: string;
     type: string;
 }
 
 const ApplyNow: React.FC = () => {
 
-    const [type, setType] = useState<string>('');
+    const [file, setFile] = useState<File | null>(null);
     const [fileName, setFileName] = useState('');
 
     const [formData, setFormData] = useState<FormData>({
@@ -36,29 +37,47 @@ const ApplyNow: React.FC = () => {
         }));
     };
 
-    
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        setShowConfirmationPopup(true);
+    const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const file = event.target.files?.[0];
+        if (file) {
+            setFile(file);
+            setFileName(file.name);
+        }
     };
 
-    const confirmSubmission = () => {
-        // Handle form data submission to the server
-        console.log(formData);
-        setShowConfirmationPopup(false);
-        setShowAlertPopup(true);
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        setShowConfirmationPopup(true); // Show confirmation popup
+    };
+
+    // Confirm submission - this is where the form data will be submitted to the backend API
+    const confirmSubmission = async () => {
+        const formDataToSend = new FormData();
+        formDataToSend.append('name', formData.name);
+        formDataToSend.append('surname', formData.surname);
+        formDataToSend.append('email', formData.email);
+        formDataToSend.append('position', formData.position);
+        formDataToSend.append('reason', formData.reason);
+        if (file) {
+            formDataToSend.append('resume', file);
+        }
+
+        try {
+            // Submit the form data and file to the backend API
+            await axios.post('http://localhost:5000/api/submit-application', formDataToSend, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            });
+            setShowConfirmationPopup(false); // Hide confirmation popup
+            setShowAlertPopup(true); // Show success alert
+        } catch (error) {
+            console.error('Error submitting application:', error);
+        }
     };
 
     const closeAlertPopup = () => {
         setShowAlertPopup(false);
-    };
-
-
-    const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const file = event.target.files?.[0];
-        if (file) {
-            setFileName(file.name);
-        }
     };
 
     return (
@@ -74,7 +93,7 @@ const ApplyNow: React.FC = () => {
                     <p className='Interested-in-our-mission-p'>Ready to take the next step in your career? We’re excited to hear from talented, passionate individuals who are eager to make an impact. Fill out the application form below, and let’s explore how you can become a valuable part of our team.</p>
                 </div>
                 <div className="contact-content">
-                    <form className="contact-form" encType="multipart/form-data">
+                    <form className="contact-form" encType="multipart/form-data" onSubmit={handleSubmit}>
                         <h2 className='sendMessage'>Send us a Message</h2>
                         <label htmlFor="name">Name</label>
                         <input type="text" id="name" placeholder="Name" value={formData.name} onChange={handleChange} />
@@ -94,7 +113,7 @@ const ApplyNow: React.FC = () => {
                             <option value="analyst">Analyst</option>
                         </select>
 
-                        <label htmlFor="reason">Why should we hire you ?</label>
+                        <label htmlFor="reason">Why should we hire you?</label>
                         <p className='form-smaller-texts'>Cover letter</p>
                         <textarea id="reason" placeholder="Write something here" value={formData.reason} onChange={handleChange} rows={3}></textarea>
 
@@ -109,9 +128,8 @@ const ApplyNow: React.FC = () => {
                             style={{ display: 'none' }}
                             onChange={handleFileChange}
                         />
-                        <p className='form-smaller-texts' style={{marginLeft:"1.5em"}}>Doc, Docx, pdf (5mb)</p>
-                        <button className='form-submit-button' onClick={handleSubmit}>Apply</button>
-
+                        <p className='form-smaller-texts' style={{marginLeft:"1.5em"}}>Doc, Docx, pdf (10MB)</p>
+                        <button className='form-submit-button' type="submit">Apply</button>
                     </form>
                     <ContactInfo />
                 </div>

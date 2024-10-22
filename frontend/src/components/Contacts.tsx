@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import '../styles/css/MacBookAir/Contact.css';
 import ContactInfo from './ContactInfo';
-import { submitForm } from '../services/api';
-import { LeftObserver, TopObserver, RightObserver, BottomObserver } from '../utils/Animation';
+import { LeftObserver, TopObserver, BottomObserver } from '../utils/Animation';
 
 interface FormData {
     name: string;
     surname: string;
     email: string;
     message: string;
-    service: string[]; // Changed from [string] to string[]
+    service: string[];
 }
 
 const Contacts: React.FC = () => {
@@ -33,27 +33,15 @@ const Contacts: React.FC = () => {
         }));
     };
 
-    // const handleServiceChange = (service: string, e: React.MouseEvent<HTMLButtonElement>) => {
-    //     e.preventDefault();
-    //     // const target = e.target as HTMLButtonElement;
-    //     // setServices([...services,service]);
-    //     setServices(service);
-    //     setFormData((prevState) => ({
-    //         ...prevState,
-    //         service: prevState.service.includes(service) ? prevState.service.filter((s) => s !== service) : [...prevState.service, service]
-    //     }));
-    // }
-
     const handleServiceChange = (service: string, e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
-        // setServices((prevServices) => [...prevServices, service]);
         setFormData((prevState) => ({
-          ...prevState,
-          service: prevState.service.includes(service)
-            ? prevState.service.filter((s) => s !== service)
-            : [...prevState.service, service]
+            ...prevState,
+            service: prevState.service.includes(service)
+                ? prevState.service.filter((s) => s !== service)
+                : [...prevState.service, service]
         }));
-      };
+    };
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -61,31 +49,29 @@ const Contacts: React.FC = () => {
     };
 
     const confirmSubmission = async () => {
-        // Handle form data submission to the server
-        console.log(formData);
         try {
-            await submitForm(formData);  // Send data to the backend
+            // Send form data to the backend
+            await axios.post('http://localhost:5000/api/submit-form', formData);
+            setShowConfirmationPopup(false);
+            setShowAlertPopup(true);
         } catch (error) {
             console.error('Error submitting form', error);
         }
-        setShowConfirmationPopup(false);
-        setShowAlertPopup(true);
     };
 
     const closeAlertPopup = () => {
         setShowAlertPopup(false);
     };
 
-    // animation part
-
+    // Animation logic
     useEffect(() => {
         const headerTitle = document.querySelectorAll('.contact-header-title') as NodeListOf<HTMLElement>;
-        headerTitle.forEach((element, index) => {
+        headerTitle.forEach((element) => {
             TopObserver.observe(element);
         });
 
         const headerDescription = document.querySelectorAll('.contact-header-description') as NodeListOf<HTMLElement>;
-        headerDescription.forEach((element, index) => {
+        headerDescription.forEach((element) => {
             BottomObserver.observe(element);
         });
 
@@ -96,16 +82,17 @@ const Contacts: React.FC = () => {
 
     }, []);
 
-
     return (
         <>
             <div id='contact-us' className="contact-container">
                 <div className="contact-header">
                     <h1 className='contact-header-title'>Get In Touch</h1>
-                    <p className='contact-header-description'>We'd love to hear from you! Whether you have questions, need more information, or want to discuss your project, feel free to reach out. Our team is here to help and will get back to you as soon as possible.</p>
+                    <p className='contact-header-description'>
+                        We'd love to hear from you! Whether you have questions, need more information, or want to discuss your project, feel free to reach out. Our team is here to help and will get back to you as soon as possible.
+                    </p>
                 </div>
                 <div className="contact-content">
-                    <form className="contact-form">
+                    <form className="contact-form" onSubmit={handleSubmit}>
                         <h2 className='sendMessage'>Send us a Message</h2>
                         <label htmlFor="name">Name</label>
                         <input type="text" id="name" placeholder="Name" value={formData.name} onChange={handleChange} />
@@ -125,15 +112,14 @@ const Contacts: React.FC = () => {
                                     type="button"
                                     key={service}
                                     id={service}
-                                    value={service}
                                     className={`px-4 py-2 rounded-md ${formData.service.includes(service) ? 'bg-[#457FD7] text-white' : 'border border-black text-black'}`}
-                                    onClick={(event) =>{handleServiceChange(service, event);}} >
+                                    onClick={(event) => handleServiceChange(service, event)}
+                                >
                                     {service}
                                 </button>
                             ))}
                         </div>
-                        <button className='form-submit-button' onClick={handleSubmit}>Submit</button>
-
+                        <button className='form-submit-button' type="submit">Submit</button>
                     </form>
                     <ContactInfo />
                 </div>
@@ -159,10 +145,10 @@ const Contacts: React.FC = () => {
                         </div>
                     </div>
                 )}
-            </div >
-
+            </div>
         </>
     );
 };
 
 export default Contacts;
+
