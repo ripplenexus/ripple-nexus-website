@@ -28,11 +28,11 @@
 
 .whatsapp-form-popup {
     position: absolute;
-    bottom: -16em;
+    bottom: -15em;
     right: -8em;
     transform: translate(-50%, -50%);
     /* background-color: rgba(255, 255, 255, 0.9); */
-    padding: 1em 2em;
+    padding: 1em 1.5em;
     margin: 0;
     z-index: 650;
     height: 0;
@@ -98,7 +98,8 @@
 }
 
 .whatsapp-form input,
-.whatsapp-form textarea {
+.whatsapp-form textarea,
+.whatsapp-form select {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
@@ -107,7 +108,8 @@
 }
 
 .whatsapp-form input:hover,
-.whatsapp-form textarea:hover {
+.whatsapp-form textarea:hover,
+.whatsapp-form select:hover {
     border: 2px solid #ccc;
     box-shadow: 0 0 5px 0 #aaa;
 }

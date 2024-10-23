@@ -5,7 +5,11 @@
     justify-content: center;
     align-items: center;
     padding: 3.875em 2.0625em 1.74375em 6.9375em;
-    background-color: #A9E841;
+    /* background-color: #A9E841; */
+    background: linear-gradient(90deg, #03acb5, #2840f4, #2ddaf1);
+    /* background: linear-gradient(to right, #01182c 80%, #2BA84A 100%); */
+    /* background: linear-gradient(90deg, #01182e, #2BA84A); */
+    color: white;
     position: relative;
     transition: all 0.5s linear;
     font-family: "Poppins", sans-serif;
@@ -28,10 +32,11 @@
     line-height: 1;
     letter-spacing: -0.08rem;
     text-align: center;
-    color: #000;
+    /* color: #000; */
+    color: inherit;
     transition: inherit;
     /* border: 2px solid black; */
-    animation: fadeInRight 2s ease forwards;
+    /* animation: fadeInRight 2s ease forwards; */
 }
 
 .page .text-section p {
@@ -45,9 +50,10 @@
     line-height: 1.4;
     letter-spacing: normal;
     text-align: left;
-    color: #000;
+    /* color: #000; */
+    color: inherit;
     transition: inherit;
-    animation: fadeInRight 3s ease forwards;
+    /* animation: fadeInRight 3s ease forwards; */
     /* border: 2px solid black; */
 }
 
@@ -60,16 +66,18 @@
 }
 
 .page .cta-button {
-    color: white;
+    color: inherit;
+    /* color: white; */
     border: none;
     width: 10.19375rem;
     margin-right: 3.60625em;
-    padding: 1.10625rem 1.9375rem;
+    padding: 1.1rem 1.9rem;
     border-radius: 0.5rem;
-    background-color: #457fd7;
+    /* background-color: #457fd7; */
+    background: linear-gradient(90deg, #028897, #2840f4);
     cursor: pointer;
     transition: inherit;
-    animation: fadeInRight 2.5s ease forwards;
+    /* animation: fadeInRight 2.5s ease forwards; */
 }
 
 .page .cta-button label {
@@ -83,11 +91,12 @@
     line-height: 1.4;
     letter-spacing: normal;
     text-align: center;
-    color: white;
+    /* color: white; */
+    color: inherit;
 }
 
 .page .cta-button:hover {
-    background-color: #1c62cc;
+    background: linear-gradient(90deg, #2840f4, #028897);
     transition: inherit;
 }
 
@@ -102,7 +111,7 @@
     width: 4.05625rem;
     border-radius: 0.28em;
     transition: inherit;
-    animation: fadeInLeft 2s ease forwards;
+    /* animation: fadeInLeft 2s ease forwards; */
 }
 
 .page .info-box h2 {
@@ -117,7 +126,8 @@
     line-height: normal;
     letter-spacing: normal;
     text-align: left;
-    color: #172048;
+    /* color: #172048; */
+    color: inherit;
     transition: inherit;
 }
 
@@ -130,7 +140,8 @@
     line-height: normal;
     letter-spacing: normal;
     text-align: left;
-    color: #000;
+    /* color: #000; */
+    color: inherit;
     transition: inherit;
 }
 

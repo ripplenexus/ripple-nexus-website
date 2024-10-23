@@ -66,7 +66,21 @@ img {
     z-index: 150;
 }
 
+/* for small icon */
 
+.menu-icon {
+    display: none;
+    /* border: 1px solid black; */
+    font-size: 1em;
+    /* width: 40px;
+    height: 40px; */
+    margin: 0;
+    border-radius: 50%;
+    padding: 0.1em 0.35em;
+    font-size: 1.5em;
+    /* background-color: #457fd7; */
+    transition: all 0.5s ease;
+}
 
 .nav-right {
     display: flex;
@@ -88,6 +102,10 @@ img {
 
 .nav-menu li {
     display: inline;
+    padding: 0.1em;
+    position: relative;
+    /* border: 1px solid black;
+    border-radius: 0.25em; */
 }
 
 .nav-menu a {
@@ -102,6 +120,12 @@ img {
     text-align: left;
     color: #000;
     text-decoration: none;
+    border-radius: .25em;
+    padding: 0.05em;
+}
+
+.nav-menu a:hover {
+    color: white;
 }
 
 .quote-button {
@@ -115,9 +139,11 @@ img {
     border-radius: 0.5em;
     border: solid 0.05625em black;
     background-color: #fff;
+    color: black;
     cursor: pointer;
     transition: all linear 0.5s;
 }
+
 
 .quote-button label {
     flex-grow: 0;
@@ -129,15 +155,16 @@ img {
     line-height: 1.4;
     letter-spacing: normal;
     text-align: center;
-    color: #000;
-
+    color: inherit;
     cursor: pointer;
 }
 
 .quote-button:hover {
-    background-color: #45a049;
+    /* background-color: #45a049; */
+    background-color: black;
+    border: 1px solid white;
+    color: white;
 }
-
 
 
 /* Container for the navigation menu */
@@ -183,13 +210,16 @@ img {
     transform: translateX(0);
 }
 
-@media (min-width:919px) {
-    .small-window-nav {
-        display: none;
-    }
-}
 
 @media (max-width: 919px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .menu-icon {
+        display: inline-block;
+    }
+
     .brand {
         margin: auto;
         font-size: 2em;
@@ -206,6 +236,7 @@ img {
 }
 
 @media screen and (max-width:650px) {
+
     .navbar {
         height: auto;
         justify-content: space-between;
@@ -233,22 +264,7 @@ img {
     }
 }
 
-
 /* for small icon */
-
-.menu-icon {
-    display: none;
-    /* border: 1px solid black; */
-    font-size: 1em;
-    /* width: 40px;
-    height: 40px; */
-    margin: 0;
-    border-radius: 50%;
-    padding: 0.1em 0.35em;
-    font-size: 1.5em;
-    /* background-color: #457fd7; */
-    transition: all 0.5s ease;
-}
 
 .bg-color-dark {
     background-color: #000;

@@ -73,31 +73,14 @@ const CareerPage: React.FC = () => {
   }
 
   useEffect(() => {
-    const headerTitle = document.querySelectorAll('#career-header, .mission-card, #interested-in-mission, .open-position-card ') as NodeListOf<HTMLElement>;
+    const headerTitle = document.querySelectorAll('#career-header') as NodeListOf<HTMLElement>;
     headerTitle.forEach((element, index) => {
       TopObserver.observe(element);
     });
 
-    const headerDescription = document.querySelectorAll('#career-header-description, .how-to-apply') as NodeListOf<HTMLElement>;
+    const headerDescription = document.querySelectorAll('#career-header-description, .mission-card, #interested-in-mission ') as NodeListOf<HTMLElement>;
     headerDescription.forEach((element, index) => {
       BottomObserver.observe(element);
-    });
-
-    const diversityImg = document.querySelectorAll('#diversity-img') as NodeListOf<HTMLElement>;
-    diversityImg.forEach((element, index) => {
-      LeftObserver.observe(element);
-    });
-
-    const diversitydescription = document.querySelectorAll('#diversity-description, .open-position-header') as NodeListOf<HTMLElement>;
-    diversitydescription.forEach((element, index) => {
-      RightObserver.observe(element);
-    });
-    
-    const workReason = document.querySelectorAll('.reasons-to-work') as NodeListOf<HTMLElement>;
-    workReason.forEach((element, index) => {
-      setTimeout(()=>{
-        RightObserver.observe(element);
-      }, index*50);
     });
 
   }, []);
@@ -115,12 +98,12 @@ const CareerPage: React.FC = () => {
               backgroundPosition: 'center'
             }}
           >
-            <h1 id='career-header' className="text-white font-500 font-poppins text-center leading-[1.4] text-3xl sm:text-4xl lg:text-6xl w-11/12 md:w-2/3 lg:w-1/2 drop-shadow-lg" style={{lineHeight:"1.4"}}>
+            <h1 id='career-header' className="text-white font-500 font-poppins text-center leading-[1.4] text-3xl sm:text-4xl lg:text-6xl w-11/12 md:w-2/3 lg:w-[650px] drop-shadow-lg " style={{lineHeight:"1.4"}}>
               Explore Exciting Career <span className='relative inline-block'>Opportunities<img className='absolute bottom-[-0.28em] left-0' src={Underline2} alt='underline-2 over Opportunity' />
               <img className='absolute' src={Underline1} alt='underline-1 over Opportunity' /></span> with Us 
 
             </h1>
-            <p id='career-header-description' className="text-base sm:text-lg lg:text-xl w-11/12 md:w-2/3 lg:w-1/2 pt-4 sm:pt-6 lg:pt-10 font-poppins text-[21.1px] font-300 leading-[1.4] text-center text-white  ">
+            <p id='career-header-description' className="text-base sm:text-lg lg:text-xl w-11/12 md:w-2/3 lg:w-[650px] p-2 pt-4 sm:pt-6 lg:pt-10 font-poppins text-[1.25em] font-300 leading-[1.4] text-center text-white">
               Join our team and be part of a dynamic and innovative environment where your skills and ideas can make a real impact. We are always on the lookout for passionate and talented individuals to help us drive success and growth.
             </p>
           </div>
@@ -147,7 +130,7 @@ const CareerPage: React.FC = () => {
 
       {/* Call to Action Section */}
       <div id="interested-in-mission" className="flex flex-col justify-center items-center w-full text-center py-10">
-        <div className="text-4xl sm:text-5xl lg:text-6xl font-500 font-[Poppins] text-black mb-2">
+        <div className="text-3xl sm:text-4xl lg:text-5xl font-500 font-[Poppins] text-black mb-2">
           Interested in our <br />mission?
         </div>
       </div>
@@ -159,8 +142,8 @@ const CareerPage: React.FC = () => {
             return (
               <div key={111 + index} className="w-full sm:w-1/3 flex flex-col gap-3 p-6 bg-white rounded-lg shadow-lg hover:bg-blue-50 transition-all duration-300 font-[Poppins] mission-card">
                 <img src={element.logo} className="text-center w-16 h-16 sm:w-20 sm:h-20 mx-auto hover:scale-110 transition-transform duration-300" alt="People First" />
-                <h2 className="text-black text-2xl lg:text-[1.8em] font-500">{element.mission}</h2>
-                <p className="text-base sm:text-xl text-black">{element.description}</p>
+                <h2 className="text-black text-xl lg:text-[1.5em] font-500">{element.mission}</h2>
+                <p className="text-base sm:text-xl lg:text-[1.2em] text-black">{element.description}</p>
               </div>
             )
           })
@@ -169,7 +152,7 @@ const CareerPage: React.FC = () => {
 
       {/* Open Positions Section */}
       <div className="w-11/12 lg:w-10/12 flex flex-col mt-10">
-        <div className="text-black font-500 font-[Poppins] text-4xl sm:text-5xl lg:text-6xl mb-6 open-position-header">
+        <div className="text-black font-500 font-[Poppins] text-3xl sm:text-4xl lg:text-5xl mb-6 open-position-header">
           Open positions
         </div>
 
@@ -193,7 +176,7 @@ const CareerPage: React.FC = () => {
 
       {/* Why Work With Us Section */}
       <div className="w-11/12 lg:w-10/12 flex flex-col py-10 font-[Poppins]">
-        <h2 className="text-black  text-3xl lg:text-[1.75em] font-bold lg:ml-4 mb-6">Why Work With Us?</h2>
+        <h2 className="text-black  text-3xl lg:text-[1.75em] font-600 lg:ml-4 mb-6">Why Work With Us?</h2>
 
 
         <ul className="text-black list-disc list-inside pl-5 space-y-4">
@@ -209,11 +192,11 @@ const CareerPage: React.FC = () => {
 
       {/* Contact Section */}
       <div className="w-11/12 lg:w-10/12 flex flex-col py-10 font-[Poppins] how-to-apply">
-        <h2 className="text-black  font-bold text-2xl sm:text-xl lg:text-[1.75em] lg:ml-4 mb-6">
+        <h2 className="text-black  font-[600] text-2xl sm:text-xl lg:text-[1.75em] lg:ml-4 mb-6">
           How to Apply?
         </h2>
         <p className="text-black text-base sm:text-lg lg:ml-4 font-500">
-          If you’re interested in any of the positions above or want to explore other opportunities with us, please send your resume and cover letter to [your-email@example.com] with the subject line "Career Application – [Position Title]". We look forward to hearing from you!        </p>
+          If you’re interested in any of the positions above or want to explore other opportunities with us, please send your resume and cover letter to <strong>contact@ripplenexus.tech</strong> with the subject line "Career Application – [Position Title]". We look forward to hearing from you!        </p>
       </div>
     </div>
   );

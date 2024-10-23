@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useNavigate, useLocation } from 'react-router-dom';
 // import { ReactSVG } from 'react-svg';
 import '../styles/css/Navigation.css';
 import RLogo from '../assets/img/RippleLogos/R_logo.png';
@@ -12,6 +12,8 @@ import { startAnimation, endAnimation, showElement, hideElement } from '../utils
 const Navigation: React.FC = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const navigate = useNavigate();
+  // const location = useLocation();
+
   // for logo animation part
   useEffect(() => {
     const handleScroll = () => {
@@ -63,44 +65,43 @@ const Navigation: React.FC = () => {
   }, []);
 
   //for menu bar animation
-  useEffect(() => {
-    const toggleMenu = () => {
-      // const menuIcon  = document.getElementById('menu-icon') as HTMLElement;
-      const windowWidth = window.innerWidth;
-      if (windowWidth < 920) {
-        endAnimation('.menu-icon', 'fade-out-left');
-        endAnimation('.nav-menu li', 'fade-in-left');
-        hideElement('.nav-menu');
-        const showTime = startAnimation('.nav-menu li', 'fade-out-right');
-        setTimeout(() => {
-          showElement('.menu-icon', 'inline-block');
-          startAnimation('.menu-icon', 'fade-in-right');
-        }, showTime / 4);
-      } else {
-        showElement('.nav-menu', 'flex');
-        showElement('.nav-menu li', 'inline');
-        endAnimation('.menu-icon', 'fade-in-right');
-        endAnimation('.nav-menu li', 'fade-out-right');
-        const showTime = startAnimation('.menu-icon', 'fade-out-left');
-        setTimeout(() => {
-          hideElement('.menu-icon');
-          startAnimation('.nav-menu li', 'fade-in-left');
-        }, showTime / 4);
-      }
-    }
+  // useEffect(() => {
+  //   const toggleMenu = () => {
+  //     const windowWidth = window.innerWidth;
+  //     if (windowWidth < 920) {
+  //       endAnimation('.menu-icon', 'fade-out-left');
+  //       endAnimation('.nav-menu li', 'fade-in-left');
+  //       hideElement('.nav-menu');
+  //       const showTime = startAnimation('.nav-menu li', 'fade-out-right');
+  //       setTimeout(() => {
+  //         showElement('.menu-icon', 'inline-block');
+  //         startAnimation('.menu-icon', 'fade-in-right');
+  //       }, showTime / 4);
+  //     } else {
+  //       showElement('.nav-menu', 'flex');
+  //       showElement('.nav-menu li', 'inline');
+  //       endAnimation('.menu-icon', 'fade-in-right');
+  //       endAnimation('.nav-menu li', 'fade-out-right');
+  //       const showTime = startAnimation('.menu-icon', 'fade-out-left');
+  //       setTimeout(() => {
+  //         hideElement('.menu-icon');
+  //         startAnimation('.nav-menu li', 'fade-in-left');
+  //       }, showTime / 4);
+  //     }
+  //   }
 
-    const events = ['resize', 'load']
-    events.forEach((event) => {
-      window.addEventListener(event, toggleMenu);
-    })
+  //   const events = ['resize', 'load']
+  //   events.forEach((event) => {
+  //     window.addEventListener(event, toggleMenu);
+  //   })
 
-    return () => {
-      events.forEach((event) => {
-        window.removeEventListener(event, toggleMenu);
-      });
-    };
+  //   return () => {
+  //     events.forEach((event) => {
+  //       window.removeEventListener(event, toggleMenu);
+  //     });
+  //   };
 
-  }, [])
+  // }, [])
 
   return (
     <nav className="navbar" style={{ position: "sticky" }}>
@@ -114,10 +115,10 @@ const Navigation: React.FC = () => {
         {/* {showMenu ? '∆' : '☰'} */}
         <button id='menu-icon' className='menu-icon bg-color-light' onClick={() => setShowMenu(!showMenu)}>☰</button>
         <ul className="nav-menu">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/services">Services</Link></li>
-          <li><Link to="/career">Career</Link></li>
-          <li><Link to="/about">About Us</Link></li>
+          <li className='movingBackgroundColor'><NavLink to="/" >Home</NavLink></li>
+          <li className='movingBackgroundColor'><NavLink to="/services">Services</NavLink></li>
+          <li className='movingBackgroundColor'><NavLink to="/career">Career</NavLink></li>
+          <li className='movingBackgroundColor'><NavLink to="/about">About Us</NavLink></li>
         </ul>
         {
           (showMenu) && (

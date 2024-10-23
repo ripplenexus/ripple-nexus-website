@@ -62,7 +62,7 @@ const ServicesCards: React.FC = () => {
     useEffect(()=>{
         const cards = document.querySelectorAll('.services-container .service-card') as NodeListOf<HTMLElement>;
         cards.forEach((element, index) => {
-            LeftObserver.observe(element);
+            BottomObserver.observe(element);
         });
     },[]);
 

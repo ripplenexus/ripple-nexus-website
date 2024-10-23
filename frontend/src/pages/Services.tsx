@@ -14,21 +14,7 @@ const Services: React.FC = () => {
 
 
     useEffect(() => {
-        const topAnim = document.querySelectorAll('.cover-main-heading, .cover-sub-heading, .body-heading') as NodeListOf<HTMLElement>;
-        topAnim.forEach((element) => {
-            TopObserver.observe(element);
-        });
-
-        const bottomAnim = document.querySelectorAll('.body-button, .services-heading') as NodeListOf<HTMLElement>;
-        bottomAnim.forEach((element) => {
-            BottomObserver.observe(element);
-        });
-
-        const leftAnim = document.querySelectorAll('.cover-description, .body-description, .cover-list') as NodeListOf<HTMLElement>;
-        leftAnim.forEach((element) => {
-            LeftObserver.observe(element);
-        });
-
+       
         const rightAnim = document.querySelectorAll('.cover-image, .body-image') as NodeListOf<HTMLElement>;
         rightAnim.forEach((element) => {
             RightObserver.observe(element);

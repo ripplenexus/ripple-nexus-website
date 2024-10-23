@@ -23,6 +23,8 @@ module.exports = {
       colors: {
         'button-light-blue': '#457fd7',
         'career-blue': '#3a53e4',
+        'highlight-1': '#ccc',
+        'footer-line': '#888'
       }
     },
   },

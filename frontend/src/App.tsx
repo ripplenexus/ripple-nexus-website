@@ -20,7 +20,7 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<HomePage/>} />
-        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog" element={<h1 style={{height:"35vh", fontSize:"4em", display:"flex", justifyContent:"center", alignItems:"center"}}>Coming Soon.....</h1>} />
         <Route path="/blog-details" element={<BlogDetailsPage />} />
         <Route path="/about" element={<ContactUsPage />} />
         <Route path="/confirmation" element={<ConfirmationPage />} />
