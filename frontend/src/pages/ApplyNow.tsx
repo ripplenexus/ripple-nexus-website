@@ -64,7 +64,7 @@ const ApplyNow: React.FC = () => {
 
         try {
             // Submit the form data and file to the backend API
-            await axios.post('http://localhost:5000/api/submit-application', formDataToSend, {
+            await axios.post('https://ripple-nexus-website.onrender.com/api/submit-application', formDataToSend, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
