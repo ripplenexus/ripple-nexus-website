@@ -14,7 +14,7 @@ const WhatsAppForm: React.FC = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        const whatsappMessage = `*${formData.services}*\n\nName : *${formData.name}*\nEmail : *${formData.email}*\n\nMessage : ${formData.message}`;
+        const whatsappMessage = `> *${formData.services}*\n\nName : *${formData.name}*\nEmail : *${formData.email}*\n\nMessage : ${formData.message}`;
         const whatsappUrl = `https://api.whatsapp.com/send?phone=+917599756826&text=${encodeURIComponent(whatsappMessage)}`;
         window.open(whatsappUrl, '_blank');
     };
@@ -127,7 +127,7 @@ const WhatsAppForm: React.FC = () => {
                                 <label htmlFor='whatsapp-service'>Service:</label>
                             <select id="whatsapp-service" name='services' onChange={handleInputChange} required>
                             <option value='' disabled selected>Select a position</option>
-                                {['Web Development', 'UI/UX Design', 'Graphic & Logic Design', 'Resume/CV Writing', 'LinkedIn Optimization'].map((service, index)=>{
+                                {['Web Development', 'UI/UX Design', 'Graphics Design', 'Logo and Branding Design', 'Resume/CV Writing', 'LinkedIn Optimization'].map((service, index)=>{
                                    return (<option value={service}>{service}</option>)
                                 })};
                             </select>

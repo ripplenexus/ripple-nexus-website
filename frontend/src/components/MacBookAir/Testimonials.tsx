@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../../styles/css/MacBookAir/Testimonials.css';
-import { TopObserver } from '../../utils/Animation';
+import { BottomObserver } from '../../utils/Animation';
 import profile from '../../assets/img/profile.png'
 import testimonials from '../../utils/TestimonialsData';
 import ImgWithFallback from '../../utils/ImgFallback';
@@ -19,7 +19,7 @@ const Testimonials: React.FC = () => {
     useEffect(() => {
         const cards = document.querySelectorAll('.testimonial-cards') as NodeListOf<HTMLElement>;
         cards.forEach((element, index) => {
-            TopObserver.observe(element);
+            BottomObserver.observe(element);
         });
     }, []);
 

@@ -84,9 +84,10 @@ const Contacts: React.FC = () => {
 
     return (
         <>
+
             <div id='contact-us' className="contact-container">
                 <div className="contact-header">
-                    <h1 className='contact-header-title'>Get In Touch</h1>
+                <h1 className='contact-header-title'>Get In Touch</h1>
                     <p className='contact-header-description'>
                         We'd love to hear from you! Whether you have questions, need more information, or want to discuss your project, feel free to reach out. Our team is here to help and will get back to you as soon as possible.
                     </p>
@@ -107,7 +108,7 @@ const Contacts: React.FC = () => {
                         <textarea id="message" placeholder="Message" value={formData.message} onChange={handleChange}></textarea>
 
                         <div className="button-group">
-                            {['Web Development', 'UI/UX Design', 'Graphic & Logic Design', 'Resume/CV Writing', 'LinkedIn Optimization'].map((service) => (
+                            {['Web Development', 'UI/UX Design', 'Graphics Design', 'Logo and Branding Design', 'Resume/CV Writing', 'LinkedIn Optimization'].map((service) => (
                                 <button
                                     type="button"
                                     key={service}

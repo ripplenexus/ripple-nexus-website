@@ -15,6 +15,9 @@
     /* position: fixed; */
     top: 0;
     background-color: rgb(252, 251, 251);
+    /* border-radius: 0 0 2em 2em; */
+    box-shadow: 0 0 1em #888;
+    /* border: 1px solid black; */
 }
 
 .brand {
@@ -30,6 +33,7 @@
     letter-spacing: -0.061875rem;
     text-align: center;
     color: #4a4a4a;
+    cursor: pointer;
     position: relative;
     overflow: hidden;
     min-width: 200px;
@@ -64,7 +68,10 @@ img {
     top: 0;
     left: 0;
     z-index: 150;
+    /* cursor: pointer; */
 }
+
+
 
 /* for small icon */
 
@@ -96,7 +103,7 @@ img {
 .nav-menu {
     list-style: none;
     display: flex;
-    gap: 1.25em;
+    gap: 1.2em;
     margin-right: 1.25em;
 }
 
@@ -104,6 +111,9 @@ img {
     display: inline;
     padding: 0.1em;
     position: relative;
+    /* width: fit-content; */
+    /* border: 2px solid red; */
+    text-wrap: nowrap;
     /* border: 1px solid black;
     border-radius: 0.25em; */
 }
@@ -135,7 +145,7 @@ img {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 0.55625em;
-    padding: 1.10625em 1.9375em;
+    padding: 0.8em 1.2em;
     border-radius: 0.5em;
     border: solid 0.05625em black;
     background-color: #fff;
@@ -211,7 +221,7 @@ img {
 }
 
 
-@media (max-width: 919px) {
+@media (max-width: 940px) {
     .nav-menu {
         display: none;
     }

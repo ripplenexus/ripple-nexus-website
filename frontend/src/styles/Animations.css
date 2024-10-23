@@ -207,6 +207,8 @@
 }
 
 .movingBackgroundColor a.active {
+    border-radius: 0.25em;
+    padding: 0.1em 0.2em;
     background-color: black;
-    color: white;
+    color: inherit;
 }
