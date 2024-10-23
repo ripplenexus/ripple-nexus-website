@@ -47,7 +47,7 @@ router.post('/submit-application', upload.single('resume'), async (req, res) => 
 
   // Get file info if a file is uploaded
   const fileName = req.file ? req.file.originalname : 'No file uploaded';
-  const fileUrl = req.file ? `http://localhost:5000/api/download/${req.file.filename}?original=${encodeURIComponent(req.file.originalname)}` : '';
+  const fileUrl = req.file ? `https://ripple-nexus-website.onrender.com/api/download/${req.file.filename}?original=${encodeURIComponent(req.file.originalname)}` : '';
 
   try {
     // Prepare the form data to be appended to Google Sheet, including the resume filename as a hyperlink
@@ -126,3 +126,108 @@ router.get('/download/:filename', (req, res) => {
 });
 
 module.exports = router;
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*const express = require('express');
+const { google } = require('googleapis');
+const router = express.Router();
+require('dotenv').config();
+
+// OAuth2 client setup
+const oauth2Client = new google.auth.OAuth2(
+  process.env.CLIENT_ID,
+  process.env.CLIENT_SECRET,
+  // process.env.REDIRECT_URI
+);
+
+// Set the refresh token
+oauth2Client.setCredentials({
+  refresh_token: process.env.REFRESH_TOKEN,
+});
+
+// Google Sheets API setup
+const sheets = google.sheets({ version: 'v4', auth: oauth2Client });
+
+// Handle form submission
+router.post('/submit-form', async (req, res) => {
+  const { name, surname, email, message, service } = req.body;
+
+  try {
+    // First, get the last row in the sheet to calculate where to append the data
+    const getRows = await sheets.spreadsheets.values.get({
+      spreadsheetId: process.env.SHEET_ID,
+      range: 'FormDetails!A:E',
+    });
+
+    // Calculate the next row based on the number of rows currently in the sheet
+    const nextRow = getRows.data.values ? getRows.data.values.length + 1 : 2; // +1 if data exists, starts at row 2
+
+    // Prepare the data to be appended
+    const rowData = [[name, surname, email, message, service.join(', ')]];
+
+    // Append the form data to the sheet in the next available row
+    await sheets.spreadsheets.values.append({
+      spreadsheetId: process.env.SHEET_ID,
+      range: `FormDetails!A${nextRow}:E${nextRow}`,  // Append data below headers
+      valueInputOption: 'RAW',
+      resource: {
+        values: rowData,
+      },
+    });
+
+    // Respond with success
+    res.status(200).send('Form submitted successfully');
+  } catch (error) {
+    console.error('Error submitting form:', error);
+    res.status(500).send('Error submitting form');
+  }
+});
+
+module.exports = router;
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*const express = require('express');
+const router = express.Router();
+const Form = require('../models/Form');  // Import the Form model
+
+// Handle form submission
+router.post('/submit-form', async (req, res) => {
+  const { name, surname, email, message, service } = req.body;
+
+  try {
+    const newForm = new Form({ name, surname, email, message, service });
+    await newForm.save();
+    res.status(200).send('Form submitted successfully');
+  } catch (error) {
+    res.status(500).send('Error submitting form');
+  }
+});
+
+module.exports = router;
+*/
