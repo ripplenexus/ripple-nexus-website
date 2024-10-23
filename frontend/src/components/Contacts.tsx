@@ -51,7 +51,7 @@ const Contacts: React.FC = () => {
     const confirmSubmission = async () => {
         try {
             // Send form data to the backend
-            await axios.post('http://localhost:5000/api/submit-form', formData);
+            await axios.post('https://ripple-nexus-website.onrender.com/api/submit-form', formData);
             setShowConfirmationPopup(false);
             setShowAlertPopup(true);
         } catch (error) {
