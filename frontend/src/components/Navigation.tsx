@@ -12,11 +12,20 @@ import { startAnimation, endAnimation, showElement, hideElement } from '../utils
 const Navigation: React.FC = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const navigate = useNavigate();
-  // const location = useLocation();
+
+
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
 
   // for logo animation part
   useEffect(() => {
     const handleScroll = () => {
+      const navBar = document.getElementById('navbar') as HTMLElement;
       const R_logo = document.getElementById('R_logo') as HTMLElement;
       const RippleNexus_logo = document.getElementById('RippleNexus_logo') as HTMLElement;
       const MenuIcon = document.getElementById('menu-icon') as HTMLElement;
@@ -25,6 +34,7 @@ const Navigation: React.FC = () => {
 
       if (window.scrollY > triggerPoint) {
         //for hamburger animation
+        navBar.style.borderRadius = "0 0 2em 2em";
         MenuIcon.classList.remove('bg-color-light');
         MenuIcon.classList.add('bg-color-dark');
         //for logo animation
@@ -40,6 +50,8 @@ const Navigation: React.FC = () => {
         }
 
       } else {
+        //for navigation border
+        navBar.style.borderRadius = "0";
         // for hamburger menu animation
         MenuIcon.classList.remove('bg-color-dark');
         MenuIcon.classList.add('bg-color-light');
@@ -104,8 +116,8 @@ const Navigation: React.FC = () => {
   // }, [])
 
   return (
-    <nav className="navbar" style={{ position: "sticky" }}>
-      <div className="brand">
+    <nav id='navbar' className="navbar" style={{ position: "sticky" }}>
+      <div className="brand"  onClick={()=>navigate('/')}>
         {/* <img id="RippleNexus_logo" height="auto" width="50%" src={RippleNexusLogo} alt="logo" className='hidden' /> */}
         <img id="RippleNexus_logo" height="auto" width="200px" src={RippleNexusLogoBW} alt="logo" className='hidden' />
         {/* <h1 id="RippleNexus_logo" className='hidden'>Ripple Nexus</h1> */}
@@ -131,7 +143,12 @@ const Navigation: React.FC = () => {
           )
         }
 
-        <button className="quote-button" onClick={()=>navigate('/about#contact-us')}><label>Request a Quote</label></button>
+        <button className="quote-button" 
+        onClick={()=>{
+          navigate('/about#contact-us');
+          window.scroll(0, 800);
+          }}>
+          <label>Request a Quote</label></button>
       </div>
     </nav>
   );

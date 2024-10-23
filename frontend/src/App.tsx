@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, {useEffect} from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './styles/Animations.css'; //animation classes
 import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicePage';
@@ -15,6 +15,8 @@ import ApplyNow from './pages/ApplyNow';
 import CareerPage from './pages/CareerPage';
 
 function App() {
+  
+
   return (
     <Router>
       <Navigation />

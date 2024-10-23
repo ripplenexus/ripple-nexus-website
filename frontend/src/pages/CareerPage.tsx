@@ -86,7 +86,7 @@ const CareerPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col items-center mb-20 ">
+    <div  className="min-h-screen flex flex-col items-center mb-20 ">
       {/* Header Section */}
       <div className="flex w-full justify-center p-0 bg-career-blue bg-700 h-[400px] sm:h-[500px]">
         <div className="w-full flex justify-center">
