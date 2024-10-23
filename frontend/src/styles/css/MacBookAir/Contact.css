@@ -158,11 +158,17 @@ form.contact-form label[for="position"] {
 
 form.contact-form select#position {
     font-family: Inter;
+    width: 60%;
     margin-bottom: 0.6em;
     padding: 0.6em;
     border: 1px solid #D9D9D9;
     border-radius: 0.8em;
-    color: #D9D9D9;
+    /* color: #D9D9D9; */
+    color: black;
+}
+
+form.contact-form select#position option:default {
+    color: #d9d9d9;
 }
 
 /* file upload submission */

@@ -95,22 +95,25 @@ const ApplyNow: React.FC = () => {
                 <div className="contact-content">
                     <form className="contact-form" encType="multipart/form-data" onSubmit={handleSubmit}>
                         <h2 className='sendMessage'>Send us a Message</h2>
-                        <label htmlFor="name">Name</label>
-                        <input type="text" id="name" placeholder="Name" value={formData.name} onChange={handleChange} />
+                        <label htmlFor="name">First Name</label>
+                        <input type="text" id="name" placeholder="First Name" value={formData.name} onChange={handleChange} />
 
                         <label htmlFor="surname">Surname</label>
                         <input type="text" id="surname" placeholder="Surname" value={formData.surname} onChange={handleChange} />
 
-                        <label htmlFor="email">Business Email</label>
-                        <input type="email" id="email" placeholder="Business Email" value={formData.email} onChange={handleChange} />
+                        <label htmlFor="email">Email</label>
+                        <input type="email" id="email" placeholder="Email" value={formData.email} onChange={handleChange} />
 
                         <label htmlFor="position">Position you are applying for?</label>
                         <select id="position" value={formData.position} onChange={handleChange}>
                             <option value="" disabled selected>Select a position</option>
-                            <option value="developer">Developer</option>
+                            {['Full Stack Developer', 'Backend Developer', 'Frontend Developer', 'Logo and Branding Designer', 'Graphic Designer', 'AI Chatbot Developer', 'Software Developer'].map((opt, idx)=>{
+                                return(<option value={opt}>{opt}</option>)
+                            })}
+                            {/* <option value="developer">Developer</option>
                             <option value="designer">Designer</option>
                             <option value="manager">Manager</option>
-                            <option value="analyst">Analyst</option>
+                            <option value="analyst">Analyst</option> */}
                         </select>
 
                         <label htmlFor="reason">Why should we hire you?</label>
