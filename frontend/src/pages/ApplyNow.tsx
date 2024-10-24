@@ -49,10 +49,10 @@ const ApplyNow: React.FC = () => {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         const fileInput = document.getElementById('resumeUpload') as HTMLInputElement;
-    if (!fileInput.files || fileInput.files.length === 0) {
-        alert('Please upload your resume.');
-        return;
-    }
+        if (!fileInput.files || fileInput.files.length === 0) {
+            alert('Please upload your resume.');
+            return;
+        }
         setShowConfirmationPopup(true); // Show confirmation popup
     };
 
@@ -71,7 +71,7 @@ const ApplyNow: React.FC = () => {
         try {
             // Submit the form data and file to the backend API
             // console.log(formDataToSend);
-            console.log('starting loading');
+            // console.log('starting loading');
             setLoading(true);
             await axios.post('https://ripple-nexus-website.onrender.com/api/submit-application', formDataToSend, {
                 headers: {
@@ -79,8 +79,22 @@ const ApplyNow: React.FC = () => {
                 },
             });
             setLoading(false);
-            console.log("loading ended");
+            // console.log("loading ended");
             setShowConfirmationPopup(false); // Hide confirmation popup
+            //clearing old data
+            setFormData({
+                name: '',
+                surname: '',
+                email: '',
+                reason: '',
+                position: '',
+                type: '',
+            });
+
+            //clearing file input
+            const fileInput = document.getElementById('resumeUpload') as HTMLInputElement;
+            fileInput.value = '';
+            setFileName('');
             setShowAlertPopup(true); // Show success alert
         } catch (error) {
             console.error('Error submitting application:', error);
@@ -110,7 +124,7 @@ const ApplyNow: React.FC = () => {
                         <input type="text" id="name" placeholder="First Name" value={formData.name} onChange={handleChange} required />
 
                         <label htmlFor="surname">Surname</label>
-                        <input type="text" id="surname" placeholder="Surname" value={formData.surname} onChange={handleChange} required/>
+                        <input type="text" id="surname" placeholder="Surname" value={formData.surname} onChange={handleChange} required />
 
                         <label htmlFor="email">Email</label>
                         <input type="email" id="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
@@ -118,8 +132,8 @@ const ApplyNow: React.FC = () => {
                         <label htmlFor="position">Position you are applying for?</label>
                         <select id="position" value={formData.position} onChange={handleChange} required>
                             <option value="" disabled defaultChecked>Select a position</option>
-                            {['Full Stack Developer', 'Backend Developer', 'Frontend Developer', 'Logo and Branding Designer', 'Graphic Designer', 'AI Chatbot Developer', 'Software Developer'].map((opt, idx)=>{
-                                return(<option key={2315+idx} value={opt}>{opt}</option>)
+                            {['Full Stack Developer', 'Backend Developer', 'Frontend Developer', 'Logo and Branding Designer', 'Graphic Designer', 'AI Chatbot Developer', 'Software Developer'].map((opt, idx) => {
+                                return (<option key={2315 + idx} value={opt}>{opt}</option>)
                             })}
                             {/* <option value="developer">Developer</option>
                             <option value="designer">Designer</option>
@@ -131,7 +145,7 @@ const ApplyNow: React.FC = () => {
                         <p className='form-smaller-texts'>Cover letter</p>
                         <textarea id="reason" placeholder="Write something here" value={formData.reason} onChange={handleChange} rows={3} required></textarea>
 
-                        <label htmlFor="resumeUpload" className="custom-file-upload" style={{color: "#457fd7"}}>
+                        <label htmlFor="resumeUpload" className="custom-file-upload" style={{ color: "#457fd7" }}>
                             {fileName ? `File: ${fileName}` : 'Upload Resume'}
                         </label>
                         <input
@@ -142,30 +156,30 @@ const ApplyNow: React.FC = () => {
                             style={{ display: 'none' }}
                             onChange={handleFileChange}
                         />
-                        <p className='form-smaller-texts' style={{marginLeft:"1.5em"}}>Doc, Docx, pdf (10MB)</p>
+                        <p className='form-smaller-texts' style={{ marginLeft: "1.5em" }}>Doc, Docx, pdf (10MB)</p>
                         <button className='form-submit-button' type="submit">Apply</button>
                     </form>
                     <ContactInfo />
                 </div>
 
                 {showConfirmationPopup && (
-                   <>
-                   <div className="popup">
-                       <div className="popup-content">
-                           <h2 style={{ color: "black" }}>Confirm Submission</h2>
-                           <p style={{ color: "black" }}>Are you sure you want to submit the form?</p>
-                           <div className='button-group'>
-                               <button onClick={confirmSubmission}>Yes</button>
-                               <button onClick={() => setShowConfirmationPopup(false)}>No</button>
-                           </div>
-                       </div>
-                   </div>
-                   {
-                       loading && (<Loader />)
-                   }
-                   
-               </>
-                    
+                    <>
+                        <div className="popup">
+                            <div className="popup-content">
+                                <h2 style={{ color: "black" }}>Confirm Submission</h2>
+                                <p style={{ color: "black" }}>Are you sure you want to submit the form?</p>
+                                <div className='button-group'>
+                                    <button onClick={confirmSubmission}>Yes</button>
+                                    <button onClick={() => setShowConfirmationPopup(false)}>No</button>
+                                </div>
+                            </div>
+                        </div>
+                        {
+                            loading && (<Loader />)
+                        }
+
+                    </>
+
 
                 )}
 

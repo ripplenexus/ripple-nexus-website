@@ -62,6 +62,14 @@ const Contacts: React.FC = () => {
             await axios.post('https://ripple-nexus-website.onrender.com/api/submit-form', formData);
             setLoading(false);
             setShowConfirmationPopup(false);
+            //clearing old data
+            setFormData({
+                name: '',
+                surname: '',
+                email: '',
+                message: '',
+                service: [''], 
+            });
             setShowAlertPopup(true);
         } catch (error) {
             console.error('Error submitting form', error);

@@ -123,18 +123,22 @@ form.contact-form textarea::placeholder {
     color: #D9D9D9;
 }
 
-form.contact-form .button-group,
-div.popup-content .button-group {
+form.contact-form .button-group {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 0.7em;
 }
 
+div.popup-content .button-group {
+    margin: 0.8em;
+    display: flex;
+}
 
 .alert-popup-content button,
 .popup-content button {
-    padding: 0.7em;
+    padding: 0.3em 0.7em;
+    margin: auto;
     border: none;
     border-radius: 0.3em;
     cursor: pointer;
@@ -326,6 +330,7 @@ form.contact-form select#position option:default {
 
 .popup,
 .alert-popup {
+    font-family: "Poppins";
     position: fixed;
     top: 0;
     left: 0;
