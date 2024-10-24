@@ -3,6 +3,7 @@ import axios from 'axios';
 import '../styles/css/MacBookAir/Contact.css';
 import ContactInfo from './ContactInfo';
 import { LeftObserver, TopObserver, BottomObserver } from '../utils/Animation';
+import Loader from './loader';
 
 interface FormData {
     name: string;
@@ -13,7 +14,7 @@ interface FormData {
 }
 
 const Contacts: React.FC = () => {
-
+    const [loading, setLoading] = useState<Boolean>(false);
     const [formData, setFormData] = useState<FormData>({
         name: '',
         surname: '',
@@ -50,9 +51,11 @@ const Contacts: React.FC = () => {
 
     const confirmSubmission = async () => {
         try {
+            setLoading(true);
             // Send form data to the backend
             // console.log(formData);
             await axios.post('https://ripple-nexus-website.onrender.com/api/submit-form', formData);
+            setLoading(false);
             setShowConfirmationPopup(false);
             setShowAlertPopup(true);
         } catch (error) {
@@ -88,7 +91,7 @@ const Contacts: React.FC = () => {
 
             <div id='contact-us' className="contact-container">
                 <div className="contact-header">
-                <h1 className='contact-header-title'>Get In Touch</h1>
+                    <h1 className='contact-header-title'>Get In Touch</h1>
                     <p className='contact-header-description'>
                         We'd love to hear from you! Whether you have questions, need more information, or want to discuss your project, feel free to reach out. Our team is here to help and will get back to you as soon as possible.
                     </p>
@@ -127,16 +130,22 @@ const Contacts: React.FC = () => {
                 </div>
 
                 {showConfirmationPopup && (
-                    <div className="popup">
-                        <div className="popup-content">
-                            <h2 style={{ color: "black" }}>Confirm Submission</h2>
-                            <p style={{ color: "black" }}>Are you sure you want to submit the form?</p>
-                            <div className='button-group'>
-                                <button onClick={confirmSubmission}>Yes</button>
-                                <button onClick={() => setShowConfirmationPopup(false)}>No</button>
+                    <>
+                        <div className="popup">
+                            <div className="popup-content">
+                                <h2 style={{ color: "black" }}>Confirm Submission</h2>
+                                <p style={{ color: "black" }}>Are you sure you want to submit the form?</p>
+                                <div className='button-group'>
+                                    <button onClick={confirmSubmission}>Yes</button>
+                                    <button onClick={() => setShowConfirmationPopup(false)}>No</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        {
+                            loading && (<Loader />)
+                        }
+                        
+                    </>
                 )}
 
                 {showAlertPopup && (
