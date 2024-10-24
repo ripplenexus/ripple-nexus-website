@@ -6,7 +6,6 @@ import RLogo from '../assets/img/RippleLogos/R_logo.png';
 import RLogoBW from '../assets/img/RippleLogos/R_logoBW.png';
 // import RippleNexusLogo from '../assets/img/RippleLogos/RippleNexus_logo.png';
 import RippleNexusLogoBW from '../assets/img/RippleLogos/RippleNexusBW.png';
-import { startAnimation, endAnimation, showElement, hideElement } from '../utils/Animation';
 
 
 const Navigation: React.FC = () => {
@@ -146,7 +145,7 @@ const Navigation: React.FC = () => {
         <button className="quote-button" 
         onClick={()=>{
           navigate('/about#contact-us');
-          window.scroll(0, 800);
+          window.scroll(0, 900);
           }}>
           <label>Request a Quote</label></button>
       </div>
