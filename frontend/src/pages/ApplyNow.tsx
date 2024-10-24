@@ -64,6 +64,7 @@ const ApplyNow: React.FC = () => {
 
         try {
             // Submit the form data and file to the backend API
+            // console.log(formDataToSend);
             await axios.post('https://ripple-nexus-website.onrender.com/api/submit-application', formDataToSend, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
@@ -106,9 +107,9 @@ const ApplyNow: React.FC = () => {
 
                         <label htmlFor="position">Position you are applying for?</label>
                         <select id="position" value={formData.position} onChange={handleChange}>
-                            <option value="" disabled selected>Select a position</option>
+                            <option value="" disabled defaultChecked>Select a position</option>
                             {['Full Stack Developer', 'Backend Developer', 'Frontend Developer', 'Logo and Branding Designer', 'Graphic Designer', 'AI Chatbot Developer', 'Software Developer'].map((opt, idx)=>{
-                                return(<option value={opt}>{opt}</option>)
+                                return(<option key={2315+idx} value={opt}>{opt}</option>)
                             })}
                             {/* <option value="developer">Developer</option>
                             <option value="designer">Designer</option>

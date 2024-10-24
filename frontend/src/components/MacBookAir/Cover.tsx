@@ -18,11 +18,11 @@ const MainCover: React.FC = () => {
                     </a>
                     <div className='cta-section-info'>
                     <div className="info-box">
-                        <h2 className='info-box-score'>200+</h2>
+                        <h2 className='info-box-score'>50+</h2>
                         <h5 className='info-box-subhead'>Projects Delivered</h5>
                     </div>
                     <div className="info-box">
-                        <h2 className='info-box-score'>50+</h2>
+                        <h2 className='info-box-score'>15+</h2>
                         <h5 className='info-box-subhead'>Domain Expertise</h5>
                     </div>
                     </div>

@@ -10,8 +10,8 @@ interface ImgDetails{
 }
 const ImgWithFallback: React.FC<ImgDetails> = ({src, alt, fallbackSrc=profile, className, dataTitle})=>{
     const [imgSrc, setImgSrc] = useState(src);
-    console.log(dataTitle);
-    console.log(className);
+    // console.log(dataTitle);
+    // console.log(className);
     const handleError =()=>{
         if(fallbackSrc){
             setImgSrc(fallbackSrc);

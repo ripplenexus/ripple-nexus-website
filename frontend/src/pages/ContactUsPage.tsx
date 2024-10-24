@@ -1,12 +1,12 @@
 import React from 'react';
-import CompanyVision from '../components/CompanyVision';
+import CompanyVisionNew from '../components/CompanyVisionNew';
 // import ContactForm from '../components/ContactForm';
 import Contacts from '../components/Contacts';
 
 const ContactUsPage = () => {
   return (
     <>
-      <CompanyVision />
+      <CompanyVisionNew />
       {<Contacts/>}
     </>
   );

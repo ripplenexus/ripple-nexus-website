@@ -29,7 +29,7 @@ const Testimonials: React.FC = () => {
                 <h2 className='testimonial-header'>Testimonials</h2>
                 <div className="testimonial-cards">
                     {testimonials.map((testimonial, index) => (
-                        <div className='testimonial-card-container' style={{zIndex:`${599-index}`}}>
+                        <div key={3215+index} className='testimonial-card-container' style={{zIndex:`${599-index}`}}>
                         <div key={index} className={`testimonial-card ${expanded[index] ? 'expanded' : ''}`} style={{zIndex:`${600-index}`}}>
                             <div className="rating">
                                 {'★'.repeat(testimonial.rating)}

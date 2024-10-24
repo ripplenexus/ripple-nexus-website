@@ -32,26 +32,26 @@ const Mission = [
 const OpenPositions = [
   {
     position: "Full Stack Developer",
-    duration: "Full time",
-    location: "WFH",
+    duration: "Project Based",
+    location: "Remote/WFH",
     stipend: "$20-$30",
   },
   {
-    position: "Full Stack Developer",
-    duration: "Full time",
-    location: "WFH",
+    position: "UI/UX Designer",
+    duration: "Project Based",
+    location: "Remote/WFH",
     stipend: "$20-$30",
   },
   {
-    position: "Full Stack Developer",
-    duration: "Full time",
-    location: "WFH",
+    position: "Logo and Branding Expert",
+    duration: "Project Based",
+    location: "Remote/WFH",
     stipend: "$20-$30",
   },
   {
-    position: "Full Stack Developer",
-    duration: "Full time",
-    location: "WFH",
+    position: "Software Developer",
+    duration: "Project Based",
+    location: "Remote/WFH",
     stipend: "$20-$30",
   }
 ]
@@ -183,7 +183,7 @@ const CareerPage: React.FC = () => {
           {
             ReasonsToWork.map((ele, idx) => {
               return (
-                <li className="sm:text-[1.2em] text-[1em] font-medium hover:text-blue-600 transition-colors reasons-to-work">{ele}</li>
+                <li className="sm:text-[1.2em] text-[1em] font-medium  transition-colors reasons-to-work">{ele}</li>
               )
             })
           }
@@ -196,7 +196,7 @@ const CareerPage: React.FC = () => {
           How to Apply?
         </h2>
         <p className="text-black text-base sm:text-lg lg:ml-4 font-500">
-          If you’re interested in any of the positions above or want to explore other opportunities with us, please send your resume and cover letter to <strong>contact@ripplenexus.tech</strong> with the subject line "Career Application – [Position Title]". We look forward to hearing from you!        </p>
+          If you’re interested in any of the positions above or would like to explore other opportunities with us, please send your resume and cover letter to <strong>contact@ripplenexus.tech</strong> with the subject line "Career Application – [Position Title]". We look forward to hearing from you!        </p>
       </div>
     </div>
   );
