@@ -46,10 +46,15 @@ const Contacts: React.FC = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
+        if(formData.service.length===0){
+            window.alert('Please choose a service!');
+            return;
+        }
         setShowConfirmationPopup(true);
     };
 
     const confirmSubmission = async () => {
+       
         try {
             setLoading(true);
             // Send form data to the backend
@@ -100,16 +105,16 @@ const Contacts: React.FC = () => {
                     <form className="contact-form" onSubmit={handleSubmit}>
                         <h2 className='sendMessage'>Send us a Message</h2>
                         <label htmlFor="name">First Name</label>
-                        <input type="text" id="name" placeholder="First Name" value={formData.name} onChange={handleChange} />
+                        <input type="text" id="name" placeholder="First Name" value={formData.name} onChange={handleChange} required />
 
                         <label htmlFor="surname">Surname</label>
-                        <input type="text" id="surname" placeholder="Surname" value={formData.surname} onChange={handleChange} />
+                        <input type="text" id="surname" placeholder="Surname" value={formData.surname} onChange={handleChange} required/>
 
                         <label htmlFor="email">Email</label>
-                        <input type="email" id="email" placeholder="Email" value={formData.email} onChange={handleChange} />
+                        <input type="email" id="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
 
                         <label htmlFor="message">Message</label>
-                        <textarea id="message" placeholder="Message" value={formData.message} onChange={handleChange}></textarea>
+                        <textarea id="message" placeholder="Message" value={formData.message} onChange={handleChange} required></textarea>
 
                         <div className="button-group">
                             {['Web Development', 'UI/UX Design', 'Graphics Design', 'Logo and Branding Design', 'Resume/CV Writing', 'LinkedIn Optimization'].map((service) => (

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios'; // Axios for API integration
 import ContactInfo from '../components/ContactInfo';
+import Loader from '../components/loader';
 import '../styles/css/ApplyNow/ApplyNow.css';
 
 interface FormData {
@@ -13,7 +14,7 @@ interface FormData {
 }
 
 const ApplyNow: React.FC = () => {
-
+    const [loading, setLoading] = useState<boolean>(false);
     const [file, setFile] = useState<File | null>(null);
     const [fileName, setFileName] = useState('');
 
@@ -65,11 +66,15 @@ const ApplyNow: React.FC = () => {
         try {
             // Submit the form data and file to the backend API
             // console.log(formDataToSend);
+            console.log('starting loading');
+            setLoading(true);
             await axios.post('https://ripple-nexus-website.onrender.com/api/submit-application', formDataToSend, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
             });
+            setLoading(false);
+            console.log("loading ended");
             setShowConfirmationPopup(false); // Hide confirmation popup
             setShowAlertPopup(true); // Show success alert
         } catch (error) {
@@ -97,16 +102,16 @@ const ApplyNow: React.FC = () => {
                     <form className="contact-form" encType="multipart/form-data" onSubmit={handleSubmit}>
                         <h2 className='sendMessage'>Send us a Message</h2>
                         <label htmlFor="name">First Name</label>
-                        <input type="text" id="name" placeholder="First Name" value={formData.name} onChange={handleChange} />
+                        <input type="text" id="name" placeholder="First Name" value={formData.name} onChange={handleChange} required />
 
                         <label htmlFor="surname">Surname</label>
-                        <input type="text" id="surname" placeholder="Surname" value={formData.surname} onChange={handleChange} />
+                        <input type="text" id="surname" placeholder="Surname" value={formData.surname} onChange={handleChange} required/>
 
                         <label htmlFor="email">Email</label>
-                        <input type="email" id="email" placeholder="Email" value={formData.email} onChange={handleChange} />
+                        <input type="email" id="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
 
                         <label htmlFor="position">Position you are applying for?</label>
-                        <select id="position" value={formData.position} onChange={handleChange}>
+                        <select id="position" value={formData.position} onChange={handleChange} required>
                             <option value="" disabled defaultChecked>Select a position</option>
                             {['Full Stack Developer', 'Backend Developer', 'Frontend Developer', 'Logo and Branding Designer', 'Graphic Designer', 'AI Chatbot Developer', 'Software Developer'].map((opt, idx)=>{
                                 return(<option key={2315+idx} value={opt}>{opt}</option>)
@@ -119,7 +124,7 @@ const ApplyNow: React.FC = () => {
 
                         <label htmlFor="reason">Why should we hire you?</label>
                         <p className='form-smaller-texts'>Cover letter</p>
-                        <textarea id="reason" placeholder="Write something here" value={formData.reason} onChange={handleChange} rows={3}></textarea>
+                        <textarea id="reason" placeholder="Write something here" value={formData.reason} onChange={handleChange} rows={3} required></textarea>
 
                         <label htmlFor="resumeUpload" className="custom-file-upload" style={{color: "#457fd7"}}>
                             {fileName ? `File: ${fileName}` : 'Upload Resume'}
@@ -131,6 +136,7 @@ const ApplyNow: React.FC = () => {
                             accept=".doc,.docx,.pdf"
                             style={{ display: 'none' }}
                             onChange={handleFileChange}
+                            required
                         />
                         <p className='form-smaller-texts' style={{marginLeft:"1.5em"}}>Doc, Docx, pdf (10MB)</p>
                         <button className='form-submit-button' type="submit">Apply</button>
@@ -139,16 +145,24 @@ const ApplyNow: React.FC = () => {
                 </div>
 
                 {showConfirmationPopup && (
-                    <div className="popup">
-                        <div className="popup-content">
-                            <h2 style={{ color: "black" }}>Confirm Submission</h2>
-                            <p style={{ color: "black" }}>Are you sure you want to submit the form?</p>
-                            <div className='button-group'>
-                                <button onClick={confirmSubmission}>Yes</button>
-                                <button onClick={() => setShowConfirmationPopup(false)}>No</button>
-                            </div>
-                        </div>
-                    </div>
+                   <>
+                   <div className="popup">
+                       <div className="popup-content">
+                           <h2 style={{ color: "black" }}>Confirm Submission</h2>
+                           <p style={{ color: "black" }}>Are you sure you want to submit the form?</p>
+                           <div className='button-group'>
+                               <button onClick={confirmSubmission}>Yes</button>
+                               <button onClick={() => setShowConfirmationPopup(false)}>No</button>
+                           </div>
+                       </div>
+                   </div>
+                   {
+                       loading && (<Loader />)
+                   }
+                   
+               </>
+                    
+
                 )}
 
                 {showAlertPopup && (

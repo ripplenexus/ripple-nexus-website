@@ -284,6 +284,10 @@ form.contact-form select#position option:default {
         width: 100%;
     }
 
+    form.contact-form select#position {
+        width: 100%;
+    }
+
     div.contact-info {
         width: 100%;
     }
