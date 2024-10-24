@@ -48,6 +48,11 @@ const ApplyNow: React.FC = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
+        const fileInput = document.getElementById('resumeUpload') as HTMLInputElement;
+    if (!fileInput.files || fileInput.files.length === 0) {
+        alert('Please upload your resume.');
+        return;
+    }
         setShowConfirmationPopup(true); // Show confirmation popup
     };
 
@@ -136,7 +141,6 @@ const ApplyNow: React.FC = () => {
                             accept=".doc,.docx,.pdf"
                             style={{ display: 'none' }}
                             onChange={handleFileChange}
-                            required
                         />
                         <p className='form-smaller-texts' style={{marginLeft:"1.5em"}}>Doc, Docx, pdf (10MB)</p>
                         <button className='form-submit-button' type="submit">Apply</button>
